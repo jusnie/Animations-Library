@@ -21,6 +21,8 @@ export default function App() {
   const [activeFormat, setActiveFormat] = useState('all');
   const [activeTech, setActiveTech] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchInputRef = useRef(null);
   const [visibleCount, setVisibleCount] = useState(24);
   const [selectedItem, setSelectedItem] = useState(null);
   const [mp4Url, setMp4Url] = useState(null);
