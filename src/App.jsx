@@ -181,8 +181,18 @@ export default function App() {
   const filteredAnimations = useMemo(() => {
     return allAnimations.filter((item) => {
       if (activeCat !== 'all' && item.category !== activeCat) return false;
-      if (activeSet !== 'all' && !item.sets.includes(activeSet)) return false;
-      if (activeFormat !== 'all' && item.format !== activeFormat) return false;
+      if (activeSet === 'start-here') {
+        if (item.prompt.length > 350 && !item.sets.includes('start-here')) return false;
+      } else if (activeSet === 'product-promos') {
+        const text = `${item.title} ${item.prompt}`.toLowerCase();
+        if (!item.sets.includes('product-promos') && !/(promo|launch|commercial|brand|product|ad\b)/.test(text)) return false;
+      } else if (activeSet !== 'all' && !item.sets.includes(activeSet)) {
+        return false;
+      }
+      if (activeFormat === 'vertical') {
+        const text = `${item.title} ${item.prompt}`.toLowerCase();
+        if (item.format !== 'vertical' && !/(9:16|vertical|1080x1920|reels|tiktok|shorts)/.test(text)) return false;
+      }
       if (activeTech !== 'all' && item.tech !== activeTech) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
