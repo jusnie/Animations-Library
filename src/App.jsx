@@ -282,7 +282,7 @@ export default function App() {
           <div className="flex items-center gap-2 ml-auto">
             <div
               className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                searchOpen || searchQuery ? 'w-56 sm:w-72' : 'w-10'
+                searchOpen || searchQuery ? 'w-[calc(100vw-2rem)] sm:w-80' : 'w-10'
               }`}
             >
               <input
