@@ -615,24 +615,36 @@ export default function App() {
             </div>
 
             <div className="mb-4">
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                 <span className="font-marker text-lg">Opus Prompt</span>
-                <button
-                  onClick={() =>
-                    handleCopy(selectedItem.prompt, selectedItem.id + '-modal')
-                  }
-                  className="sketch-btn bg-[#fde047] px-3 py-1 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
-                >
-                  {copiedId === selectedItem.id + '-modal' ? (
-                    <>
-                      <Check className="w-4 h-4" /> Copied!
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-4 h-4" /> Copy prompt
-                    </>
+                <div className="flex items-center gap-2">
+                  {selectedItem.postUrl && (
+                    <a
+                      href={selectedItem.postUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sketch-btn bg-[#bae6fd] px-3 py-1 text-sm font-bold flex items-center gap-1.5"
+                    >
+                      Original Video <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
                   )}
-                </button>
+                  <button
+                    onClick={() =>
+                      handleCopy(selectedItem.prompt, selectedItem.id + '-modal')
+                    }
+                    className="sketch-btn bg-[#fde047] px-3 py-1 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
+                  >
+                    {copiedId === selectedItem.id + '-modal' ? (
+                      <>
+                        <Check className="w-4 h-4" /> Copied!
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-4 h-4" /> Copy prompt
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
               <pre className="font-mono-code text-xs sm:text-sm bg-white border-2 border-[#1e1b18] rounded-xl p-4 whitespace-pre-wrap">
                 {selectedItem.prompt}
