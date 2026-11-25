@@ -584,7 +584,7 @@ export default function App() {
           onClick={() => setSelectedItem(null)}
         >
           <div
-            className="sketch-box bg-[#fdfbf7] max-w-2xl w-full p-6 relative"
+            className="sketch-box bg-[#fdfbf7] max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
