@@ -607,12 +607,12 @@ export default function App() {
       <footer className="border-t-2 border-[#1e1b18] bg-white px-4 sm:px-8 py-6 mt-12">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2 text-sm text-[#57534e]">
           <span className="font-caveat text-xl">
-            Hand-drawn &amp; coded by{' '}
+            Developer:{' '}
             <span className="marker-highlight font-bold text-[#1e1b18]">
               Yasuda
             </span>
           </span>
-          <span>Opus Video Library Clone</span>
+          <span>Opus Animations Library</span>
         </div>
       </footer>
 
