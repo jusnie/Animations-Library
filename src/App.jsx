@@ -642,6 +642,7 @@ export default function App() {
                 <video
                   src={mp4Url}
                   poster={selectedItem.thumbnailUrl}
+                  referrerPolicy="no-referrer"
                   controls
                   autoPlay
                   loop
