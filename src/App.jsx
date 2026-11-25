@@ -292,8 +292,21 @@ export default function App() {
 
               <h1 className="font-marker text-4xl sm:text-6xl leading-tight mb-4">
                 Every Opus video,{' '}
-                <span className="marker-highlight inline-block rotate-1">
+                <span className="marker-highlight inline-block rotate-1 relative">
                   every prompt.
+                  <svg
+                    viewBox="0 0 220 14"
+                    className="w-full h-3 -mt-1 text-[#1e1b18]"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 9C45 3 110 13 217 5"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </span>
               </h1>
               <p className="font-caveat text-2xl sm:text-3xl text-[#57534e] max-w-2xl mb-8">
@@ -355,19 +368,29 @@ export default function App() {
                       backgroundColor: set.color,
                       transform: `rotate(${set.tilt})`,
                     }}
-                    className="sketch-box-alt p-6 text-left flex flex-col justify-between cursor-pointer"
+                    className="sketch-box-alt p-5 text-left flex flex-col justify-between cursor-pointer group"
                   >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 bg-white border-2 border-[#1e1b18] rounded-full">
-                          {set.badge}
-                        </span>
-                        <span className="font-bold text-sm">{set.count}</span>
+                    <div className="flex flex-col sm:flex-row gap-4 items-start">
+                      <div className="w-full sm:w-28 h-28 shrink-0 rounded-lg border-2 border-[#1e1b18] overflow-hidden bg-white">
+                        <img
+                          src={set.thumbnailUrl}
+                          alt={set.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                          loading="lazy"
+                        />
                       </div>
-                      <h3 className="font-marker text-2xl mb-1">{set.title}</h3>
-                      <p className="text-lg text-[#1e1b18]/85">
-                        {set.subtitle}
-                      </p>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                          <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 bg-white border-2 border-[#1e1b18] rounded-full">
+                            {set.badge}
+                          </span>
+                          <span className="font-bold text-sm">{set.count}</span>
+                        </div>
+                        <h3 className="font-marker text-2xl mb-1">{set.title}</h3>
+                        <p className="text-base text-[#1e1b18]/85">
+                          {set.subtitle}
+                        </p>
+                      </div>
                     </div>
                     <div className="mt-4 inline-flex items-center gap-1.5 font-bold text-base">
                       Explore set <ArrowRight className="w-4 h-4" />

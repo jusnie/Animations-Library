@@ -46,6 +46,7 @@ export const CURATED_SETS = [
     badge: 'Beginner friendly',
     color: '#fef08a',
     tilt: '1deg',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/rendesr-676116.webp',
     filter: { set: 'start-here' },
   },
   {
@@ -56,6 +57,7 @@ export const CURATED_SETS = [
     badge: 'Marketing',
     color: '#fda4af',
     tilt: '-1.2deg',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/softal-io-614622.webp',
     filter: { set: 'product-promos' },
   },
   {
@@ -66,6 +68,7 @@ export const CURATED_SETS = [
     badge: '9:16 Vertical',
     color: '#bae6fd',
     tilt: '0.8deg',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/mraznaan-870907.webp',
     filter: { format: 'vertical' },
   },
   {
@@ -76,6 +79,7 @@ export const CURATED_SETS = [
     badge: 'Interactive',
     color: '#bbf7d0',
     tilt: '-1.4deg',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/manasjoshi10000-396561.webp',
     filter: { cat: 'interactive', tech: 'playable' },
   },
 ];
