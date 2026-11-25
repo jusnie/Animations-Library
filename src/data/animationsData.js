@@ -84,6 +84,63 @@ export const CURATED_SETS = [
   },
 ];
 
+export const SKILLS_AND_TOOLS = [
+  {
+    id: 'unslop',
+    title: 'unslop',
+    author: '@heydamir',
+    badge: 'UI/UX Skill',
+    color: '#fef08a',
+    description: 'Turns vibecoded, AI-looking UI into a designed interface with its own character.',
+    url: 'https://github.com/heydamir/unslop',
+  },
+  {
+    id: 'opus-js-animations',
+    title: 'opus-js-animations',
+    author: '@klsoen',
+    badge: 'Claude Code Skill',
+    color: '#bae6fd',
+    description: 'Brief → sound → director’s treatment → frame-exact MP4 in code.',
+    url: 'https://github.com/klsoen/opus-js-animations',
+  },
+  {
+    id: 'claude-animation-skill',
+    title: 'claude-animation-skill',
+    author: '@buildwithhanif',
+    badge: 'Animation Skill',
+    color: '#bbf7d0',
+    description: 'Node Canvas animation skill with character rig and frame checks.',
+    url: 'https://github.com/buildwithhanif/claude-animation-skill',
+  },
+  {
+    id: 'functional-emotions-video',
+    title: 'functional-emotions-video',
+    author: '@ledbetterljoshua',
+    badge: 'WebGL2 Renderer',
+    color: '#fda4af',
+    description: 'Custom WebGL2 brushstroke renderer with beat & lyric alignment pipeline.',
+    url: 'https://github.com/ledbetterljoshua/functional-emotions-video',
+  },
+  {
+    id: 'awesome-opus-prompts',
+    title: 'awesome-opus-5-5-video-prompts',
+    author: '@X-RayLuan',
+    badge: 'Prompt Repo',
+    color: '#d8b4fe',
+    description: 'Curated Claude Opus 5.5 video demos with verbatim prompts (EN + 中文).',
+    url: 'https://github.com/X-RayLuan/awesome-opus-5-5-video-prompts',
+  },
+  {
+    id: 'opus-prompt-library',
+    title: 'opus-5-5-video-prompt-library',
+    author: '@ai9app',
+    badge: 'Templates',
+    color: '#fde047',
+    description: 'Creative briefs, animation prompts, and reusable templates for Opus 5.5.',
+    url: 'https://github.com/ai9app/opus-5-5-video-prompt-library',
+  },
+];
+
 export const ANIMATIONS = [
   {
     id: 'jelly-pufferfish-soft-body',

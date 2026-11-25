@@ -11,7 +11,7 @@ import {
   SlidersHorizontal,
   Upload,
 } from 'lucide-react';
-import { CATEGORIES, CURATED_SETS, ANIMATIONS } from './data/animationsData';
+import { CATEGORIES, CURATED_SETS, ANIMATIONS, SKILLS_AND_TOOLS } from './data/animationsData';
 import AnimationCanvas from './components/AnimationCanvas';
 
 export default function App() {
@@ -270,6 +270,14 @@ export default function App() {
               Home
             </button>
             <button
+              onClick={() => setView('skills')}
+              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer ${
+                view === 'skills' ? 'bg-[#bbf7d0]' : 'bg-white'
+              }`}
+            >
+              Skills
+            </button>
+            <button
               onClick={() => openLibraryWithFilter({})}
               className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer ${
                 view === 'library' ? 'bg-[#38bdf8]' : 'bg-white'
@@ -414,6 +422,50 @@ export default function App() {
               </div>
             </section>
           </>
+        ) : view === 'skills' ? (
+          <section>
+            <div className="mb-8">
+              <h1 className="font-marker text-3xl sm:text-4xl mb-1">
+                Skills &amp; Tools
+              </h1>
+              <p className="font-caveat text-2xl text-[#57534e]">
+                Claude Code skills, renderers, and prompt repositories to build your own animations.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SKILLS_AND_TOOLS.map((skill, idx) => (
+                <a
+                  key={skill.id}
+                  href={skill.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: skill.color,
+                    transform: `rotate(${idx % 2 === 0 ? '-0.8deg' : '0.8deg'})`,
+                  }}
+                  className="sketch-box-alt p-5 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 bg-white border-2 border-[#1e1b18] rounded-full">
+                        {skill.badge}
+                      </span>
+                      <span className="text-sm font-bold text-[#1e1b18]/75">
+                        {skill.author}
+                      </span>
+                    </div>
+                    <h2 className="font-marker text-xl mb-1.5">{skill.title}</h2>
+                    <p className="text-base text-[#1e1b18]/85 mb-4">
+                      {skill.description}
+                    </p>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 font-bold text-sm group-hover:underline">
+                    Open on GitHub <ArrowRight className="w-4 h-4" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
         ) : (
           /* Library Browser View */
           <section>
