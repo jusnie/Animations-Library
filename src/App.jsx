@@ -270,10 +270,10 @@ export default function App() {
             className="flex items-center gap-2 text-left group cursor-pointer"
           >
             <span className="inline-block bg-[#fde047] border-2 border-[#1e1b18] px-2.5 py-0.5 rounded-lg font-marker text-lg sm:text-xl -rotate-2 group-hover:rotate-0 transition-transform shadow-[2px_2px_0px_#1e1b18]">
-              Opus
+              OPUS
             </span>
             <span className="font-marker text-xl sm:text-2xl tracking-tight">
-              Video Library
+              ANIMATIONS LIBRARY
             </span>
           </button>
 
