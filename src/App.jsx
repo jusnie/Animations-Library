@@ -148,6 +148,16 @@ export default function App() {
   }, []);
 
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [visitorCount, setVisitorCount] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.counterapi.dev/v1/opus-animations-library/visits/up')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.count) setVisitorCount(data.count);
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setShowScrollTop(window.scrollY > 400);
