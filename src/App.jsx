@@ -23,13 +23,12 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(24);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [showCanvas, setShowCanvas] = useState(false);
   const [mp4Url, setMp4Url] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
 
   useEffect(() => {
     setMp4Url(null);
-    if (!selectedItem || showCanvas || !selectedItem.postUrl?.includes('x.com/')) return;
+    if (!selectedItem || !selectedItem.postUrl?.includes('x.com/')) return;
     let cancelled = false;
     fetch(`/api/video?url=${encodeURIComponent(selectedItem.postUrl)}`)
       .then((r) => (r.ok ? r.json() : null))
@@ -42,7 +41,7 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, [selectedItem, showCanvas]);
+  }, [selectedItem]);
   const [importedItems, setImportedItems] = useState(() => {
     try {
       const saved = localStorage.getItem('opus_imported_animations');
@@ -685,7 +684,7 @@ export default function App() {
             <div
               className="h-64 sm:h-80 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-[#1e1b18] relative flex items-center justify-center"
             >
-              {showCanvas || (!selectedItem.thumbnailUrl && !mp4Url) ? (
+              {!selectedItem.thumbnailUrl && !mp4Url ? (
                 <div className="w-full h-full">
                   <AnimationCanvas
                     demoType={selectedItem.demoType}
@@ -713,14 +712,7 @@ export default function App() {
                 />
               )}
             </div>
-            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-              <button
-                onClick={() => setShowCanvas(!showCanvas)}
-                className="sketch-btn bg-white px-3 py-1 text-xs font-bold flex items-center gap-1 cursor-pointer"
-              >
-                <Play className="w-3.5 h-3.5" />{' '}
-                {showCanvas ? 'Show X Video' : 'Play Live Canvas'}
-              </button>
+            <div className="flex flex-wrap items-center justify-end gap-2 mb-4">
               {selectedItem.postUrl && (
                 <a
                   href={selectedItem.postUrl}
