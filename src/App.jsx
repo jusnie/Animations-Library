@@ -21,8 +21,14 @@ export default function App() {
   const [activeFormat, setActiveFormat] = useState('all');
   const [activeTech, setActiveTech] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const searchInputRef = useRef(null);
+
+  useEffect(() => {
+    const t = setTimeout(() => setDebouncedSearch(searchQuery), 180);
+    return () => clearTimeout(t);
+  }, [searchQuery]);
   const [visibleCount, setVisibleCount] = useState(24);
   const [selectedItem, setSelectedItem] = useState(null);
   const [mp4Url, setMp4Url] = useState(null);
@@ -244,8 +250,8 @@ export default function App() {
         if (item.format !== 'vertical' && !/(9:16|vertical|1080x1920|reels|tiktok|shorts)/.test(text)) return false;
       }
       if (activeTech !== 'all' && item.tech !== activeTech) return false;
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase();
+      if (debouncedSearch.trim()) {
+        const q = debouncedSearch.toLowerCase();
         return (
           item.title.toLowerCase().includes(q) ||
           item.prompt.toLowerCase().includes(q) ||
