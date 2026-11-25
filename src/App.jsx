@@ -22,6 +22,7 @@ export default function App() {
   const [activeTech, setActiveTech] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
+  const [showCanvas, setShowCanvas] = useState(false);
   const [copiedId, setCopiedId] = useState(null);
   const [importedItems, setImportedItems] = useState(() => {
     try {
@@ -605,27 +606,41 @@ export default function App() {
                 : selectedItem.duration}
             </p>
 
-            <div className="h-72 sm:h-80 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-white relative">
-              {selectedItem.postUrl && selectedItem.postUrl.includes('x.com/') ? (
-                <iframe
-                  src={`https://twitframe.com/show?url=${encodeURIComponent(selectedItem.postUrl)}`}
-                  className="w-full h-full border-0"
-                  allowFullScreen
-                  title={selectedItem.title}
-                />
-              ) : selectedItem.thumbnailUrl ? (
-                <img
-                  src={selectedItem.thumbnailUrl}
-                  alt={selectedItem.title}
-                  className="w-full h-full object-contain bg-[#1e1b18]"
-                />
-              ) : (
+            <div
+              onClick={() => setShowCanvas(!showCanvas)}
+              className="h-64 sm:h-72 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-[#1e1b18] relative group cursor-pointer"
+              title="Click to toggle interactive animation"
+            >
+              {showCanvas || !selectedItem.thumbnailUrl ? (
                 <AnimationCanvas
                   demoType={selectedItem.demoType}
                   accent={selectedItem.accent}
                   reduceMotion={reduceMotion}
                   interactive={true}
                 />
+              ) : (
+                <img
+                  src={selectedItem.thumbnailUrl}
+                  alt={selectedItem.title}
+                  className="w-full h-full object-contain"
+                />
+              )}
+              <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                <span className="sketch-btn bg-white px-3 py-1 text-xs font-bold flex items-center gap-1">
+                  <Play className="w-3.5 h-3.5" />{' '}
+                  {showCanvas ? 'Show Poster' : 'Play Live Canvas'}
+                </span>
+              </div>
+              {selectedItem.postUrl && (
+                <a
+                  href={selectedItem.postUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="sketch-btn bg-[#fde047] px-3.5 py-1.5 text-xs sm:text-sm font-bold flex items-center gap-1.5 absolute bottom-3 right-3"
+                >
+                  Original Video <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               )}
             </div>
 
