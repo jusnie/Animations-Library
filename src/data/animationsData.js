@@ -5,7 +5,7 @@ export const CATEGORIES = [
     count: '488 videos',
     color: '#fde047',
     tilt: '-1.5deg',
-    doodle: 'waves',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/oab10don-192754.webp',
     description: 'Kinetic typography, rhythmic shapes, and fluid transitions.',
   },
   {
@@ -14,7 +14,7 @@ export const CATEGORIES = [
     count: '165 videos',
     color: '#38bdf8',
     tilt: '1.2deg',
-    doodle: 'bulb',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/kosukecat12-350411.webp',
     description: 'Visual storytelling that breaks down complex ideas fast.',
   },
   {
@@ -23,7 +23,7 @@ export const CATEGORIES = [
     count: '224 videos',
     color: '#c084fc',
     tilt: '-0.8deg',
-    doodle: 'cube',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/rewind02-830563.webp',
     description: 'Rotating polyhedra, particle fields, and depth illusions.',
   },
   {
@@ -32,7 +32,7 @@ export const CATEGORIES = [
     count: '131 videos',
     color: '#4ade80',
     tilt: '1.6deg',
-    doodle: 'gamepad',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/meller-ai-241696.webp',
     description: 'Playable toys, physics sandboxes, and mini-games.',
   },
 ];

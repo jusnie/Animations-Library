@@ -261,17 +261,6 @@ export default function App() {
             >
               Browse All
             </button>
-            <label className="sketch-btn bg-[#bbf7d0] px-3.5 py-1.5 text-base font-bold cursor-pointer flex items-center gap-1.5">
-              <Upload className="w-4 h-4" />
-              <span>Import JSON</span>
-              <input
-                type="file"
-                accept=".json,application/json"
-                multiple
-                onChange={handleImportFiles}
-                className="hidden"
-              />
-            </label>
           </nav>
         </div>
       </header>
@@ -325,12 +314,15 @@ export default function App() {
                       aria-hidden="true"
                     />
                     <div
-                      className="w-full h-28 rounded-lg border-2 border-[#1e1b18] mb-4 flex items-center justify-center overflow-hidden"
+                      className="w-full h-28 rounded-lg border-2 border-[#1e1b18] mb-4 overflow-hidden"
                       style={{ backgroundColor: cat.color }}
                     >
-                      <span className="font-marker text-2xl text-[#1e1b18] group-hover:scale-110 transition-transform">
-                        {cat.title.split(' ')[0]}
-                      </span>
+                      <img
+                        src={cat.thumbnailUrl}
+                        alt={cat.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                        loading="lazy"
+                      />
                     </div>
                     <h2 className="font-marker text-xl mb-1">{cat.title}</h2>
                     <p className="text-sm text-[#57534e] mb-3">
