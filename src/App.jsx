@@ -23,6 +23,15 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
+  const [importedItems, setImportedItems] = useState(() => {
+    try {
+      const saved = localStorage.getItem('opus_imported_animations');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [importStatus, setImportStatus] = useState('');
 
   useEffect(() => {
     if (importedItems.length > 0) return;
