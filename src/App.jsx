@@ -21,6 +21,7 @@ export default function App() {
   const [activeFormat, setActiveFormat] = useState('all');
   const [activeTech, setActiveTech] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(24);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showCanvas, setShowCanvas] = useState(false);
   const [mp4Url, setMp4Url] = useState(null);
@@ -519,6 +520,16 @@ export default function App() {
                   </div>
                 ))}
               </div>
+              {filteredAnimations.length > visibleCount && (
+                <div className="mt-10 text-center">
+                  <button
+                    onClick={() => setVisibleCount((c) => c + 24)}
+                    className="sketch-btn bg-[#fde047] px-6 py-2.5 font-marker text-lg cursor-pointer"
+                  >
+                    Load more ({filteredAnimations.length - visibleCount} left)
+                  </button>
+                </div>
+              )}
             )}
           </section>
         )}

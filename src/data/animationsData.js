@@ -5,7 +5,7 @@ export const CATEGORIES = [
     count: '488 videos',
     color: '#fde047',
     tilt: '-1.5deg',
-    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/oab10don-192754.webp',
+    thumbnailUrl: 'https://lumpongautomated.com/opus-video-library/library-extra/xsuperkoi-749813.webp',
     description: 'Kinetic typography, rhythmic shapes, and fluid transitions.',
   },
   {
