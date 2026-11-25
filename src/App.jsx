@@ -605,13 +605,21 @@ export default function App() {
                 : selectedItem.duration}
             </p>
 
-            <div className="h-64 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-white">
-              <AnimationCanvas
-                demoType={selectedItem.demoType}
-                accent={selectedItem.accent}
-                reduceMotion={reduceMotion}
-                interactive={true}
-              />
+            <div className="h-64 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-white relative">
+              {selectedItem.thumbnailUrl ? (
+                <img
+                  src={selectedItem.thumbnailUrl}
+                  alt={selectedItem.title}
+                  className="w-full h-full object-contain bg-[#1e1b18]"
+                />
+              ) : (
+                <AnimationCanvas
+                  demoType={selectedItem.demoType}
+                  accent={selectedItem.accent}
+                  reduceMotion={reduceMotion}
+                  interactive={true}
+                />
+              )}
             </div>
 
             <div className="mb-4">
