@@ -457,7 +457,8 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                 {filteredAnimations.map((item, idx) => (
                   <div
                     key={item.id}
@@ -519,17 +520,18 @@ export default function App() {
                     </div>
                   </div>
                 ))}
-              </div>
-              {filteredAnimations.length > visibleCount && (
-                <div className="mt-10 text-center">
-                  <button
-                    onClick={() => setVisibleCount((c) => c + 24)}
-                    className="sketch-btn bg-[#fde047] px-6 py-2.5 font-marker text-lg cursor-pointer"
-                  >
-                    Load more ({filteredAnimations.length - visibleCount} left)
-                  </button>
                 </div>
-              )}
+                {filteredAnimations.length > visibleCount && (
+                  <div className="mt-10 text-center">
+                    <button
+                      onClick={() => setVisibleCount((c) => c + 24)}
+                      className="sketch-btn bg-[#fde047] px-6 py-2.5 font-marker text-lg cursor-pointer"
+                    >
+                      Load more ({filteredAnimations.length - visibleCount} left)
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </section>
         )}
