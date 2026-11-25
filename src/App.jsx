@@ -281,49 +281,54 @@ export default function App() {
 
           <div className="flex items-center gap-2 ml-auto">
             <div
-              className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-out ${
+              className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 searchOpen || searchQuery ? 'w-56 sm:w-72' : 'w-10'
               }`}
             >
-              {searchOpen || searchQuery ? (
-                <div className="relative w-full">
-                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e]" />
-                  <input
-                    ref={searchInputRef}
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => {
-                      setSearchQuery(e.target.value);
-                      if (view !== 'library') setView('library');
-                    }}
-                    onBlur={() => {
-                      if (!searchQuery) setSearchOpen(false);
-                    }}
-                    placeholder="Search prompts, @authors..."
-                    className="w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
-                  />
-                  <button
-                    onClick={() => {
-                      setSearchQuery('');
-                      setSearchOpen(false);
-                    }}
-                    aria-label="Close search"
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18] cursor-pointer"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={() => {
+              <input
+                ref={searchInputRef}
+                type="text"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  if (view !== 'library') setView('library');
+                }}
+                onBlur={() => {
+                  if (!searchQuery) setSearchOpen(false);
+                }}
+                placeholder="Search prompts, @authors..."
+                className={`w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047] transition-opacity duration-300 ${
+                  searchOpen || searchQuery
+                    ? 'opacity-100 pointer-events-auto'
+                    : 'opacity-0 pointer-events-none'
+                }`}
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  if (searchOpen || searchQuery) {
+                    setSearchQuery('');
+                    setSearchOpen(false);
+                  } else {
                     setSearchOpen(true);
-                    setTimeout(() => searchInputRef.current?.focus(), 50);
-                  }}
-                  aria-label="Open search"
-                  className="sketch-btn bg-white p-2 cursor-pointer flex items-center justify-center"
-                >
+                    setTimeout(() => searchInputRef.current?.focus(), 60);
+                  }
+                }}
+                aria-label={searchOpen || searchQuery ? 'Close search' : 'Open search'}
+                className={`absolute flex items-center justify-center cursor-pointer transition-all duration-300 ${
+                  searchOpen || searchQuery
+                    ? 'right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18]'
+                    : 'inset-0 sketch-btn bg-white p-2'
+                }`}
+              >
+                {searchOpen || searchQuery ? (
+                  <X className="w-4 h-4" />
+                ) : (
                   <Search className="w-4 h-4" />
-                </button>
+                )}
+              </button>
+              {(searchOpen || searchQuery) && (
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e] pointer-events-none" />
               )}
             </div>
           </div>
