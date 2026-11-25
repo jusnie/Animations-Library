@@ -254,7 +254,7 @@ export default function App() {
       }
       return true;
     });
-  }, [allAnimations, activeCat, activeSet, activeFormat, activeTech, searchQuery]);
+  }, [allAnimations, activeCat, activeSet, activeFormat, activeTech, debouncedSearch]);
 
   const handleCopy = (text, id) => {
     navigator.clipboard.writeText(text);
