@@ -21,6 +21,8 @@ export default function App() {
   const [activeFormat, setActiveFormat] = useState('all');
   const [activeTech, setActiveTech] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchInputRef = useRef(null);
   const [visibleCount, setVisibleCount] = useState(24);
   const [selectedItem, setSelectedItem] = useState(null);
   const [mp4Url, setMp4Url] = useState(null);
@@ -277,26 +279,50 @@ export default function App() {
             </span>
           </button>
 
-          <div className="flex items-center gap-3 flex-1 max-w-md">
-            <div className="relative flex-1">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e]" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  if (view !== 'library') setView('library');
-                }}
-                placeholder="Search prompts, styles, @authors..."
-                className="w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
-              />
-              {searchQuery && (
+          <div className="flex items-center gap-2 ml-auto">
+            <div
+              className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-out ${
+                searchOpen || searchQuery ? 'w-56 sm:w-72' : 'w-10'
+              }`}
+            >
+              {searchOpen || searchQuery ? (
+                <div className="relative w-full">
+                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e]" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      if (view !== 'library') setView('library');
+                    }}
+                    onBlur={() => {
+                      if (!searchQuery) setSearchOpen(false);
+                    }}
+                    placeholder="Search prompts, @authors..."
+                    className="w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
+                  />
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      setSearchOpen(false);
+                    }}
+                    aria-label="Close search"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18] cursor-pointer"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
                 <button
-                  onClick={() => setSearchQuery('')}
-                  aria-label="Clear search"
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18] cursor-pointer"
+                  onClick={() => {
+                    setSearchOpen(true);
+                    setTimeout(() => searchInputRef.current?.focus(), 50);
+                  }}
+                  aria-label="Open search"
+                  className="sketch-btn bg-white p-2 cursor-pointer flex items-center justify-center"
                 >
-                  <X className="w-4 h-4" />
+                  <Search className="w-4 h-4" />
                 </button>
               )}
             </div>
