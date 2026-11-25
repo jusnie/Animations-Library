@@ -67,7 +67,9 @@ export default function App() {
       const promptEn = promptRes.status === 'fulfilled' && promptRes.value ? promptRes.value : {};
       const promptFix = promptFixRes.status === 'fulfilled' && promptFixRes.value ? promptFixRes.value : {};
       const videoPost = videoPostRes.status === 'fulfilled' && videoPostRes.value ? videoPostRes.value : {};
-      const mergedRaw = [...extraItems, ...libItems];
+      const mergedRaw = [...extraItems, ...libItems].filter(
+        (item) => !item.partial && (item.prompt || '').length >= 30
+      );
       if (mergedRaw.length === 0) return;
       const mapped = mergedRaw.map((item, idx) => {
         const fixOverride = typeof promptFix[item.id] === 'string' ? promptFix[item.id] : promptFix[item.id]?.prompt;
