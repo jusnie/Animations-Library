@@ -353,7 +353,6 @@ export default function App() {
             {/* Curated Sets */}
             <section className="mb-14">
               <div className="flex items-center gap-3 mb-6">
-                <Sparkles className="w-7 h-7 text-[#1e1b18]" />
                 <h2 className="font-marker text-3xl sm:text-4xl">
                   Not sure where to begin?
                 </h2>
@@ -708,34 +707,22 @@ export default function App() {
             <div className="mb-4">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                 <span className="font-marker text-lg">Opus Prompt</span>
-                <div className="flex items-center gap-2">
-                  {selectedItem.postUrl && (
-                    <a
-                      href={selectedItem.postUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sketch-btn bg-[#bae6fd] px-3 py-1 text-sm font-bold flex items-center gap-1.5"
-                    >
-                      Original Video <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
+                <button
+                  onClick={() =>
+                    handleCopy(selectedItem.prompt, selectedItem.id + '-modal')
+                  }
+                  className="sketch-btn bg-[#fde047] px-3 py-1 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
+                >
+                  {copiedId === selectedItem.id + '-modal' ? (
+                    <>
+                      <Check className="w-4 h-4" /> Copied!
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4" /> Copy prompt
+                    </>
                   )}
-                  <button
-                    onClick={() =>
-                      handleCopy(selectedItem.prompt, selectedItem.id + '-modal')
-                    }
-                    className="sketch-btn bg-[#fde047] px-3 py-1 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
-                  >
-                    {copiedId === selectedItem.id + '-modal' ? (
-                      <>
-                        <Check className="w-4 h-4" /> Copied!
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-4 h-4" /> Copy prompt
-                      </>
-                    )}
-                  </button>
-                </div>
+                </button>
               </div>
               <pre className="font-mono-code text-xs sm:text-sm bg-white border-2 border-[#1e1b18] rounded-xl p-4 whitespace-pre-wrap">
                 {selectedItem.prompt}
