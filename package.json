@@ -1,0 +1,34 @@
+{
+  "name": "animations-library",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hand-drawn Opus Video & Animations Library",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jusnie/Animations-Library.git"
+  },
+  "keywords": [],
+  "author": "Yasuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jusnie/Animations-Library/issues"
+  },
+  "homepage": "https://github.com/jusnie/Animations-Library#readme",
+  "dependencies": {
+    "lucide-react": "^1.80.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  }
+}
