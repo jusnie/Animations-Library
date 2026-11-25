@@ -23,14 +23,24 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
   const [showCanvas, setShowCanvas] = useState(false);
+  const [mp4Url, setMp4Url] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
 
   useEffect(() => {
-    if (selectedItem && !showCanvas && selectedItem.postUrl?.includes('x.com/')) {
-      setTimeout(() => {
-        window.twttr?.widgets?.load();
-      }, 50);
-    }
+    setMp4Url(null);
+    if (!selectedItem || showCanvas || !selectedItem.postUrl?.includes('x.com/')) return;
+    let cancelled = false;
+    fetch(`/api/video?url=${encodeURIComponent(selectedItem.postUrl)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.mp4Url) {
+          setMp4Url(data.mp4Url);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, [selectedItem, showCanvas]);
   const [importedItems, setImportedItems] = useState(() => {
     try {
@@ -617,10 +627,10 @@ export default function App() {
             </p>
 
             <div
-              className="min-h-64 max-h-96 overflow-y-auto border-2 border-[#1e1b18] rounded-xl mb-5 bg-[#1e1b18] relative flex items-center justify-center"
+              className="h-64 sm:h-80 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-[#1e1b18] relative flex items-center justify-center"
             >
-              {showCanvas || (!selectedItem.thumbnailUrl && !selectedItem.postUrl?.includes('x.com/')) ? (
-                <div className="w-full h-64">
+              {showCanvas || (!selectedItem.thumbnailUrl && !mp4Url) ? (
+                <div className="w-full h-full">
                   <AnimationCanvas
                     demoType={selectedItem.demoType}
                     accent={selectedItem.accent}
@@ -628,19 +638,21 @@ export default function App() {
                     interactive={true}
                   />
                 </div>
-              ) : selectedItem.postUrl?.includes('x.com/') ? (
-                <div className="w-full flex justify-center p-2 bg-white">
-                  <blockquote className="twitter-tweet" data-dnt="true">
-                    <a href={selectedItem.postUrl.replace('x.com/', 'twitter.com/')}>
-                      Loading video from X...
-                    </a>
-                  </blockquote>
-                </div>
+              ) : mp4Url ? (
+                <video
+                  src={mp4Url}
+                  poster={selectedItem.thumbnailUrl}
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                  className="w-full h-full object-contain bg-black"
+                />
               ) : (
                 <img
                   src={selectedItem.thumbnailUrl}
                   alt={selectedItem.title}
-                  className="w-full h-64 object-contain"
+                  className="w-full h-full object-contain"
                 />
               )}
             </div>
