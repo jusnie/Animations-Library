@@ -34,7 +34,7 @@ export default function App() {
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (!cancelled && data?.mp4Url) {
-          setMp4Url(data.mp4Url);
+          setMp4Url(`/api/video?stream=1&url=${encodeURIComponent(selectedItem.postUrl)}`);
         }
       })
       .catch(() => {});
