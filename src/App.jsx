@@ -98,6 +98,21 @@ export default function App() {
     });
   }, []);
 
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 400);
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedItem(null);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, []);
+
   const openLibraryWithFilter = (filter = {}) => {
     setActiveCat(filter.cat || 'all');
     setActiveSet(filter.set || 'all');
@@ -232,8 +247,17 @@ export default function App() {
                   if (view !== 'library') setView('library');
                 }}
                 placeholder="Search prompts, styles, @authors..."
-                className="w-full pl-9 pr-3 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
+                className="w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
               />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  aria-label="Clear search"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18] cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
             </div>
           </div>
 
@@ -256,11 +280,14 @@ export default function App() {
             </button>
             <button
               onClick={() => openLibraryWithFilter({})}
-              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer ${
+              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer flex items-center gap-1.5 ${
                 view === 'library' ? 'bg-[#38bdf8]' : 'bg-white'
               }`}
             >
-              Browse All
+              <span>Browse All</span>
+              <span className="text-xs font-mono-code bg-[#fdfbf7] border border-[#1e1b18] rounded-full px-1.5 py-0.2">
+                {allAnimations.length}
+              </span>
             </button>
           </nav>
         </div>
@@ -602,6 +629,17 @@ export default function App() {
           </section>
         )}
       </main>
+
+      {/* Floating Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Scroll to top"
+          className="fixed bottom-6 right-6 z-40 sketch-btn bg-[#fde047] px-3.5 py-2 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
+        >
+          ↑ Top
+        </button>
+      )}
 
       {/* Footer */}
       <footer className="border-t-2 border-[#1e1b18] bg-white px-4 sm:px-8 py-6 mt-12">
