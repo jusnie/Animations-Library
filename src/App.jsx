@@ -40,10 +40,12 @@ export default function App() {
       fetch('/data/library.json').then((r) => (r.ok ? r.json() : [])),
       fetch('/data/library-extra.json').then((r) => (r.ok ? r.json() : [])),
       fetch('/data/prompt-en.json').then((r) => (r.ok ? r.json() : {})),
-    ]).then(([libRes, extraRes, promptRes]) => {
+      fetch('/data/video-post.json').then((r) => (r.ok ? r.json() : {})),
+    ]).then(([libRes, extraRes, promptRes, videoPostRes]) => {
       const libItems = libRes.status === 'fulfilled' && Array.isArray(libRes.value) ? libRes.value : [];
       const extraItems = extraRes.status === 'fulfilled' && Array.isArray(extraRes.value) ? extraRes.value : [];
       const promptEn = promptRes.status === 'fulfilled' && promptRes.value ? promptRes.value : {};
+      const videoPost = videoPostRes.status === 'fulfilled' && videoPostRes.value ? videoPostRes.value : {};
       const mergedRaw = [...extraItems, ...libItems];
       if (mergedRaw.length === 0) return;
       const mapped = mergedRaw.map((item, idx) => {
@@ -65,7 +67,7 @@ export default function App() {
           accent: ['#fde047', '#fb7185', '#38bdf8', '#4ade80', '#c084fc'][idx % 5],
           thumbnailUrl: poster,
           prompt: enOverride || item.prompt || 'Prompt not available.',
-          postUrl: item.postUrl || '',
+          postUrl: videoPost[item.id] || item.postUrl || '',
         };
       });
       setImportedItems(mapped);
