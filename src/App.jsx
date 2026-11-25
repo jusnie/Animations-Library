@@ -266,23 +266,23 @@ export default function App() {
     <div className="min-h-screen flex flex-col transition-colors">
       {/* Top Sketchbook Navbar */}
       <header className="sticky top-0 z-30 bg-[#fdfbf7]/95 backdrop-blur-sm border-b-2 border-[#1e1b18] px-4 sm:px-8 py-3">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           <button
             onClick={() => setView('home')}
-            className="flex items-center gap-2 text-left group cursor-pointer"
+            className="flex items-center gap-1.5 sm:gap-2 text-left group cursor-pointer shrink-0"
           >
-            <span className="inline-block bg-[#fde047] border-2 border-[#1e1b18] px-2.5 py-0.5 rounded-lg font-marker text-lg sm:text-xl -rotate-2 group-hover:rotate-0 transition-transform shadow-[2px_2px_0px_#1e1b18]">
+            <span className="inline-block bg-[#fde047] border-2 border-[#1e1b18] px-2 py-0.5 rounded-lg font-marker text-sm sm:text-base -rotate-2 group-hover:rotate-0 transition-transform shadow-[2px_2px_0px_#1e1b18]">
               OPUS
             </span>
-            <span className="font-marker text-xl sm:text-2xl tracking-tight">
+            <span className="font-marker text-sm sm:text-lg tracking-tight whitespace-nowrap">
               ANIMATIONS LIBRARY
             </span>
           </button>
 
-          <div className="flex items-center gap-2 ml-auto">
+          <div className="flex items-center gap-2 ml-auto shrink-0">
             <div
               className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-out ${
-                searchOpen || searchQuery ? 'w-56 sm:w-72' : 'w-10'
+                searchOpen || searchQuery ? 'w-36 sm:w-64' : 'w-9'
               }`}
             >
               {searchOpen || searchQuery ? (
