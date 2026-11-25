@@ -280,29 +280,30 @@ export default function App() {
           </button>
 
           <div className="flex items-center gap-2 ml-auto">
-            <div
-              className={`relative flex items-center justify-end overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                searchOpen || searchQuery ? 'w-[calc(100vw-2rem)] sm:w-80' : 'w-10'
-              }`}
-            >
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  if (view !== 'library') setView('library');
-                }}
-                onBlur={() => {
-                  if (!searchQuery) setSearchOpen(false);
-                }}
-                placeholder="Search prompts, @authors..."
-                className={`w-full pl-9 pr-8 py-1.5 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047] transition-opacity duration-300 ${
+            <div className="relative flex items-center justify-end w-[calc(100vw-2rem)] sm:w-80 h-10">
+              <div
+                className={`absolute inset-0 origin-right transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${
                   searchOpen || searchQuery
-                    ? 'opacity-100 pointer-events-auto'
-                    : 'opacity-0 pointer-events-none'
+                    ? 'scale-x-100 opacity-100 pointer-events-auto'
+                    : 'scale-x-0 opacity-0 pointer-events-none'
                 }`}
-              />
+              >
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e] pointer-events-none" />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    if (view !== 'library') setView('library');
+                  }}
+                  onBlur={() => {
+                    if (!searchQuery) setSearchOpen(false);
+                  }}
+                  placeholder="Search prompts, @authors..."
+                  className="w-full h-full pl-9 pr-8 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-base focus:outline-none focus:ring-2 focus:ring-[#fde047]"
+                />
+              </div>
               <button
                 type="button"
                 onClick={() => {
@@ -315,10 +316,10 @@ export default function App() {
                   }
                 }}
                 aria-label={searchOpen || searchQuery ? 'Close search' : 'Open search'}
-                className={`absolute flex items-center justify-center cursor-pointer transition-all duration-300 ${
+                className={`relative z-10 flex items-center justify-center cursor-pointer transition-transform duration-200 ${
                   searchOpen || searchQuery
-                    ? 'right-2.5 top-1/2 -translate-y-1/2 text-[#57534e] hover:text-[#1e1b18]'
-                    : 'inset-0 sketch-btn bg-white p-2'
+                    ? 'mr-2.5 text-[#57534e] hover:text-[#1e1b18] scale-100'
+                    : 'sketch-btn bg-white w-10 h-10 p-2'
                 }`}
               >
                 {searchOpen || searchQuery ? (
@@ -327,9 +328,6 @@ export default function App() {
                   <Search className="w-4 h-4" />
                 )}
               </button>
-              {(searchOpen || searchQuery) && (
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#57534e] pointer-events-none" />
-              )}
             </div>
           </div>
 
