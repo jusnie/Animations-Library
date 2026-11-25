@@ -605,8 +605,15 @@ export default function App() {
                 : selectedItem.duration}
             </p>
 
-            <div className="h-64 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-white relative">
-              {selectedItem.thumbnailUrl ? (
+            <div className="h-72 sm:h-80 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-white relative">
+              {selectedItem.postUrl && selectedItem.postUrl.includes('x.com/') ? (
+                <iframe
+                  src={`https://twitframe.com/show?url=${encodeURIComponent(selectedItem.postUrl)}`}
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  title={selectedItem.title}
+                />
+              ) : selectedItem.thumbnailUrl ? (
                 <img
                   src={selectedItem.thumbnailUrl}
                   alt={selectedItem.title}
