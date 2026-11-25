@@ -59,15 +59,18 @@ export default function App() {
       fetch('/data/library.json').then((r) => (r.ok ? r.json() : [])),
       fetch('/data/library-extra.json').then((r) => (r.ok ? r.json() : [])),
       fetch('/data/prompt-en.json').then((r) => (r.ok ? r.json() : {})),
+      fetch('/data/prompt-fix.json').then((r) => (r.ok ? r.json() : {})),
       fetch('/data/video-post.json').then((r) => (r.ok ? r.json() : {})),
-    ]).then(([libRes, extraRes, promptRes, videoPostRes]) => {
+    ]).then(([libRes, extraRes, promptRes, promptFixRes, videoPostRes]) => {
       const libItems = libRes.status === 'fulfilled' && Array.isArray(libRes.value) ? libRes.value : [];
       const extraItems = extraRes.status === 'fulfilled' && Array.isArray(extraRes.value) ? extraRes.value : [];
       const promptEn = promptRes.status === 'fulfilled' && promptRes.value ? promptRes.value : {};
+      const promptFix = promptFixRes.status === 'fulfilled' && promptFixRes.value ? promptFixRes.value : {};
       const videoPost = videoPostRes.status === 'fulfilled' && videoPostRes.value ? videoPostRes.value : {};
       const mergedRaw = [...extraItems, ...libItems];
       if (mergedRaw.length === 0) return;
       const mapped = mergedRaw.map((item, idx) => {
+        const fixOverride = typeof promptFix[item.id] === 'string' ? promptFix[item.id] : promptFix[item.id]?.prompt;
         const enOverride = promptEn[item.id]?.en;
         const poster = item.poster?.startsWith('/')
           ? `https://lumpongautomated.com/opus-video-library${item.poster}`
