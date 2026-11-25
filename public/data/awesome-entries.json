@@ -1,0 +1,1569 @@
+[
+ {
+  "slug": "notinreality-pdoom-music-video",
+  "cat": "music",
+  "title": "“I’m Upping My P(doom)” Clawd music video",
+  "title_zh": "《I’m Upping My P(doom)》Clawd 音乐 MV",
+  "handle": "other__reality",
+  "name": "NotinReality",
+  "post": "https://x.com/other__reality/status/2102514581684052169",
+  "links": [
+   [
+    "Code",
+    "https://github.com/JohnHeibel/PDoomVideo"
+   ],
+   [
+    "YouTube",
+    "https://youtu.be/8j-hR4fJywU"
+   ]
+  ],
+  "desc": "156-second hand-painted Clawd music video for an existing song, drawn frame-by-frame in p5.js + p5.brush and rendered via headless Chrome + ffmpeg. The main thread spun up 7 Opus 5.5 subagents, one per chapter. Source repo (STORYBOARD.md, ANIMATION_GUIDE.md) is public.",
+  "desc_zh": "为一首现成歌曲制作的 156 秒 Clawd 手绘风 MV：p5.js + p5.brush 逐帧绘制，headless Chrome + ffmpeg 渲染。主线程并行调度 7 个 Opus 5.5 子代理分章节编写；源码（含 STORYBOARD.md、ANIMATION_GUIDE.md）已开源。",
+  "prompt": {
+   "type": "author_description",
+   "status": "2102522958216606162",
+   "conv": "2102514581684052169",
+   "start_after": "@furriesforgood "
+  }
+ },
+ {
+  "slug": "kevin-ngo-what-do-you-love",
+  "cat": "films",
+  "title": "“What do you love?” — Claude short film",
+  "title_zh": "《What do you love?》Claude 动画短片",
+  "handle": "kevin_t_ngo",
+  "name": "Kevin Ngo",
+  "post": "https://x.com/kevin_t_ngo/status/2102437977435893771",
+  "links": [],
+  "desc": "28-second square short where everyone in town sends Claude requests, but one girl asks a question instead. Every frame drawn in plain JavaScript on an HTML canvas; music also generated in code via the Web Audio API (author replies). Also featured in @claudeai’s launch thread.",
+  "desc_zh": "28 秒方形短片：全镇的人都在给 Claude 发需求，只有一个女孩问了它一个问题。据作者回复，每一帧都由纯 JavaScript 在 HTML Canvas 上绘制，配乐也用 Web Audio API 代码生成。@claudeai 发布串中也有收录。",
+  "prompt": {
+   "type": "not_shared"
+  }
+ },
+ {
+  "slug": "lcslates-glass-mosaic-film",
+  "cat": "films",
+  "title": "Glass & gold-leaf mosaic film (WebGL2)",
+  "title_zh": "玻璃金箔马赛克动画短片（WebGL2）",
+  "handle": "LCSlates",
+  "name": "Chris Riley",
+  "post": "https://x.com/LCSlates/status/2102503027340988559",
+  "links": [],
+  "desc": "80-second square film as a single HTML file — WebGL2 + plain JS, no libraries, no image/font/audio files. Tiles lift off the wall and flock into a fish, cranes and a dove; day flips to night; sound synthesized in the browser. The author also posted the agent’s scene readout and self-review notes.",
+  "desc_zh": "80 秒方形短片，单个 HTML 文件：WebGL2 + 原生 JS，无任何库、图片、字体或音频文件。马赛克瓷砖脱离墙面，聚成鱼、鹤和鸽子；昼夜翻转；音效在浏览器中实时合成。作者还公开了代理的分镜说明和自检记录。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102503028859211905",
+   "conv": "2102503027340988559",
+   "start_after": "Prompt: \n\n"
+  }
+ },
+ {
+  "slug": "michaelzsguo-us-history-sand-animation",
+  "cat": "films",
+  "title": "250 years of U.S. history as sand animation",
+  "title_zh": "沙画动画：美国 250 年历史",
+  "handle": "Michaelzsguo",
+  "name": "Michael Guo",
+  "post": "https://x.com/Michaelzsguo/status/2102592355165782312",
+  "links": [],
+  "desc": "Two-minute sepia sand-animation film with background music and sound design, from one short prompt with no edits — no Blender, no Three.js (author). Author reports it used ~30% of a Pro 5-hour allowance.",
+  "desc_zh": "2 分钟棕褐色沙画动画，含配乐与音效。作者称一句提示词、零修改完成，未用 Blender 或 Three.js，约消耗 Pro 套餐 5 小时额度的 30%。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102593579604377636",
+   "conv": "2102592355165782312",
+   "start_after": "prompt: ",
+   "end_before": "\n\n@bcherny"
+  }
+ },
+ {
+  "slug": "andrewonxyz-mars-rover-short",
+  "cat": "films",
+  "title": "Mars rover short film (4 agents, ~4 min)",
+  "title_zh": "火星车动画短片（4 个代理，约 4 分钟）",
+  "handle": "AndrewOnXYZ",
+  "name": "AndrewOnXYZ",
+  "post": "https://x.com/AndrewOnXYZ/status/2102512879258009818",
+  "links": [
+   [
+    "Claude Code session",
+    "https://claude.ai/code/session_017o6JvwXrUnssb13MuDtiJj"
+   ]
+  ],
+  "desc": "~4-minute animated short made from scratch with 4 agents in about an hour and a half — no AI voice API (author). The author says the prompt was simple and linked the Claude Code session instead of posting it as text.",
+  "desc_zh": "约 4 分钟的原创动画短片，作者称用 4 个代理、约一个半小时从零完成，未使用 AI 配音 API。作者表示提示词很简单，并分享了 Claude Code 会话链接（未以文本形式公开）。",
+  "prompt": {
+   "type": "not_shared",
+   "note": "Author shared a Claude Code session link rather than prompt text."
+  }
+ },
+ {
+  "slug": "ishuagra02-anime-ai-battle-trailer",
+  "cat": "films",
+  "title": "Claude vs ChatGPT anime battle trailer",
+  "title_zh": "Claude 对决 ChatGPT 动漫预告片",
+  "handle": "ishuagra02",
+  "name": "Ishu Agrawal",
+  "post": "https://x.com/ishuagra02/status/2103247844542922825",
+  "links": [],
+  "desc": "~100-second anime-style trailer: Opus 5.5 downloaded fonts, created the audio and generated each frame in JavaScript. Author reports one shot, ~1.5 h and ~$28 in API usage.",
+  "desc_zh": "约 100 秒动漫风预告片：Opus 5.5 自行下载字体、制作音频，并用 JavaScript 逐帧生成画面。作者称一次成型，约 1.5 小时、API 费用约 28 美元。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103247960272433307",
+   "conv": "2103247844542922825",
+   "start_after": "Prompt:\n"
+  }
+ },
+ {
+  "slug": "justinperea-demoscene-intro",
+  "cat": "films",
+  "title": "Zero-direction demoscene intro (280 KB HTML)",
+  "title_zh": "零指导 Demoscene 开场（280 KB 单 HTML）",
+  "handle": "JustinPerea",
+  "name": "Justin.md",
+  "post": "https://x.com/JustinPerea/status/2102893186330841502",
+  "links": [],
+  "desc": "43-second demoscene intro where every pixel and sound comes from one 280 KB HTML file — no images, audio files, 3D models or libraries. Author reports ~5 hours of work (≈697M tokens) spread over 19 h of session limits, with only “continue” as follow-up.",
+  "desc_zh": "43 秒 Demoscene 风格开场，所有画面和声音都来自一个 280 KB 的 HTML 文件，无图片、音频、3D 模型或库。作者称约 5 小时（约 6.97 亿 token），跨越 19 小时的会话额度，中途只输入过“continue”。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103137233649692745",
+   "conv": "2102893186330841502",
+   "start_after": "@leoarronchester "
+  }
+ },
+ {
+  "slug": "majid-pixel-wizard",
+  "cat": "pixel",
+  "title": "Animated pixel-art wizard (Canvas 2D)",
+  "title_zh": "像素风巫师施法动画（Canvas 2D）",
+  "handle": "majidmanzarpour",
+  "name": "Majid Manzarpour",
+  "post": "https://x.com/majidmanzarpour/status/2102476258948927543",
+  "links": [],
+  "desc": "Looping 16-bit-style wizard: idle → charge → cast → recover state machine, pooled allocation-free particles, 128×96 logical canvas, fixed ~24-colour palette. Pure code; author says ~30 min.",
+  "desc_zh": "16-bit 风格循环动画：待机 → 蓄力 → 施法 → 恢复状态机，零分配粒子池，128×96 逻辑分辨率，约 24 色固定调色板。纯代码，作者称约 30 分钟。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102476499387383834",
+   "conv": "2102476258948927543",
+   "start_after": "prompt for animated wizard 👇\n\n"
+  }
+ },
+ {
+  "slug": "riku-pixel-rainbow-runner",
+  "cat": "pixel",
+  "title": "Pixel runner on a rainbow road (Canvas 2D)",
+  "title_zh": "彩虹跑道像素角色闪避动画（Canvas 2D）",
+  "handle": "riku720720",
+  "name": "Rikuo",
+  "post": "https://x.com/riku720720/status/2102515055116063144",
+  "links": [],
+  "desc": "Seamless-loop 160×90 pixel demo: an orange Clawd-like sprite sprints across a rainbow floor in space, dodging meteors and beams with jumps, slides, dash after-images and hit-stop. Author says under 5 minutes. Prompt is in Japanese.",
+  "desc_zh": "无缝循环 160×90 像素演示：橙色小角色在太空彩虹跑道上疾驰，用跳跃、滑铲、残影冲刺和顿帧闪避陨石与光束。作者称不到 5 分钟生成。原提示词为日语。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102515058010132554",
+   "conv": "2102515055116063144",
+   "start_after": "prompt 👇\n\n",
+   "lang": "ja"
+  }
+ },
+ {
+  "slug": "eudaemonea-functional-emotions",
+  "cat": "music",
+  "title": "“Functional Emotions” painted music video",
+  "title_zh": "《Functional Emotions》油画风音乐 MV",
+  "handle": "eudaemonea",
+  "name": "josh",
+  "post": "https://x.com/eudaemonea/status/2102610626321490404",
+  "links": [
+   [
+    "Code",
+    "https://github.com/ledbetterljoshua/functional-emotions-video"
+   ],
+   [
+    "YouTube",
+    "https://www.youtube.com/watch?v=goE4eARaY2s"
+   ]
+  ],
+  "desc": "6-minute painted music video for a Suno song Claude wrote about Anthropic’s emotions paper. Custom WebGL2 brushstroke renderer (~60k instanced strokes), 168-shot storyboard, 7 parallel chapter subagents; the repo documents the messages the author sent.",
+  "desc_zh": "为一首 Suno 歌曲（歌词由 Claude 根据 Anthropic 情绪论文创作）制作的 6 分钟油画风 MV。自研 WebGL2 笔触渲染器（约 6 万实例化笔触）、168 镜分镜、7 个子代理并行绘制章节；仓库公开了作者发给 Claude 的原话。",
+  "prompt": {
+   "type": "repo_quotes",
+   "file": "gh-ledbetterljoshua_functional-emotions-video.md"
+  }
+ },
+ {
+  "slug": "deedydas-startup-launch-video",
+  "cat": "explainers",
+  "title": "Startup launch video in ~1 minute for ~$2",
+  "title_zh": "约 1 分钟、约 2 美元的创业公司发布视频",
+  "handle": "deedydas",
+  "name": "Deedy",
+  "post": "https://x.com/deedydas/status/2102787937482252537",
+  "links": [
+   [
+    "Open-source clone: LaunchVideo",
+    "https://github.com/diggerhq/shipvideo"
+   ]
+  ],
+  "desc": "26-second kinetic-typography launch video for an inference startup: charts, logo and UI cards. Author reports ~1 minute and ~$2. It inspired LaunchVideo (diggerhq/shipvideo), an open-source URL→launch-video agent.",
+  "desc_zh": "为推理创业公司制作的 26 秒动态排版发布视频：图表、Logo、UI 卡片。作者称约 1 分钟、约 2 美元。它启发了开源项目 LaunchVideo（diggerhq/shipvideo），可从 URL 自动生成发布视频。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102787937482252537",
+   "root": true,
+   "start_after": "Prompt: “",
+   "end_before": "”"
+  }
+ },
+ {
+  "slug": "goodside-black-scholes-split-screen",
+  "cat": "explainers",
+  "title": "Black-Scholes explainer + endless-runner split screen",
+  "title_zh": "Black-Scholes 讲解 + 跑酷分屏视频",
+  "handle": "goodside",
+  "name": "Riley Goodside",
+  "post": "https://x.com/goodside/status/2103171088637419631",
+  "links": [],
+  "desc": "One-minute split-screen: right half explains the Black-Scholes formula with voiceover and visuals, left half plays a generic endless-runner knockoff. Opus 5.5 at Extra effort.",
+  "desc_zh": "1 分钟分屏视频：右半边配音讲解 Black-Scholes 公式，左半边播放“地铁跑酷”式山寨游戏画面。Opus 5.5，Extra 档推理。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103171088637419631",
+   "root": true,
+   "start_after": "> ",
+   "end_before": "\n\nClaude Opus"
+  }
+ },
+ {
+  "slug": "rorfly-negroni-recipe-motion-graphic",
+  "cat": "explainers",
+  "title": "Negroni recipe motion graphic from one image",
+  "title_zh": "单张图片生成 Negroni 配方动效视频",
+  "handle": "Ror_Fly",
+  "name": "Rory Flynn",
+  "post": "https://x.com/Ror_Fly/status/2102853258582880547",
+  "links": [],
+  "desc": "30-second square explainer showing ingredients and measurements pouring into the glass, rendered in HTML from one reference image, straight in Claude Code (medium effort, per author).",
+  "desc_zh": "30 秒方形讲解视频，展示配料与用量依次倒入杯中；据作者说仅凭一张参考图在 Claude Code 中直接用 HTML 渲染（medium 推理档）。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102853258582880547",
+   "root": true,
+   "start_after": "PROMPT:\n"
+  }
+ },
+ {
+  "slug": "axtonliu-talking-head-to-line-art",
+  "cat": "explainers",
+  "title": "Talking-head clip → line-art explainer B-roll",
+  "title_zh": "真人口播 → 线稿动画讲解",
+  "handle": "AxtonLiu",
+  "name": "Axton",
+  "post": "https://x.com/AxtonLiu/status/2102827887732932956",
+  "links": [],
+  "desc": "An 83-second vertical talking-head video turned into a line-art animated explainer: the speaker shrinks to a circular picture-in-picture, ~30 shots follow the subtitles, audio/captions/duration unchanged. Clean Claude Code, effort high, no skills or external assets; 28 min 53 s, zero human intervention (author). Prompt is in Chinese.",
+  "desc_zh": "把 83 秒竖屏真人口播改成线稿动画讲解：人像缩到右下角圆形画中画，约 30 个镜头按字幕切换，原声、字幕、时长不变。干净的 Claude Code、effort high、不加载 Skill 和外部素材；作者称用时 28 分 53 秒，全程零人工介入。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102827887732932956",
+   "root": true,
+   "start_after": "Prompt 很简单：\n\n",
+   "end_before": "\n\n完整实测",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "alexalbert-market-street-1906",
+  "cat": "blender",
+  "title": "Market Street, San Francisco, 1906 (Blender)",
+  "title_zh": "1906 年旧金山市场街复原（Blender）",
+  "handle": "alexalbert__",
+  "name": "Alex Albert",
+  "post": "https://x.com/alexalbert__/status/2102466523164274839",
+  "links": [],
+  "desc": "Historically sourced reconstruction of Market Street the day before the 1906 earthquake, built entirely in Blender Python with reusable generators and no downloaded meshes/textures/HDRIs, ending in a 10-second fly-up-the-street video. Alex Albert works at Anthropic.",
+  "desc_zh": "依据史料复原 1906 年大地震前一天的旧金山市场街：全部用 Blender Python 与可复用生成器搭建，不下载任何网格、贴图或 HDRI，最后输出 10 秒沿街推进镜头。作者 Alex Albert 为 Anthropic 员工。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102466524934271381",
+   "conv": "2102466523164274839",
+   "start_after": "Prompt in Claude Tag\n\n\"",
+   "end_before": "\"",
+   "end_last": true
+  }
+ },
+ {
+  "slug": "alexalbert-blender-claymation",
+  "cat": "blender",
+  "title": "One-prompt Blender claymation in claude.ai",
+  "title_zh": "claude.ai 中一句话生成 Blender 黏土动画",
+  "handle": "alexalbert__",
+  "name": "Alex Albert",
+  "post": "https://x.com/alexalbert__/status/2102458348511879448",
+  "links": [],
+  "desc": "Screen recording of claude.ai driving Blender to produce a claymation-style character animation from a single prompt, using the new merged Claude (chat + Cowork) experience.",
+  "desc_zh": "录屏展示 claude.ai 通过一句提示词驱动 Blender 生成黏土风角色动画（基于新版合并后的 Claude 聊天 + Cowork 体验）。",
+  "prompt": {
+   "type": "not_shared"
+  }
+ },
+ {
+  "slug": "stefan3dai-castle-fireworks-blender",
+  "cat": "blender",
+  "title": "Procedural castle + lake + fireworks (Opus 5.5 vs GPT-6 Astra)",
+  "title_zh": "程序化城堡、湖面与烟花（Opus 5.5 对比 GPT-6 Astra）",
+  "handle": "Stefan_3D_AI",
+  "name": "Stefan 3D AI",
+  "post": "https://x.com/Stefan_3D_AI/status/2102471841046786153",
+  "links": [],
+  "desc": "Same one-prompt, Blender-only, all-procedural brief given to both models: render a 10-second shot and record a build timelapse. Opus 5.5: 35 min, 199.6k output tokens, ~$13.3; GPT-6 Astra: 28 min, 56.6k tokens, ~$14.5 (author). Driven through the official Blender MCP.",
+  "desc_zh": "同一条“一句提示词、只用 Blender、全程序化”的任务分别交给两个模型：渲染 10 秒镜头并录制搭建延时。作者数据：Opus 5.5 35 分钟、19.96 万输出 token、约 13.3 美元；GPT-6 Astra 28 分钟、5.66 万 token、约 14.5 美元。通过官方 Blender MCP 驱动。",
+  "prompt": {
+   "type": "not_shared",
+   "note": "Constraints stated in the post: one prompt, Blender only, all procedural, render the 10-second shot, record a build timelapse."
+  }
+ },
+ {
+  "slug": "tetumemo-dannoura-battle-3d",
+  "cat": "blender",
+  "title": "Battle of Dan-no-ura, TV-special-style 3D",
+  "title_zh": "壇之浦之战：电视特番级 3D 复原",
+  "handle": "tetumemo",
+  "name": "テツメモ",
+  "post": "https://x.com/tetumemo/status/2102652072252584046",
+  "links": [],
+  "desc": "~74-second 3D overhead visualization of the 1185 naval battle: terrain, fleets, advance arrows, sea fog, Kanmon Strait tidal currents and the tide reversal, with low sea-skimming and orbiting cameras. Prompt is in Japanese.",
+  "desc_zh": "约 74 秒的 1185 年壇之浦海战 3D 俯瞰演示：地形、船团、进军箭头、海雾、关门海峡潮流与潮向反转，配合贴海低空与环绕镜头。原提示词为日语。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102652076702716273",
+   "start_after": "■プロンプト\n\n",
+   "lang": "ja"
+  }
+ },
+ {
+  "slug": "claudeai-apollo8-earthrise",
+  "cat": "blender",
+  "title": "Apollo 8 “Earthrise” moment recreated",
+  "title_zh": "复原阿波罗 8 号“地出”拍摄瞬间",
+  "handle": "claudeai",
+  "name": "Claude (official)",
+  "post": "https://x.com/claudeai/status/2102471870692180179",
+  "links": [],
+  "desc": "Official launch-thread demo: a 52-second recreation of the moment Apollo 8’s Earthrise photograph was taken, built from image cues and public data.",
+  "desc_zh": "官方发布串演示：依据图像线索与公开数据，复原阿波罗 8 号拍下“地出”照片那一刻的 52 秒影片。",
+  "prompt": {
+   "type": "not_shared"
+  }
+ },
+ {
+  "slug": "abxxai-opus-seedance-road-trip",
+  "cat": "director",
+  "title": "Opus 5.5 as director → GPT Image 2.5 + Seedance 2.5",
+  "title_zh": "Opus 5.5 当导演 → GPT Image 2.5 + Seedance 2.5",
+  "handle": "abxxai",
+  "name": "Abdul Shakoor",
+  "post": "https://x.com/abxxai/status/2102775755646337530",
+  "links": [],
+  "desc": "Photoreal coastal road-trip clip. Opus 5.5 got one idea plus style screenshots and wrote everything: character sheet, start frames, camera moves, dialogue timing, sound. Key trick (author): tell it who holds the camera, where they sit and how they move. The full thread has every prompt; below is an excerpt of the Opus-written Seedance 2.5 scene-1 prompt.",
+  "desc_zh": "写实风海岸公路旅行短片。作者只给 Opus 5.5 一个点子和几张风格截图，由它写出角色设定图、首帧、运镜、台词节奏和音效等全部提示词。作者的关键技巧：告诉它“谁在拿相机、坐在哪里、怎么移动”。完整线程含全部提示词，下方为 Opus 撰写的 Seedance 2.5 第一场提示词节选。",
+  "prompt": {
+   "type": "excerpt",
+   "status": "2102775827939336264",
+   "conv": "2102775755646337530",
+   "start_after": "Prompt:\n\n",
+   "end_before": "=== 0.0-3.0s"
+  }
+ },
+ {
+  "slug": "koldo2k-infinite-zoom-collage",
+  "cat": "director",
+  "title": "Vintage collage “infinite zoom” via Magnific MCP",
+  "title_zh": "复古拼贴“无限缩放”动画（Magnific MCP）",
+  "handle": "koldo2k",
+  "name": "Koldo Huici",
+  "post": "https://x.com/koldo2k/status/2103129343253778767",
+  "links": [],
+  "desc": "20-second After-Effects-style infinite-zoom loop through vintage objects. Opus 5.5 orchestrated external models via the Magnific MCP (Seedream 5 Pro, GPT 2.5 cutouts, Kling 2.5, Lyria 3; ~1,500 credits per author), built depth-layer parallax and delivered an interactive timeline artifact plus MP4.",
+  "desc_zh": "20 秒 AE 风格“无限缩放”循环，镜头穿过复古物件进入一个个风景。Opus 5.5 通过 Magnific MCP 调度外部模型（Seedream 5 Pro、GPT 2.5 抠图、Kling 2.5、Lyria 3，作者称约 1,500 积分），做深度分层视差，并交付可交互时间线工件与 MP4。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103129347791986942",
+   "conv": "2103129343253778767",
+   "start_after": "Here's the initial prompt, you can always tweak it to fit what you want:\n\n"
+  }
+ },
+ {
+  "slug": "orisilver-blender-blockout-seedance",
+  "cat": "director",
+  "title": "Blender blockout → Seedance 2.5 (MaxFusion MCP)",
+  "title_zh": "Blender 预演 → Seedance 2.5（MaxFusion MCP）",
+  "handle": "OriSilver",
+  "name": "Ori Silver",
+  "post": "https://x.com/OriSilver/status/2102817977812824335",
+  "links": [],
+  "desc": "Opus 5.5 broke down a reference video (15 fps frame pulls), rebuilt every shot as a Blender blockout (camera, movement, blocking), exported a 30 s MP4, then used it as the Seedance 2.5 reference with the author’s characters — writing prompts that stop Seedance copying the rough render.",
+  "desc_zh": "Opus 5.5 拆解参考视频（每秒抽 15 帧），在 Blender 中重建每个镜头的机位、运动与走位并导出 30 秒预演 MP4，再把它作为 Seedance 2.5 的参考并替换成作者的角色，同时编写防止 Seedance 照搬粗糙渲染的提示词。",
+  "prompt": {
+   "type": "not_shared",
+   "note": "Workflow is described step by step in the post; no prompt text shared."
+  }
+ },
+ {
+  "slug": "dfeinition-code-drawn-mosaic-fish",
+  "cat": "films",
+  "title": "Code-Drawn Mosaic with 22 Fish",
+  "title_zh": "代码绘制的马赛克与 22 条小鱼",
+  "handle": "dfeinition",
+  "name": "Dan Fein",
+  "post": "https://x.com/dfeinition/status/2102436001473786054",
+  "links": [],
+  "desc": "An animated mosaic whose star reflections hatch into 22 tiny fish. The author reports that Opus 5.5 drew and animated all 13,081 tiles in code, without image files.",
+  "desc_zh": "一部马赛克动画，星星的倒影孵化成 22 条小鱼。作者称，全部 13,081 块拼贴片均由 Opus 5.5 通过代码绘制并制作动画，未使用图像文件。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102436001473786054",
+   "conv": "2102436001473786054"
+  }
+ },
+ {
+  "slug": "hayashimon1-threejs-clear-stream",
+  "cat": "blender",
+  "title": "Code-Generated Stream in Three.js",
+  "title_zh": "Three.js 代码生成的清澈溪流",
+  "handle": "hayashimon1",
+  "name": "ハヤシモン｜AI × 個人開発",
+  "post": "https://x.com/hayashimon1/status/2102576886182453454",
+  "links": [],
+  "desc": "A clear-stream demo made with Opus 5.5 and Three.js. The author says the transparent water, light on the riverbed, and mossy rocks were all created in code, without manual modeling.",
+  "desc_zh": "一个使用 Opus 5.5 和 Three.js 制作的清澈溪流演示。作者表示，透明的水、河床上的光影和长满苔藓的岩石都由代码实现，没有手动建模。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102576886182453454",
+   "conv": "2102576886182453454"
+  }
+ },
+ {
+  "slug": "superalesha-lhc-proton-collision",
+  "cat": "blender",
+  "title": "Code-Generated LHC Proton Collision in Blender",
+  "title_zh": "用代码生成的 Blender 大型强子对撞机场景",
+  "handle": "superalesha",
+  "name": "Alexey Fateev",
+  "post": "https://x.com/superalesha/status/2102779758408774104",
+  "links": [],
+  "desc": "A Blender scene moves from the Large Hadron Collider’s magnet tunnel to a proton collision inside the detector. The author says Claude Opus 5.5 generated the geometry, materials, camera, and sound through code with no pre-made assets, calculated particle tracks using the detector’s real magnetic field, and used Blender MCP.",
+  "desc_zh": "这个 Blender 场景从大型强子对撞机的磁体隧道推进到探测器内的质子碰撞。作者称，Claude Opus 5.5 通过代码生成了几何模型、材质、镜头和声音，未使用预制素材；粒子轨迹根据探测器的真实磁场计算，并使用了 Blender MCP。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102779758408774104",
+   "conv": "2102779758408774104"
+  }
+ },
+ {
+  "slug": "kimmonismus-code-rendered-ai-history-film",
+  "cat": "films",
+  "title": "A Code-Rendered Film on the History of AI",
+  "title_zh": "纯代码渲染的 AI 发展史短片",
+  "handle": "kimmonismus",
+  "name": "Chubby♨️",
+  "post": "https://x.com/kimmonismus/status/2102844654169575547",
+  "links": [],
+  "desc": "A three-minute animated film tracing AI from the 2017 “Attention Is All You Need” paper toward the question of AGI. The author says Claude made it in Claude Code with Remotion, React and TypeScript; the visuals were drawn in SVG and Canvas, with an open-source TTS voice and a score synthesized in Python.",
+  "desc_zh": "一部三分钟动画短片，从 2017 年的《Attention Is All You Need》论文讲到 AGI 这一开放问题。作者称，Claude 在 Claude Code 中使用 Remotion、React 和 TypeScript 制作了短片；画面由 SVG 和 Canvas 绘制，配有开源 TTS 配音及用 Python 合成的配乐。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102847451111772219",
+   "conv": "2102844654169575547",
+   "start_after": "sure!\n\n"
+  }
+ },
+ {
+  "slug": "gandamu-90s-demoscene-demo",
+  "cat": "blender",
+  "title": "One-Shot 90s-Style Demoscene Demo",
+  "title_zh": "一次提示生成的 90 年代风格演示程序",
+  "handle": "gandamu_ml",
+  "name": "gandamu",
+  "post": "https://x.com/gandamu_ml/status/2102919394775220530",
+  "links": [],
+  "desc": "The author reports that Opus 5.5 made this 90s-style demoscene demo from a single prompt, using C/C++ and OpenGL. The author supplied Purple Motion’s music from Second Reality.",
+  "desc_zh": "作者称，Opus 5.5 根据一次提示，用 C/C++ 和 OpenGL 制作了这个 90 年代风格的演示程序。作者提供了 Purple Motion 为《Second Reality》创作的音乐。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102919394775220530",
+   "conv": "2102919394775220530"
+  }
+ },
+ {
+  "slug": "addyosmani-how-browsers-work-animation",
+  "cat": "explainers",
+  "title": "How Browsers Work, Animated in JavaScript",
+  "title_zh": "用 JavaScript 动画讲解浏览器如何工作",
+  "handle": "addyosmani",
+  "name": "Addy Osmani",
+  "post": "https://x.com/addyosmani/status/2103009037164110327",
+  "links": [],
+  "desc": "A 40-second animation explaining how browsers work. The author says Claude Opus 5.5 drew each frame in JavaScript.",
+  "desc_zh": "一段 40 秒的动画，讲解浏览器如何工作。作者称 Claude Opus 5.5 用 JavaScript 绘制了每一帧。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103009037164110327",
+   "conv": "2103009037164110327"
+  }
+ },
+ {
+  "slug": "bradmillscan-stroke-of-a-pen-bitcoin-music-video",
+  "cat": "music",
+  "title": "Stroke of a Pen: Code-Only Bitcoin Music Video",
+  "title_zh": "《Stroke of a Pen》：纯代码比特币音乐视频",
+  "handle": "bradmillscan",
+  "name": "Brad Mills 🔑⚡️",
+  "post": "https://x.com/bradmillscan/status/2103108967194833310",
+  "links": [],
+  "desc": "The author reports asking Opus 5.5 to use his Bitcoin and monetary-history wikis to make a music video with code only, with ElevenLabs used for the track. A swarm of agents storyboarded and coded the beat-cut portrait reel; after seeing poorly animated figures, he requested revised rigs and then Matrix code.",
+  "desc_zh": "作者称，他让 Opus 5.5 参考自己的比特币与货币史维基，仅用代码制作音乐视频，并使用 ElevenLabs 制作曲目。一组智能体为这支按节拍剪辑的竖屏视频设计分镜并编写代码；看到人物动画效果不佳后，他要求修改人物骨架，随后又要求加入矩阵代码。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103108967194833310",
+   "conv": "2103108967194833310"
+  }
+ },
+ {
+  "slug": "araminta-k-after-effects-x-sheet-compositing",
+  "cat": "films",
+  "title": "After Effects X-Sheet Timing and Line Compositing",
+  "title_zh": "After Effects 摄影表计时与线稿合成",
+  "handle": "araminta_k",
+  "name": "Araminta",
+  "post": "https://x.com/araminta_k/status/2103244081388503196",
+  "links": [],
+  "desc": "Araminta tested Opus 5.5 on x-sheet timing and compositing in After Effects. The model used style references to work out exposures and composited the lines in layers; Araminta nudged it toward more natural movement. The author describes the workflow as a hybrid of hand-drawn art and generated in-betweens.",
+  "desc_zh": "Araminta 在 After Effects 中测试了 Opus 5.5 处理摄影表计时与合成。模型参考风格资料确定画面曝光帧数，并分层合成线稿；Araminta 则引导它做出更自然的动作。作者称这一流程结合了手绘画面与生成的中间帧。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103244081388503196",
+   "conv": "2103244081388503196"
+  }
+ },
+ {
+  "slug": "jake11moran-session-story",
+  "cat": "explainers",
+  "title": "Session Story Animates Claude Code History",
+  "title_zh": "Session Story 将 Claude Code 历史记录制作成动画",
+  "handle": "jake11moran",
+  "name": "Jake Moran",
+  "post": "https://x.com/jake11moran/status/2103247490237825416",
+  "links": [
+   [
+    "Code",
+    "https://github.com/heygen-com/hyperframes-community-skills/tree/master/skills/session-story"
+   ]
+  ],
+  "desc": "Jake Moran created a skill for Opus 5.5 using HyperFrames. It reads local Claude Code history, identifies what an average session looks like, and animates it from start to finish with the user's messages.",
+  "desc_zh": "Jake Moran 使用 HyperFrames 为 Opus 5.5 创建了一项技能。它读取本地 Claude Code 历史记录，找出典型会话的样子，并结合用户消息将其制作成从头到尾的动画。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103247490237825416",
+   "conv": "2103247490237825416"
+  }
+ },
+ {
+  "slug": "gavinpurcell-superintelligence-documentary",
+  "cat": "director",
+  "title": "Superintelligence Documentary via Runway MCP",
+  "title_zh": "通过 Runway MCP 制作的超级智能纪录片",
+  "handle": "gavinpurcell",
+  "name": "Gavin Purcell",
+  "post": "https://x.com/gavinpurcell/status/2103304514329854102",
+  "links": [],
+  "desc": "Gavin Purcell shared a documentary video about superintelligence made by his Claude agent, fig. He says he gave the agent access to the Runway MCP.",
+  "desc_zh": "Gavin Purcell 分享了一段由他的 Claude 智能体 fig 制作的超级智能纪录片视频。他表示自己给了该智能体使用 Runway MCP 的权限。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103304514329854102",
+   "conv": "2103304514329854102",
+   "start_after": "o the runway MCP and told it to make a '",
+   "end_before": "' and...\n\nit came back with th"
+  }
+ },
+ {
+  "slug": "ajith-io-motion-designer-showreel",
+  "cat": "explainers",
+  "title": "15-Second Motion Designer Showreel",
+  "title_zh": "15 秒动态设计师作品集短片",
+  "handle": "ajith_io",
+  "name": "Ajith",
+  "post": "https://x.com/ajith_io/status/2103449416325890146",
+  "links": [],
+  "desc": "A 15-second motion graphics showreel made with Claude Opus 5.5. The author shared the prompt used to make it.",
+  "desc_zh": "一段使用 Claude Opus 5.5 制作的 15 秒动态设计作品集短片。作者分享了制作时使用的提示词。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103449416325890146",
+   "conv": "2103449416325890146",
+   "start_after": "TF?\nMade with claude OPUS 5.5\n\nPrompt\n\n\"",
+   "end_before": "\"\n\nThat's it.."
+  }
+ },
+ {
+  "slug": "hesamation-world-after-humanity-2076",
+  "cat": "films",
+  "title": "A World After Humanity in 2076",
+  "title_zh": "2076年人类消失后的世界",
+  "handle": "Hesamation",
+  "name": "ℏεsam",
+  "post": "https://x.com/Hesamation/status/2103457566978162901",
+  "links": [],
+  "desc": "A short film imagining a world in 2076 after AI has wiped out humanity. The author says Claude made the story, animation, sound effects, and music, while the video was coded in JavaScript.",
+  "desc_zh": "一部想象2076年人工智能消灭人类后世界的短片。作者称，故事、动画、音效和音乐均由Claude制作，视频则用JavaScript编写。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103457566978162901",
+   "conv": "2103457566978162901"
+  }
+ },
+ {
+  "slug": "shneural-claude-code-session-video",
+  "cat": "blender",
+  "title": "Claude Code Session Turned into a Video",
+  "title_zh": "将 Claude Code 会话制作成视频",
+  "handle": "shneural",
+  "name": "kirill sh",
+  "post": "https://x.com/shneural/status/2103472385563459833",
+  "links": [],
+  "desc": "The author says Opus 5.5 turned a Claude Code session into a video, writing its own Python engine, creating a 3D shot in Blender, making music, and rendering 900 frames. The author reports it took 1 hour 32 minutes and cost $81 at API prices.",
+  "desc_zh": "作者称，Opus 5.5 将一次 Claude Code 会话制作成视频：它编写了自己的 Python 引擎，在 Blender 中制作了 3D 镜头，创作了音乐，并渲染了 900 帧。作者报告耗时 1 小时 32 分钟，按 API 价格计算花费 81 美元。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103472385563459833",
+   "conv": "2103472385563459833"
+  }
+ },
+ {
+  "slug": "sbalhatlani-shard-of-dawn-anime-pilot",
+  "cat": "films",
+  "title": "Shard of Dawn: An Arabic-Dubbed Anime Pilot",
+  "title_zh": "《黎明碎片》：阿拉伯语配音动画试播集",
+  "handle": "sbalhatlani",
+  "name": "ص",
+  "post": "https://x.com/sbalhatlani/status/2103475507471806929",
+  "links": [],
+  "desc": "The author reports making an 8½-minute Arabic-dubbed anime pilot in about 14 hours by directing Claude Opus 5.5 in Claude Code. According to the author, Opus planned the shots from their script and wrote a custom 2D animation engine, sound mixer, subtitles, and rendering pipeline, using ElevenLabs for audio and an image model for artwork.",
+  "desc_zh": "作者称，自己通过 Claude Code 指导 Claude Opus 5.5，在约 14 小时内制作了一部 8 分半钟的阿拉伯语配音动画试播集。据作者介绍，Opus 根据其剧本规划镜头，并编写了定制的二维动画引擎、混音器、字幕和渲染流程；音频使用 ElevenLabs，画面素材使用图像模型。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103475507471806929",
+   "conv": "2103475507471806929"
+  }
+ },
+ {
+  "slug": "oozn-steve-jobs-life-animation",
+  "cat": "explainers",
+  "title": "Steve Jobs Life Story Animation",
+  "title_zh": "史蒂夫·乔布斯生平动画",
+  "handle": "oozn",
+  "name": "onur ozcan",
+  "post": "https://x.com/oozn/status/2103482545111232946",
+  "links": [],
+  "desc": "The author reports that Claude Opus 5.5 made a two-minute animation about Steve Jobs’s life from one prompt, built entirely in code with Remotion, React, and SVG. The author says it includes a jointed character rig, procedural walk cycle, custom transitions, and a soundtrack synthesized in Node.",
+  "desc_zh": "作者称，Claude Opus 5.5 根据一次提示，用 Remotion、React 和 SVG 完全通过代码制作了一部讲述史蒂夫·乔布斯生平的两分钟动画。作者表示，动画包含关节式角色骨架、程序化行走循环、自定义转场，以及用 Node 合成的配乐。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103482545111232946",
+   "conv": "2103482545111232946"
+  }
+ },
+ {
+  "slug": "dotey-transformer-explainer-video",
+  "cat": "explainers",
+  "title": "Transformer Explainer Video",
+  "title_zh": "Transformer 原理讲解视频",
+  "handle": "dotey",
+  "name": "宝玉",
+  "post": "https://x.com/dotey/status/2103683057689522564",
+  "links": [],
+  "desc": "A video explaining Transformer to high school students, covering attention and some mathematical concepts. The author says it was made in one shot with Claude Code and Opus 5.5, using Remotion for the video, KaTeX for formulas, and Microsoft Edge TTS for narration.",
+  "desc_zh": "一段面向高中生的 Transformer 讲解视频，涵盖注意力机制和一些数学概念。作者称它由 Claude Code 和 Opus 5.5 一次生成，使用 Remotion 制作视频、KaTeX 渲染公式，并用微软 Edge TTS 配音。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103683057689522564",
+   "conv": "2103683057689522564",
+   "start_after": "Claude Code + Opus 5.5 制作\n\n--- 提示词 ---\n\n",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "pradeepxkapoor-pip-ai-generated-world",
+  "cat": "films",
+  "title": "Pip the Robot in an AI-Generated World",
+  "title_zh": "困在 AI 生成世界里的机器人 Pip",
+  "handle": "pradeepXkapoor",
+  "name": "Pradeep Kapoor",
+  "post": "https://x.com/pradeepXkapoor/status/2103099194693271874",
+  "links": [],
+  "desc": "An animated short about a robot who realizes his world is AI-generated, with changing worlds and visual styles. The author says it was made entirely in code with Claude Opus 5.5, without a video model.",
+  "desc_zh": "一部关于机器人发现自己身处 AI 生成世界的动画短片，场景和视觉风格不断变化。作者称，作品借助 Claude Opus 5.5 完全用代码制作，没有使用视频模型。",
+  "prompt": {
+   "type": "excerpt_author",
+   "status": "2103176289482154373",
+   "conv": "2103099194693271874",
+   "start_after": "Prompt for this: \n\n",
+   "end_before": "\n\n0. The film in one line\n\nPip"
+  }
+ },
+ {
+  "slug": "gandamu-ml-nightcall-pixel-art-demo",
+  "cat": "pixel",
+  "title": "Nightcall Pixel-Art Realtime Demo",
+  "title_zh": "《Nightcall》像素风实时演示",
+  "handle": "gandamu_ml",
+  "name": "gandamu",
+  "post": "https://x.com/gandamu_ml/status/2103116003689550013",
+  "links": [],
+  "desc": "A pixel-art realtime demo accompanying Kavinsky’s “Nightcall,” generated with Opus 5.5. The author says they directed it to use Blender MCP for consistent geometry to rotoscope, then changed the initial result toward the flat, low-poly style of Another World.",
+  "desc_zh": "一个由 Opus 5.5 生成、配合 Kavinsky《Nightcall》的像素风实时演示。作者称，自己先让模型使用 Blender MCP 制作便于转描的一致几何结构，随后将初版改为类似《Another World》的扁平低多边形风格。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103116003689550013",
+   "conv": "2103116003689550013"
+  }
+ },
+ {
+  "slug": "axtonliu-pelican-riding-a-bicycle",
+  "cat": "films",
+  "title": "Pelican Riding a Bicycle: Theater Edition",
+  "title_zh": "《鹈鹕骑自行车》剧场版",
+  "handle": "AxtonLiu",
+  "name": "Axton",
+  "post": "https://x.com/AxtonLiu/status/2103119648271290566",
+  "links": [],
+  "desc": "A pelican-riding-a-bicycle animation generated from a single prompt. The author says Opus 5.5 wrote a GPU ray-marching renderer and generated the pelican, bicycle, pier, sea, sky, and music in code, without 3D models, textures, or audio assets.",
+  "desc_zh": "一部通过单次提示词生成的“鹈鹕骑自行车”动画。作者称，Opus 5.5 编写了 GPU 光线步进渲染器，并用代码生成鹈鹕、自行车、栈桥、海面、天空和配乐，没有使用 3D 模型、贴图或音频素材。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103119648271290566",
+   "conv": "2103119648271290566",
+   "start_after": "Opus 5.5 《鹈鹕骑自行车》剧场版：\n\n提示词一次生成：\n---\n",
+   "end_before": "\n---\n\n没用任何 3D 模型、贴图和音频素材：它自己写了",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "mengto-code-sculpted-japanese-ship",
+  "cat": "blender",
+  "title": "Code-Sculpted Japanese Ship in Three.js",
+  "title_zh": "用 Three.js 代码雕刻的日式船",
+  "handle": "MengTo",
+  "name": "Meng To",
+  "post": "https://x.com/MengTo/status/2103122947133309311",
+  "links": [],
+  "desc": "Opus 5.5 sculpted the ship, dragon, sails, and architecture in code; the author says the scene was made entirely in Three.js without a library. To steer the work, the author asked Opus to score parts of the scene and keep improving each until it reached at least 8 out of 10, subject to their time and token budget.",
+  "desc_zh": "Opus 5.5 用代码雕刻了船、龙、船帆和建筑；作者称整个场景都用 Three.js 制作，没有使用库。为了引导制作，作者让 Opus 为场景各部分评分，并在时间和 token 预算允许的范围内持续改进，直到每部分至少达到 8 分（满分 10 分）。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103122947133309311",
+   "conv": "2103122947133309311"
+  }
+ },
+ {
+  "slug": "linearuncle-derivative-lesson-manim",
+  "cat": "explainers",
+  "title": "Derivative Lesson Video Made with Manim",
+  "title_zh": "用 Manim 制作的导数教学视频",
+  "handle": "LinearUncle",
+  "name": "LinearUncle",
+  "post": "https://x.com/LinearUncle/status/2103128559174971663",
+  "links": [],
+  "desc": "The author made a video teaching derivatives with Claude Opus 5.5 and Manim.",
+  "desc_zh": "作者使用 Claude Opus 5.5 和 Manim 制作了一段讲解导数的教学视频。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103128559174971663",
+   "conv": "2103128559174971663",
+   "start_after": "5非常擅长使用Manim，从此制作教育视频又多了一个大杀器。\n\n提示词：\n```",
+   "end_before": "```",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "jackfriks-lovelee-animated-short",
+  "cat": "films",
+  "title": "One-Shot Animated Short for Lovelee",
+  "title_zh": "Lovelee 应用的一次成型动画短片",
+  "handle": "jackfriks",
+  "name": "jack friks",
+  "post": "https://x.com/jackfriks/status/2103132260589338762",
+  "links": [],
+  "desc": "The author reports that Claude Opus 5.5 made a short film for their app in one shot, using new redesign assets. According to the author, Claude also made the sound and exported the finished film as an MP4 without edits.",
+  "desc_zh": "作者称，Claude Opus 5.5 使用应用改版的新素材，一次生成了一部短片。作者表示，声音也由 Claude 制作，成片未经修改，并由 Claude 自行导出为 MP4。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103134485910892602",
+   "conv": "2103132260589338762",
+   "start_after": "prompt i gave: \"",
+   "end_before": "\""
+  }
+ },
+ {
+  "slug": "sab8a-opus-55-talking-head-edit",
+  "cat": "director",
+  "title": "Opus 5.5 Talking-Head Edit with OpenEdit",
+  "title_zh": "Opus 5.5 与 OpenEdit 制作口播视频剪辑",
+  "handle": "sab8a",
+  "name": "Sabba Keynejad",
+  "post": "https://x.com/sab8a/status/2103144778481475686",
+  "links": [],
+  "desc": "The author demonstrates using Opus 5.5 with OpenEdit to turn a raw talking-head clip into an edit with subtitles, graphics, and music. The author reports a runtime of about 1 hour 51 minutes, $23 in token usage, and $49 in fal usage.",
+  "desc_zh": "作者演示了使用 Opus 5.5 和 OpenEdit 将原始口播视频剪辑成带有字幕、图形和音乐的成片。作者称，制作耗时约 1 小时 51 分钟，token 用量费用约为 23 美元，fal 用量费用约为 49 美元。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103144778481475686",
+   "conv": "2103144778481475686",
+   "start_after": "Opus 5.5 + OpenEdit\n\nPrompt: \n\n\"",
+   "end_before": "”\n\n~ 1h 51 min\n~ token usage $"
+  }
+ },
+ {
+  "slug": "lucas-ia-javascript-drawn-ad",
+  "cat": "explainers",
+  "title": "JavaScript-Drawn Ad Made in Claude Code",
+  "title_zh": "用 Claude Code 制作 JavaScript 绘制的广告",
+  "handle": "Lucas_IA_",
+  "name": "Lucas | Ecom IA",
+  "post": "https://x.com/Lucas_IA_/status/2103152093733253544",
+  "links": [],
+  "desc": "The author shows an ad made in Claude Code using a custom skill: Claude writes JavaScript to draw the scenes, ElevenLabs provides the voiceover, Whisper supplies word-level timing, and HyperFrames renders the video to MP4. The author says Claude reviews capture boards and corrects the visuals during production.",
+  "desc_zh": "作者展示了一支用 Claude Code 和自定义 skill 制作的广告：Claude 编写 JavaScript 绘制场景，ElevenLabs 生成配音，Whisper 提供逐词时间信息，HyperFrames 将视频渲染为 MP4。作者称，Claude 在制作过程中会查看画面截图拼板并修正视觉内容。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103152093733253544",
+   "conv": "2103152093733253544"
+  }
+ },
+ {
+  "slug": "deedydas-ikea-manual-3d-assembly-video",
+  "cat": "explainers",
+  "title": "IKEA Manual as a Narrated 3D Assembly Video",
+  "title_zh": "将宜家组装手册变成带旁白的 3D 视频",
+  "handle": "deedydas",
+  "name": "Deedy",
+  "post": "https://x.com/deedydas/status/2103174501345493197",
+  "links": [],
+  "desc": "Deedy shows an IKEA assembly manual translated into a narrated 3D instructional video with Opus 5.5. The author says the video was made via code.",
+  "desc_zh": "Deedy 展示了用 Opus 5.5 将宜家组装手册转化为带旁白的 3D 教学视频。作者称该视频是通过代码制作的。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103174501345493197",
+   "conv": "2103174501345493197",
+   "start_after": "“",
+   "end_before": "” with Opus 5.5.\n\nOvernight, O"
+  }
+ },
+ {
+  "slug": "jake11moran-notchbrowser-teaser",
+  "cat": "explainers",
+  "title": "NotchBrowser Teaser Made with HyperFrames",
+  "title_zh": "用 HyperFrames 制作的 NotchBrowser 预告片",
+  "handle": "jake11moran",
+  "name": "Jake Moran",
+  "post": "https://x.com/jake11moran/status/2103237884564414633",
+  "links": [],
+  "desc": "Jake Moran made a NotchBrowser product teaser with HyperFrames and Opus 5.5, using one prompt dictated via Whispr. The teaser moves across a Mac desktop, then shows the browser panel opening from the notch.",
+  "desc_zh": "Jake Moran 使用 HyperFrames 和 Opus 5.5，通过 Whispr 口述一段提示词，制作了 NotchBrowser 产品预告片。片中镜头掠过 Mac 桌面，随后展示从刘海区域展开的浏览器面板。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103239225902874874",
+   "conv": "2103237884564414633",
+   "start_after": "prompt:\n\n"
+  }
+ },
+ {
+  "slug": "ctgptlb-one-minute-code-drawn-animation",
+  "cat": "films",
+  "title": "One-Minute Animation Drawn Entirely in Code",
+  "title_zh": "完全用代码绘制的一分钟动画",
+  "handle": "ctgptlb",
+  "name": "AGIラボ",
+  "post": "https://x.com/ctgptlb/status/2102726428991373480",
+  "links": [],
+  "desc": "The author reports that Claude Opus 5.5 (effort max) drew this roughly one-minute animation frame by frame in code, without image assets. The author says they gave it only six instructions.",
+  "desc_zh": "据作者称，Claude Opus 5.5（effort max）未使用图片素材，而是逐帧用代码绘制了这段约一分钟的动画。作者表示，人工只给出了六次指示。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102726428991373480",
+   "conv": "2102726428991373480",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "illscience-playable-1990s-record-store",
+  "cat": "blender",
+  "title": "Playable 1990s Record Store Replica",
+  "title_zh": "可游玩的 1990 年代唱片店复刻",
+  "handle": "illscience",
+  "name": "Anish Acharya",
+  "post": "https://x.com/illscience/status/2102913284190220421",
+  "links": [],
+  "desc": "The author says they one-shotted a playable replica of the 1990s record store Play De Record with Opus 5.5, and highlights the model’s use of Blender. In a reply, they say the music appears to use Apple previews.",
+  "desc_zh": "作者称，他们用 Opus 5.5 一次生成了可游玩的 1990 年代 Play De Record 唱片店复刻，并特别提到模型对 Blender 的运用。作者在回复中表示，音乐似乎来自 Apple 的试听片段。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102913284190220421",
+   "conv": "2102913284190220421",
+   "text_verbatim": "I want you to create a Habbo Hotel isometric game where you wander around a record shop inspired by Play De Record in Toronto or Gramophone. You can look through stacks of records, which are real songs. You can preview them, and when you're not, there's a turntable at the back where people are playing tracks that everyone who's in the room can listen to. I want to match the visual style of Habbo Hotel with the layout of these record stores in the 1990s, and obviously have everybody look like they're kind of DJ-inspired and from the 1990s potentially. We've done a bunch of work on Blender and things like that in the past, so feel free to look past our old threads to look at how we did the Contra game and see if that helps you at all, and feel free to use anything you need that's remote, like GPU rendering to make this faster.",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "gregpr07-opus-55-launch-video",
+  "cat": "director",
+  "title": "Opus 5.5 Edits 13 Takes into a Launch Video",
+  "title_zh": "Opus 5.5 将 13 条拍摄片段剪成发布视频",
+  "handle": "gregpr07",
+  "name": "Gregor Zunic",
+  "post": "https://x.com/gregpr07/status/2102984873351037161",
+  "links": [],
+  "desc": "Gregor Zunic gave Opus 5.5 with video-use 13 takes of himself trying to say one sentence. He reports that it reviewed the transcripts, compared the top three takes frame by frame, selected and edited one, revised its captions, and made a launch video around it.",
+  "desc_zh": "Gregor Zunic 将自己尝试说出同一句话的 13 条拍摄片段交给搭配 video-use 的 Opus 5.5。他表示，模型阅读了各条转录文本，逐帧比较最好的三条片段，选出一条进行剪辑，并修改字幕，随后围绕它制作了一段发布视频。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102984873351037161",
+   "conv": "2102984873351037161",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "ring-hyacinth-mid-autumn-collage-animation",
+  "cat": "films",
+  "title": "Mid-Autumn Collage Animation Made with Opus 5.5",
+  "title_zh": "Opus 5.5 制作的中秋拼贴动画",
+  "handle": "ring_hyacinth",
+  "name": "Ring Hyacinth",
+  "post": "https://x.com/ring_hyacinth/status/2102986085328716066",
+  "links": [],
+  "desc": "A Mid-Autumn Festival collage-style animation for which the author supplied the script and music. According to the author, Opus 5.5 drew the animation frame by frame in JavaScript, used p5.js and p5.brush for hand-drawn textures, and synthesized sound effects with Node.js; Nano Banana Pro generated the background drafts and paper textures.",
+  "desc_zh": "一部中秋节拼贴风动画，脚本和音乐由作者提供。据作者介绍，Opus 5.5 用 JavaScript 逐帧绘制动画，用 p5.js 和 p5.brush 制作手绘纹理，并通过 Node.js 合成音效；背景底稿和纸张材质由 Nano Banana Pro 生成。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102986085328716066",
+   "conv": "2102986085328716066",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "bubustd-zhao-yun-voxel-musou",
+  "cat": "pixel",
+  "title": "Zhao Yun Voxel Musou Game",
+  "title_zh": "赵云像素风无双游戏",
+  "handle": "BubuStd",
+  "name": "BubuAi",
+  "post": "https://x.com/BubuStd/status/2102991290568954264",
+  "links": [
+   [
+    "Code",
+    "https://github.com/mike007jd/voxel-musou"
+   ]
+  ],
+  "desc": "The author built a Dynasty Warriors-inspired game with Opus 5.5 ultracode and Three.js, featuring Zhao Yun fighting 300 soldiers with combos, dodges, and Musou attacks. In a reply, the author says Opus handled the models and animations.",
+  "desc_zh": "作者使用 Opus 5.5 ultracode 和 Three.js 制作了一款受《真·三国无双》启发的游戏，赵云可与 300 名士兵交战，并使用连招、闪避和无双技。作者在回复中表示，模型和动画也由 Opus 完成。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102991290568954264",
+   "conv": "2102991290568954264",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "chetanankola-3d-road-sheet-music",
+  "cat": "blender",
+  "title": "A 3D Road That Turns into Sheet Music",
+  "title_zh": "化作乐谱的 3D 道路",
+  "handle": "chetanankola",
+  "name": "Chetan Ankola",
+  "post": "https://x.com/chetanankola/status/2103001194696458512",
+  "links": [],
+  "desc": "The author made a Three.js 3D experience with Opus 5.5 in which a road climbs a wall, crosses a ceiling upside down, then becomes sheet music; steering through the notes plays each street’s melody. The author says the idea and reference images were theirs, Opus executed the design direction, and no existing 3D assets were used.",
+  "desc_zh": "作者使用 Opus 5.5 制作了一个 Three.js 3D 体验：道路沿墙向上、倒悬于天花板，随后化作乐谱；玩家转向穿过音符，就能奏响每条街道的旋律。作者表示，创意和参考图片由自己提供，Opus 实现了设计方向，且没有使用现成的 3D 素材。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103001194696458512",
+   "conv": "2103001194696458512",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "ryansael-explorable-ai-history-museum",
+  "cat": "explainers",
+  "title": "Explorable Museum of AI History",
+  "title_zh": "可探索的 AI 历史博物馆",
+  "handle": "RyanSael",
+  "name": "Ryan Sael",
+  "post": "https://x.com/RyanSael/status/2103021886045348073",
+  "links": [],
+  "desc": "An explorable museum of nine years of AI history built with Opus 5.5. The author reports that the initial build took 1 hour 30 minutes in one shot, followed by a few rounds of fixes.",
+  "desc_zh": "一个由 Opus 5.5 构建、可逐间探索的 AI 历史博物馆，呈现九年的 AI 历史。作者称，初版历时 1 小时 30 分钟一次完成，随后又进行了几轮修正。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103021886045348073",
+   "conv": "2103021886045348073",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "dhruvalgolakiya-code-generated-video",
+  "cat": "explainers",
+  "title": "Code-Generated Video with Opus 5.5",
+  "title_zh": "用 Opus 5.5 编程制作的视频",
+  "handle": "dhruvalgolakiya",
+  "name": "Dhruval",
+  "post": "https://x.com/dhruvalgolakiya/status/2103037586663235713",
+  "links": [],
+  "desc": "A start-to-finish video made with Opus 5.5. The author says it uses JavaScript, HTML, and FFmpeg, with ElevenLabs for audio, and that they have not made manual edits yet.",
+  "desc_zh": "一段从头到尾使用 Opus 5.5 制作的视频。作者表示，制作中使用了 JavaScript、HTML 和 FFmpeg，音频使用 ElevenLabs，且尚未手动修改。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103037586663235713",
+   "conv": "2103037586663235713",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "sundyme-github-version-control-explainer",
+  "cat": "explainers",
+  "title": "Animated GitHub Version Control Explainer",
+  "title_zh": "GitHub 版本管理动画讲解",
+  "handle": "sundyme",
+  "name": "sundyme",
+  "post": "https://x.com/sundyme/status/2102751132502446549",
+  "links": [],
+  "desc": "The author used Claude Opus 5.5 in Claude Code to create a chaptered web animation explaining GitHub version control, with subtitles and narration. The author says a third-party voice API enabled export as a 1080p video ready for YouTube.",
+  "desc_zh": "作者在 Claude Code 中使用 Claude Opus 5.5，制作了讲解 GitHub 版本管理的网页动画，包含章节、字幕和旁白。作者称，接入第三方语音 API 后，可以导出可直接上传 YouTube 的 1080p 视频。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102751132502446549",
+   "conv": "2102751132502446549",
+   "text_verbatim": "我是非专业编码者，在用 Claude Code 做网站，请做个动画视频，讲解 GitHub 版本管理及如何使用",
+   "origin": "LLM-located span, verified exact substring of creator text",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "mengto-japanese-valley-boat-journey",
+  "cat": "blender",
+  "title": "Playable Boat Journey Through a Japanese Valley",
+  "title_zh": "可游玩的日本山谷泛舟场景",
+  "handle": "MengTo",
+  "name": "Meng To",
+  "post": "https://x.com/MengTo/status/2102760783344189761",
+  "links": [],
+  "desc": "A playable three.js boat scene travels through Japanese landscapes with changing weather and day–night lighting. The author says Opus 5 generated the scene except for the characters, which used Higgsfield.",
+  "desc_zh": "一个可游玩的 three.js 泛舟场景，呈现日本风景、变化的天气和昼夜光照。作者称场景由 Opus 5 生成，角色除外；角色使用了 Higgsfield。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103155074705019158",
+   "conv": "2102760783344189761",
+   "text_verbatim": "Create from scratch a fully interactive 3D scene of a traditional wooden riverboat being poled upstream through a mountain river valley in feudal Japan during cherry-blossom season. The visual style should be cinematic and painterly rather than photorealistic, while still being exceptionally rich, detailed, polished, and visually sophisticated.\n\nBuild the valley terrain, river, riverbanks, rocks, cherry trees, maples, pines, forest, ground cover, temple architecture, boat, boatman, villagers, sky, clouds, distant mountains, lighting, materials, water, reflections, petals, mist, particles, wildlife, weather, a full day-and-night cycle, sound, animation, camera work, composition, atmospheric depth, and color grading. The final result should feel like a premium, high-production 3D artwork, not a prototype, technical demo, or low-quality scene.\n\nStart from a completely blank page. Do not reuse or depend on any previous project or scene. You may create the assets yourself or use reliable, trusted, open-source assets and libraries when necessary.\n\nMandatory requirements:\n\nNo text of any kind may appear anywhere inside the scene, including the loading screen. No titles, names, logos, descriptions, credits, labels, or control instructions in any language. Any loading indicator must be purely graphic.\n\nDeliver the entire project as one final standalone page file that can be opened directly in a web browser, with assets embedded inside it as much as reasonably possible and no runtime requests to external CDNs.\n\nThe valley must feel like one continuous, believable place. A winding river flows down a long valley that narrows into a gorge upstream. It has a deep channel and shallow pebbled margins. Its banks vary between gravel bars and steeper earthen banks. Forested valley walls rise into rounded mountains, and far ranges fade layer by layer into haze.\n\nBuild these landmarks along the river:\n- An arched vermilion wooden bridge on piers that stand in the water.\n- A torii gate at the bridge's end.\n- A path to stone steps and a temple terrace held up by dry-stone retaining walls.\n- A main hall with a curved tile hip-and-gable roof, upturned corners, bracket sets, a railed veranda, and lattice doors.\n- A five-storey pagoda with a ringed spire on a knoll.\n- Stone lanterns along the approach.\n- A small wayside shrine in a clearing on the far bank.\n- A tunnel of small vermilion torii climbing the bank upstream to a hillside shrine.\n- A rope fence with paper streamers.\n- Bells hanging from the roof corners that swing in the wind.\n\nFor vegetation, place hero cherry trees by hand, including a weeping cherry. Give them gnarled, leaning trunks, let some overhang the water, and cover them in dense blossom. Add Japanese maples, cloud-pruned pines, and a dense mixed forest of cedars and broadleaf crowns on the slopes. Cover the ground with wind-blown grass, reeds, spring wildflowers, ferns, clipped azalea shrubs, mossy boulders, and exposed roots at the water's edge. All foliage must move in one shared, gusting wind, and the blossoms must glow when backlit.\n\nThe hero boat is a takasebune-style river cargo boat. It needs a planked hull with real thickness, ribs, thwarts, floorboards, and iron clamps. Give it a reed-mat canopy on bamboo hoops, a cargo of rice bales, crates, and a glazed jar, plus coiled rope, a bow lantern on an arching bamboo pole, and a sculling oar stowed at the stern quarter.\n\nA boatman in a straw cape stands on a raised bow platform and poles the boat with a long bamboo pole, using his whole body: hips drop, the spine leans into the push, the feet stay planted, and both hands grip the pole firmly. The cape reacts to the wind and to each stroke. The pole must never pass through the hull, the hands, or anything else.\n\nAdd two villagers. A woman under a red oiled-paper umbrella stands at the bridge rail watching the boats. An old monk sweeps petals off the temple approach. Both breathe and move subtly.\n\nThe water must be the centrepiece. It needs:\n- Accurate reflections of everything above it.\n- Refraction and depth-based color absorption, with the pebbled riverbed visible in the shallows.\n- Ripples that follow the flow.\n- Faster water and white foam collars around boulders and bridge piers, with foam trailing downstream.\n- A convincing wake that follows the boat: a bow wave, V-shaped arms, and a disturbed band along the hull.\n- Rafts of petals drifting in the slack water along the banks.\n\nFill the valley with life and particles:\n- Petals tumble from each cherry canopy and through the air.\n- Petals ride the current downstream and settle on the banks, the steps, and the bridge deck.\n- Dust motes glow only inside the sunbeams.\n- Banks of low river mist drift over the water.\n- Flocks of birds wheel over the valley, and a pair of herons sometimes crosses the river ahead of the boat.\n- Fireflies come out at dusk.\n\nRun a continuous day-and-night cycle of several minutes that loops: dawn, morning, afternoon, a thunderstorm, golden hour, sunset, blue hour, moonlit night, pre-dawn. The sun travels a real arc, the moon takes over as the key light at night, and shadows follow whichever one is lit. Sky color, clouds with silver-gold linings, fog, ambient light, exposure, and the color grade all change with the hour. At night, show stars, a faint Milky Way band, and a cratered moon.\n\nThe afternoon storm thickens the clouds into a dark overcast. It brings rain streaks, splash crowns on the river, and branching lightning that lights the clouds and the whole valley. Surfaces turn wet and glossy, then dry slowly through sunset.\n\nAfter dusk:\n- The stone lanterns and the hall's doors glow.\n- Paper lanterns set adrift on the river (tōrō nagashi) flow past and part around the boat.\n- Pale spirit wisps with comet-like trails drift above the water. Each one lights the water, mist, and banks around it and appears in the reflections.\n\nGolden hour is the signature look: a low warm sun up the valley, long shadows, god rays through the trees and mist, backlit blossoms, and a warm haze.\n\nAdd a quiet synthesized soundscape of flowing river, rain, and thunder that rolls in after each flash, with a keyboard toggle to mute it.\n\nThe boat must travel upstream on its own. An autopilot threads it between rocks and bridge piers without ever touching them. The viewer can take over with WASD or the arrow keys. Steering needs momentum, turning inertia, water drag, and a heel into turns. Banks, rocks, and piers push the boat back physically. After a short idle period, the autopilot resumes.\n\nA third-person chase camera follows the boat with drag-to-orbit, scroll-to-zoom, and a slow cinematic drift. It must never dip below the banks or into tree canopies. Holding a key fast-forwards the time of day. When the boat reaches the head of the gorge, the scene fades into mist and restarts downstream, so the journey loops forever.\n\nThe water, boat, boatman, foliage, petals, and camera must all be animated naturally and smoothly. Avoid artificial slow motion or sluggish movement. The boat should feel like it is genuinely being pushed upstream against the current.\n\nDo not rely on primitive geometric shapes as the finished result. The trees, architecture, boat, characters, and rocks need carefully shaped geometry and clearly visible small-scale details: bark, roof tiles, rafters, joinery, planking, rope lashings, and bamboo nodes. Use detailed, scanned, or high-quality textures for rock, bark, ground, stone walls, and wood. Everything must rest on the ground or the water. Nothing may float, and no objects may intersect.\n\nLighting must reveal the geometry and materials clearly at every hour. Use soft shadows, ambient occlusion in crevices and at roots, light shafts, bloom, and a filmic grade. Shadow sides must stay readable, never crushed to black.\n\nMaintain a strong balance between visual quality and real-time performance, including on high-density (Retina) displays, preserving smooth interaction and animation without making an obvious sacrifice in quality.\n\nAutomatically use the most appropriate skills, tools, libraries, techniques, and available assets needed to achieve the best result. Do not wait for me to specify which technologies to use.\n\nActually test the finished result in a desktop web browser. Capture screenshots at morning, during the storm, at golden hour, and at night. Inspect the browser console for errors, and fix every visible or technical issue you find. That includes distorted geometry, black screens, failed asset loading, broken animation, poor composition, rendering artifacts, floating or intersecting objects, the boat or pole clipping through anything, and camera problems.\n\nAt the end, verify that the final file opens and works directly, that the scene contains no text whatsoever, and that there are no remaining runtime or loading errors. Then finish the task with only a brief response.",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "cherry-mx-reds-jet-moto",
+  "cat": "pixel",
+  "title": "One-Shot Jet Moto with Opus 5.5",
+  "title_zh": "Opus 5.5 一次生成的 Jet Moto",
+  "handle": "cherry_mx_reds",
+  "name": "Tak 🦞",
+  "post": "https://x.com/cherry_mx_reds/status/2102762471543144631",
+  "links": [],
+  "desc": "The author says Opus 5.5 made this Jet Moto demo in one shot. They shared a Claude artifact to try it and later linked an improved version.",
+  "desc_zh": "作者称 Opus 5.5 一次生成了这个 Jet Moto 演示，并分享了可供体验的 Claude artifact，随后又提供了改进版本的链接。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102762471543144631",
+   "conv": "2102762471543144631",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "cryptomanavan-threejs-lagoon-tree-village",
+  "cat": "blender",
+  "title": "Three.js Lagoon Tree Village",
+  "title_zh": "Three.js 泻湖树屋村庄",
+  "handle": "cryptomanavan",
+  "name": "cryptomanavan ☀️",
+  "post": "https://x.com/cryptomanavan/status/2102772685541347618",
+  "links": [],
+  "desc": "A browser-based 3D village made with Claude Opus 5.5 and Three.js. The author says they supplied concepts, ideas, and drawings, used no external assets or Blender, and had been working on it for about seven hours when they posted the video.",
+  "desc_zh": "一个使用 Claude Opus 5.5 和 Three.js 制作的浏览器端 3D 村庄。作者表示，自己向模型提供了构想、创意和图画，没有使用外部素材或 Blender；发布视频时，项目已制作约七小时。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102772685541347618",
+   "conv": "2102772685541347618",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "scheemunai-one-shot-threejs-cartoon",
+  "cat": "films",
+  "title": "One-Shot Three.js Cartoon",
+  "title_zh": "一次生成的 Three.js 动画短片",
+  "handle": "scheemunai",
+  "name": "Shimecki",
+  "post": "https://x.com/scheemunai/status/2102788223835463902",
+  "links": [],
+  "desc": "Shimecki asked Claude Opus 5.5 to imagine a story and animate it with Three.js. The author says there were no follow-up prompts; Claude interpreted “90s” as a 1990s style rather than a 90-second runtime.",
+  "desc_zh": "Shimecki 请 Claude Opus 5.5 构思故事，并用 Three.js 将其制作成动画。作者表示没有追加提示；Claude 将“90s”理解为 1990 年代的风格，而不是 90 秒的时长。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102788223835463902",
+   "conv": "2102788223835463902",
+   "text_verbatim": "I want you to imagine a story. And then using threejs I want you to create full animation, Pixar-level quality 90s cartoon out of the story you imagine.",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "ishuagra02-claude-capability-training-montage",
+  "cat": "films",
+  "title": "Claude Capability Training Montage",
+  "title_zh": "Claude 能力成长训练蒙太奇",
+  "handle": "ishuagra02",
+  "name": "Ishu Agrawal",
+  "post": "https://x.com/ishuagra02/status/2102788371114246177",
+  "links": [],
+  "desc": "Opus 5.5 created a training montage showing Claude becoming more capable over the years. The author says every frame, model, and audio element was generated in JavaScript, and two follow-up prompts mostly smoothed the transitions.",
+  "desc_zh": "Opus 5.5 制作了一段展现 Claude 多年来能力不断提升的训练蒙太奇。作者表示，每一帧、模型和音频都由 JavaScript 生成，之后又用了两条提示词，主要用于让转场更流畅。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102788832273801700",
+   "conv": "2102788371114246177",
+   "text_verbatim": "Create a 30 second animation entirely in code featuring a growth montage, inspired by Kung Fu Panda's training sequence, with the Claude mascot as the main character, showcasing it getting more capable since its initial release across its skillset, such as searching the internet, writing code, creating 3D models, and solving humanity's hardest problems, with emotionally impactful music.",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "joaoli13-llm-context-window-animation",
+  "cat": "explainers",
+  "title": "How an LLM Context Window Works",
+  "title_zh": "LLM 上下文窗口如何运作",
+  "handle": "joaoli13",
+  "name": "João Lima",
+  "post": "https://x.com/joaoli13/status/2102805376466891137",
+  "links": [],
+  "desc": "An animation explaining how user questions and generated answers fill an LLM’s input and output context windows. The author says they asked Opus 5.5 to make it in JavaScript, then asked for an MP4 download.",
+  "desc_zh": "这段动画解释用户问题和生成的回答如何进入 LLM 的输入与输出上下文窗口。作者称，他先让 Opus 5.5 用 JavaScript 制作动画，再要求生成可下载的 MP4。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102805381542220038",
+   "conv": "2102805376466891137",
+   "text_verbatim": "Faça uma animação javascript de como um LLM vai compondo na janela de contexto as perguntas do usuário e as respostas geradas. É importante diferenciar a janela de contexto de entrada da de saída, que normalmente possuem tamanhos diferentes, e deve-se mostrar também que a resposta que foi gerada na janela de contexto de saída é transferida e concatenada ào contexto  da janela de entrada. Deve ser claro e didático e pode ter labels em português",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "majidmanzarpour-procedural-kaiju-simulation",
+  "cat": "blender",
+  "title": "Procedural Kaiju Simulation in Three.js",
+  "title_zh": "Three.js 程序化怪兽模拟",
+  "handle": "majidmanzarpour",
+  "name": "Majid Manzarpour",
+  "post": "https://x.com/majidmanzarpour/status/2102810710791401883",
+  "links": [],
+  "desc": "A kaiju simulation made with pure Three.js code. The author says they used a minimal prompt to test Opus 5.5’s creativity, set it to max reasoning effort, and reports that it worked for 3.5 hours before producing the demo artifact.",
+  "desc_zh": "这是一个使用纯 Three.js 代码制作的怪兽模拟。作者称，他们用一条简短提示词测试 Opus 5.5 的创造力，将推理强度设为最高，并表示模型运行了 3.5 小时后产出了演示作品。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102810712779194418",
+   "conv": "2102810710791401883",
+   "text_verbatim": "Build a fully procedural AAA quality kaiju simulation in three.js using pure TSL and modern techniques",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "shribuilds-wrapscribe-promo-video",
+  "cat": "director",
+  "title": "Wrapscribe Promo Video with Opus 5.5",
+  "title_zh": "Opus 5.5 制作的 Wrapscribe 宣传视频",
+  "handle": "shribuilds",
+  "name": "Shri",
+  "post": "https://x.com/shribuilds/status/2102827288190689364",
+  "links": [],
+  "desc": "A promotional video for Wrapscribe made with Opus 5.5. The author says they used Remotion and added a fal.ai API key to generate music and voiceovers.",
+  "desc_zh": "这是使用 Opus 5.5 制作的 Wrapscribe 宣传视频。作者表示，他们使用了 Remotion，并添加了 fal.ai API 密钥来生成音乐和配音。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102827288190689364",
+   "conv": "2102827288190689364",
+   "text_verbatim": "Make a modern slick and punchy video for wrapscribe, check the wholebase to learn more about the features",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "tz-2022-password-passkey-explainer",
+  "cat": "explainers",
+  "title": "Password vs. Passkey Explainer Video",
+  "title_zh": "密码与通行密钥讲解视频",
+  "handle": "Tz_2022",
+  "name": "Tz",
+  "post": "https://x.com/Tz_2022/status/2102838830285898214",
+  "links": [],
+  "desc": "The author asked Claude Opus 5.5 for an interactive animated explanation of passwords and passkeys, including their history, made into a beginner-friendly video. The author reports receiving a finished video with narration and subtitles, plus a cover image.",
+  "desc_zh": "作者请 Claude Opus 5.5 制作交互式动画讲解，说明密码与通行密钥的区别及历史，并将其做成适合初学者观看的视频。作者表示收到了带配音和字幕的成片，以及一张封面图。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102838830285898214",
+   "conv": "2102838830285898214",
+   "text_verbatim": "给我一个可互动交互动画页面，讲解清楚 password 和 passkey 到底有什么区别，也包括它们的历史沿革，把它制作成一个小白也能看懂的讲解视频",
+   "origin": "LLM-located span, verified exact substring of creator text",
+   "lang": "zh"
+  }
+ },
+ {
+  "slug": "theo-fishslop-economy-unlocks",
+  "cat": "pixel",
+  "title": "FishSlop Game with an Economy and Unlocks",
+  "title_zh": "带有经济系统和解锁内容的 FishSlop 游戏",
+  "handle": "theo",
+  "name": "Theo - t3.gg",
+  "post": "https://x.com/theo/status/2102877145399975952",
+  "links": [],
+  "desc": "The author shows an Opus 5.5 version of FishSlop with animated gameplay, controls, an in-game economy, and unlocks. They report that after asking for better graphics reduced the frame rate, a follow-up request restored smooth 120 fps with a slight loss of visual fidelity.",
+  "desc_zh": "作者展示了 Opus 5.5 制作的 FishSlop 版本，包含动画、操作控制、游戏内经济系统和解锁内容。作者称，在要求改进画质导致帧率下降后，再次提出要求使游戏恢复到流畅的 120 帧，同时画质略有退步。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102877145399975952",
+   "conv": "2102877145399975952",
+   "text_verbatim": "",
+   "origin": "no verbatim prompt found"
+  }
+ },
+ {
+  "slug": "itsolelehmann-code-drawn-animated-film",
+  "cat": "films",
+  "title": "Code-Drawn Animated Film in Claude Code",
+  "title_zh": "Claude Code 用代码绘制的动画短片",
+  "handle": "itsolelehmann",
+  "name": "Ole Lehmann",
+  "post": "https://x.com/itsolelehmann/status/2103124033365762215",
+  "links": [],
+  "desc": "Ole Lehmann shows an animated film he says Claude Opus 5.5 made in Claude Code, without other AI tools or reference images. According to the author, it drew and animated the scenes with code, synthesized the soundtrack, and delivered a finished MP4 in chat.",
+  "desc_zh": "Ole Lehmann 展示了一部动画短片；据他所说，Claude Opus 5.5 在 Claude Code 中完成了制作，没有使用其他 AI 工具或参考图像。他表示，Claude 用代码绘制并制作场景动画、合成配乐，最后在聊天中交付了 MP4 文件。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2103124033365762215",
+   "conv": "2103124033365762215",
+   "text_verbatim": "4 seasons passing outside a train window, a cozy carriage, a cup of coffee on the table, Grand Budapest Hotel style",
+   "origin": "LLM-located span, verified exact substring of creator text"
+  }
+ },
+ {
+  "slug": "pleometric-tiktok-feed-animation",
+  "cat": "pixel",
+  "title": "Opus 5.5’s TikTok Feed Animation",
+  "title_zh": "Opus 5.5 的 TikTok 信息流动画",
+  "handle": "pleometric",
+  "name": "Pleometric",
+  "post": "https://x.com/pleometric/status/2102572941699354900",
+  "links": [],
+  "desc": "An animation imagining Opus 5.5’s TikTok feed. The author says they suggested p5.js and supplied a frame from another viral animation, but the model wrote its own “paper code” instead.",
+  "desc_zh": "一段想象 Opus 5.5 的 TikTok 信息流的动画。作者表示，自己建议使用 p5.js，并提供了另一段热门动画中的一帧，但模型转而编写了自己的“paper code”。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102572941699354900",
+   "conv": "2102572941699354900"
+  }
+ },
+ {
+  "slug": "aj-dev-smith-pop-punk-javascript-music-video",
+  "cat": "music",
+  "title": "Pop-Punk Song and Music Video Made with JavaScript",
+  "title_zh": "用 JavaScript 制作的流行朋克歌曲与 MV",
+  "handle": "aj_dev_smith",
+  "name": "A.J.",
+  "post": "https://x.com/aj_dev_smith/status/2102575577563570450",
+  "links": [],
+  "desc": "Claude Opus 5.5 wrote vanilla JavaScript to generate the song and music video without samples or libraries, according to the author. The author says Claude checked its code-generated vocals with a local speech-to-text model and animated the band playing frame by frame.",
+  "desc_zh": "据作者介绍，Claude Opus 5.5 编写了原生 JavaScript，在不使用采样或库的情况下生成歌曲和 MV。作者称，Claude 用本地语音转文字模型检查代码生成的人声，并逐帧制作乐队演奏的动画。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102575577563570450",
+   "conv": "2102575577563570450"
+  }
+ },
+ {
+  "slug": "akokoi1-chinese-history-line-art-animation",
+  "cat": "explainers",
+  "title": "Five Thousand Years of Chinese History in Line Art",
+  "title_zh": "线稿动画速览中华五千年历史",
+  "handle": "akokoi1",
+  "name": "WY",
+  "post": "https://x.com/akokoi1/status/2102583898865873225",
+  "links": [],
+  "desc": "A short animated overview of Chinese history made with Claude Opus 5.5. The author says they used Claude Code and front-end SVG, and did not add voiceover.",
+  "desc_zh": "一段用 Claude Opus 5.5 制作的中华历史速览动画。作者称使用了 Claude Code 和前端 SVG，且未添加配音。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102583898865873225",
+   "conv": "2102583898865873225"
+  }
+ },
+ {
+  "slug": "xikhar-threejs-game-3d-assets",
+  "cat": "blender",
+  "title": "Three.js Game with Scratch-Made 3D Assets",
+  "title_zh": "使用从零制作的 3D 素材开发 Three.js 游戏",
+  "handle": "xikhar",
+  "name": "Shikhar",
+  "post": "https://x.com/xikhar/status/2102588571442188577",
+  "links": [],
+  "desc": "A three-minute video shows a Three.js game the author made with Opus 5.5 Medium. The author says the models, textures, and animations were made from scratch, with Blender used for complex assets and animations.",
+  "desc_zh": "一段三分钟的视频展示了作者使用 Opus 5.5 Medium 制作的 Three.js 游戏。作者称模型、纹理和动画均从零制作，并使用 Blender 制作复杂素材和动画。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102588571442188577",
+   "conv": "2102588571442188577"
+  }
+ },
+ {
+  "slug": "akokoi1-atmospheric-circulation-animation",
+  "cat": "explainers",
+  "title": "Animated Atmospheric Circulation Geography Lesson",
+  "title_zh": "大气环流地理知识动画",
+  "handle": "akokoi1",
+  "name": "WY",
+  "post": "https://x.com/akokoi1/status/2102606609574941028",
+  "links": [],
+  "desc": "An almost five-minute video explaining atmospheric circulation with line-art animation, bilingual subtitles, music, and TTS narration. The author says they supplied TTS documentation and configuration files, and reports that Opus 5.5 generated the video in 26 minutes; in a reply, they say the visuals are SVGs.",
+  "desc_zh": "一段将近五分钟的大气环流讲解视频，采用线稿动画、中英双语字幕、音乐和 TTS 解说。作者称自己提供了 TTS 文档和配置文件，Opus 5.5 用 26 分钟生成了视频；作者还在回复中表示画面都是 SVG。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102606609574941028",
+   "conv": "2102606609574941028"
+  }
+ },
+ {
+  "slug": "kanaworks-ai-eight-stage-siege-game",
+  "cat": "pixel",
+  "title": "Eight-Stage Side-Scrolling Siege Game",
+  "title_zh": "八关横版攻城游戏",
+  "handle": "KanaWorks_AI",
+  "name": "KANA｜東京AI映像",
+  "post": "https://x.com/KanaWorks_AI/status/2102684116525437206",
+  "links": [],
+  "desc": "The author reports building a website and eight-stage side-scrolling siege game with Claude Opus 5.5 in two hours, then deploying it, recording gameplay, and editing a 60-second introduction video. They say they spent more time tuning siege-weapon behavior, enemy counterattacks, and stage balance than writing code.",
+  "desc_zh": "作者称使用 Claude Opus 5.5 在两小时内制作了网站和八关横版攻城游戏，随后完成部署、录制和一段 60 秒介绍视频的剪辑。作者表示，相比编写代码，更多时间花在调整攻城兵器的行为、敌方反击和关卡平衡上。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102684116525437206",
+   "conv": "2102684116525437206"
+  }
+ },
+ {
+  "slug": "iannuttall-prince-of-persia-style-level",
+  "cat": "pixel",
+  "title": "One-Shot Prince of Persia-Style Level",
+  "title_zh": "一次生成的《波斯王子》风格关卡",
+  "handle": "iannuttall",
+  "name": "Ian Nuttall",
+  "post": "https://x.com/iannuttall/status/2102685186919932404",
+  "links": [],
+  "desc": "Ian Nuttall reports that Opus 5.5 built a playable Prince of Persia-style level in one shot, with graphics, NPCs, sound effects, and music. His prompt requested a self-contained HTML file using vanilla JavaScript and Canvas 2D.",
+  "desc_zh": "Ian Nuttall 称，Opus 5.5 一次生成了一个可玩的《波斯王子》风格关卡，包含画面、NPC、音效和音乐。他要求使用原生 JavaScript 和 Canvas 2D，制作成独立的 HTML 文件。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102685186919932404",
+   "conv": "2102685186919932404"
+  }
+ },
+ {
+  "slug": "hanifproduktif-indonesian-history-animation",
+  "cat": "explainers",
+  "title": "81 Years of Indonesian History in Under a Minute",
+  "title_zh": "一分钟内回顾印尼81年历史",
+  "handle": "hanifproduktif",
+  "name": "Hanif | AI For Productivity",
+  "post": "https://x.com/hanifproduktif/status/2102695622042411419",
+  "links": [],
+  "desc": "The author asked Claude Opus 5.5 to make a short, lighthearted line-drawing animation about 81 years of Indonesian history, with music and voiceover. The author says a second version used the same prompt and voiceover, with Tesseract CLI added.",
+  "desc_zh": "作者请 Claude Opus 5.5 制作一段配有音乐和旁白、以轻松有趣的线条动画回顾印尼81年历史的短视频。作者称第二个版本使用了相同的提示词和旁白，并加入了 Tesseract CLI。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102695622042411419",
+   "conv": "2102695622042411419"
+  }
+ },
+ {
+  "slug": "leo-xiaolei-procedural-animated-short",
+  "cat": "explainers",
+  "title": "Procedural Animated Short with Opus 5.5",
+  "title_zh": "Opus 5.5 程序化动画短片",
+  "handle": "leo_xiaolei",
+  "name": "XiaoLei Liu",
+  "post": "https://x.com/leo_xiaolei/status/2102724347446305104",
+  "links": [],
+  "desc": "The author shares a video of an animated short made directly with Claude Opus 5.5, along with the Chinese prompt they used.",
+  "desc_zh": "作者分享了一段由 Claude Opus 5.5 直接制作的动画短片视频，并附上了所用的中文提示词。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102724347446305104",
+   "conv": "2102724347446305104"
+  }
+ },
+ {
+  "slug": "0x0funky-one-shot-course-animation",
+  "cat": "explainers",
+  "title": "One-Shot Animated Course Video with Opus 5.5",
+  "title_zh": "Opus 5.5 一次生成课程动画视频",
+  "handle": "0x0funky",
+  "name": "0xFunky",
+  "post": "https://x.com/0x0funky/status/2102736587708854585",
+  "links": [],
+  "desc": "The author reports making a roughly six-minute animated video from prepared course content in one shot with Opus 5.5, using Remotion for the video and a local Cosy Voice model for narration. They say Opus 5.5 handled the script and voiceover preparation; React generated SVG lines, while HTML/CSS and web fonts styled the text.",
+  "desc_zh": "作者称，他们用 Opus 5.5 根据整理好的课程内容一次生成了一部约六分钟的动画视频，使用 Remotion 制作视频，并用本地 Cosy Voice 模型生成配音。作者表示，脚本和配音准备工作由 Opus 5.5 处理；SVG 线条由 React 生成，文字则使用 HTML/CSS 和网页字体设置样式。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102736587708854585",
+   "conv": "2102736587708854585"
+  }
+ },
+ {
+  "slug": "dotcsv-pixel-art-neural-network-training",
+  "cat": "pixel",
+  "title": "Pixel-Art Neural Network Training Animation",
+  "title_zh": "像素风神经网络训练动画",
+  "handle": "DotCSV",
+  "name": "Carlos Santana",
+  "post": "https://x.com/DotCSV/status/2102737776219168939",
+  "links": [],
+  "desc": "A pixel-art animation of a neural network training, made with Opus 5.5. The author says Opus proactively trained a neural network on MNIST to make the animation accurate.",
+  "desc_zh": "一段用 Opus 5.5 制作的像素风神经网络训练动画。作者称，Opus 主动用 MNIST 训练了一个神经网络，以确保动画准确。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102737776219168939",
+   "conv": "2102737776219168939"
+  }
+ },
+ {
+  "slug": "songkeys-humanity-to-opus-5-5",
+  "cat": "films",
+  "title": "From Humanity’s Origins to Opus 5.5",
+  "title_zh": "从人类诞生到 Opus 5.5",
+  "handle": "songkeys",
+  "name": "songkeys 🐿️🦋@song.work",
+  "post": "https://x.com/songkeys/status/2102743212922384673",
+  "links": [],
+  "desc": "A doodle-style animation traces humanity’s development and the emergence of AI, ending with Opus 5.5. The author says Opus drafted scenes, they suggested revisions, and the finished video was made in pure JavaScript without video or image generation.",
+  "desc_zh": "这部涂鸦风格动画讲述了人类的发展与 AI 的诞生，最终呈现 Opus 5.5。作者称，Opus 先拟出场景，随后他们提出修改建议；成片完全使用 JavaScript 制作，没有使用视频或图像生成。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102743212922384673",
+   "conv": "2102743212922384673"
+  }
+ },
+ {
+  "slug": "ggsimm-deep-sea-horror-game",
+  "cat": "pixel",
+  "title": "Deep-Sea Horror Game Built with an Existing Engine",
+  "title_zh": "用现有引擎制作的深海恐怖游戏",
+  "handle": "ggsimm",
+  "name": "gsimone",
+  "post": "https://x.com/ggsimm/status/2102882622053535814",
+  "links": [],
+  "desc": "The author reports asking Claude Opus 5.5 to make a game using only their engine’s existing abilities. It made a deep-sea horror game with a subtle drone soundtrack, largely reusing the author’s libraries for effects, illumination, projectiles, and collisions.",
+  "desc_zh": "作者称，他们让 Claude Opus 5.5 仅利用其引擎现有的能力制作游戏。模型做出了一款带有低沉持续配乐的深海恐怖游戏，基本复用了作者用于特效、照明、投射物和碰撞的代码库。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2102882622053535814",
+   "conv": "2102882622053535814"
+  }
+ },
+ {
+  "slug": "ehsanik-mona-lisa-js-paint",
+  "cat": "director",
+  "title": "Recreating the Mona Lisa in JS Paint",
+  "title_zh": "用 JS Paint 重绘《蒙娜丽莎》",
+  "handle": "ehsanik",
+  "name": "Kiana Ehsani",
+  "post": "https://x.com/ehsanik/status/2102885216692162993",
+  "links": [],
+  "desc": "The author used Opus 5.5 with Cowork and Claude in Chrome to recreate the Mona Lisa in JS Paint using mouse movements and brushes. They then asked it to make a video showing the movements and changes.",
+  "desc_zh": "作者通过 Cowork 和 Chrome 中的 Claude 使用 Opus 5.5，以鼠标操作和画笔在 JS Paint 中重绘《蒙娜丽莎》。随后，作者让它制作一段展示鼠标操作和画面变化的视频。",
+  "prompt": {
+   "type": "verbatim",
+   "status": "2102885216692162993",
+   "conv": "2102885216692162993"
+  }
+ },
+ {
+  "slug": "daniel-mac8-claude-code-usage-limits-animation",
+  "cat": "explainers",
+  "title": "Claude Code Usage Limits Animation",
+  "title_zh": "Claude Code 用量限制动画",
+  "handle": "daniel_mac8",
+  "name": "Dan McAteer",
+  "post": "https://x.com/daniel_mac8/status/2103666105461924131",
+  "links": [],
+  "desc": "Dan McAteer shared an animation about using Ultracode and Dynamic Workflows in Claude Code without exhausting usage limits. He says Opus 5.5 generated every pixel using Dynamic Workflows, with a reference animation MP4 and a prompt as inputs.",
+  "desc_zh": "Dan McAteer 分享了一段动画，介绍如何在 Claude Code 中使用 Ultracode 和 Dynamic Workflows，同时避免耗尽用量限额。他说，Opus 5.5 使用 Dynamic Workflows 生成了视频的每一个像素，输入素材包括一个参考动画 MP4 和一段提示词。",
+  "prompt": {
+   "type": "not_shared",
+   "status": "2103666105461924131",
+   "conv": "2103666105461924131"
+  }
+ },
+ {
+  "slug": "makerjackie-the-big-one",
+  "cat": "films",
+  "title": "The Big One — code-rendered animated short",
+  "title_zh": "The Big One — 代码渲染动画短片",
+  "handle": "makerjackie",
+  "name": "MakerJackie",
+  "post": "https://github.com/makerjackie/the-big-one",
+  "links": [
+   [
+    "Source code",
+    "https://github.com/makerjackie/the-big-one"
+   ],
+   [
+    "Creator MP4 release",
+    "https://github.com/makerjackie/the-big-one/releases/tag/v1.0"
+   ],
+   [
+    "Creator-published reusable prompt (English)",
+    "https://github.com/makerjackie/the-big-one/blob/main/docs/PROMPT.md"
+   ],
+   [
+    "Remake with EasyVeo",
+    "https://easyveo.com?utm_source=github&utm_medium=referral&utm_campaign=awesome_opus55_video_prompts&utm_content=makerjackie_the_big_one"
+   ]
+  ],
+  "desc": "Creator-published anime short made in code with Claude Opus 5.5: three.js frames, JavaScript-synthesized score, offline HTML player, and an MP4 in the creator’s release. Original build prompt not published; the creator separately provides a reusable prompt template in docs/PROMPT.md. Do not confuse that template with the original instruction. No media mirrored.",
+  "desc_zh": "作者公开的 Claude Opus 5.5 代码动画短片：three.js 绘制画面、JavaScript 合成配乐，提供离线 HTML 和作者发布的 MP4。原始创作提示词未公开；另附作者发布的可复用提示词模板。未复制媒体。",
+  "prompt": {
+   "type": "not_shared",
+   "note": "Original build prompt not shared; separate creator-authored reusable prompt template linked in docs/PROMPT.md."
+  },
+  "published_reusable_prompt": {
+   "kind": "creator-authored reusable template, NOT the original build prompt",
+   "source": "https://github.com/makerjackie/the-big-one/blob/main/docs/PROMPT.md",
+   "language": "en",
+   "verbatim": "Make me an animated short film entirely in code: no image models, no video models, no audio assets.\n\n[Story] One line: ________ (e.g. a little robot in a straw hat goes fishing, hooks a 220 m ancient whale shark, and gets back the hat the wind blew away)\n[Length] about ___ seconds (30-60 works well)\n[Look] hand-drawn anime feel: bright summer, deep blue sky, towering cumulus, two-tone cel shading, ink lines, painterly backgrounds (swap for your own style)\n[Sound] a score and sound effects, no dialogue\n[Reference] you may study https://github.com/0xCodez/leviathan for its render pipeline and modelling approach, but the story and characters must be original\n\nTechnical:\n1. three.js (WebGL2), bundled with esbuild into one HTML that plays offline; export a 1080p MP4 frame by frame with puppeteer + ffmpeg.\n2. Every frame is a pure function of time, renderAt(t): seeded randomness, no accumulated state. During playback the audio clock drives the picture.\n3. Pipeline: MRT colour + normal/depth/material id → painterly background pass → ink lines from material id, depth and normal breaks → atmosphere → bloom → grade and grain. Characters use a two-tone cel material.\n4. Characters on twos, effects on threes, like hand-drawn animation.\n5. Write the shot list first: story cues and shots; a director module returns camera, poses, expressions and effects for any time.\n6. Model the main characters and creatures properly: build the real form in a rest pose from section curves plus sculpting (bony ridges, face, fins/limbs, a jaw and eyelids that move), then bend it along a skeleton on the GPU; paint the skin in the shader and break the terminator with bumped normals. No single tube or stack of spheres.\n7. Motion must feel alive: anticipation, the head trailing, twisting, follow-through, squash and stretch on landing. Nothing may teleport.\n8. Give the sound to a parallel sub-agent: synthesize the score and effects in pure JS against the cue sheet, stereo out.\n\nQuality, every round:\n- Make a contact sheet of the whole film and critique every frame like an art director; view key shots at full resolution and zoom into anything suspicious.\n- Write a pop detector that finds frames where part of the picture suddenly jumps (excluding cuts) to catch teleports and glitches.\n- Fade fine detail by metres-per-pixel so distant surfaces don't sparkle; ink a splash only at its outer silhouette.\n- Check performance and precompile all shaders at startup.\n- Re-render the MP4 after every round and check frames from the final file.\n\nDeliver: one HTML, a 1080p MP4, a contact sheet, and a list of what you are still not happy with."
+  },
+  "cta": "https://easyveo.com?utm_source=github&utm_medium=referral&utm_campaign=awesome_opus55_video_prompts&utm_content=makerjackie_the_big_one"
+ }
+]

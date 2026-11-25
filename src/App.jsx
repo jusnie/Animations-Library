@@ -60,16 +60,19 @@ export default function App() {
       fetch('/data/prompt-en.json').then((r) => (r.ok ? r.json() : {})),
       fetch('/data/prompt-fix.json').then((r) => (r.ok ? r.json() : {})),
       fetch('/data/video-post.json').then((r) => (r.ok ? r.json() : {})),
-    ]).then(([libRes, extraRes, promptRes, promptFixRes, videoPostRes]) => {
+      fetch('/data/awesome-entries.json').then((r) => (r.ok ? r.json() : [])),
+    ]).then(([libRes, extraRes, promptRes, promptFixRes, videoPostRes, awesomeRes]) => {
       const libItems = libRes.status === 'fulfilled' && Array.isArray(libRes.value) ? libRes.value : [];
       const extraItems = extraRes.status === 'fulfilled' && Array.isArray(extraRes.value) ? extraRes.value : [];
       const promptEn = promptRes.status === 'fulfilled' && promptRes.value ? promptRes.value : {};
       const promptFix = promptFixRes.status === 'fulfilled' && promptFixRes.value ? promptFixRes.value : {};
       const videoPost = videoPostRes.status === 'fulfilled' && videoPostRes.value ? videoPostRes.value : {};
+      const awesomeItems = awesomeRes.status === 'fulfilled' && Array.isArray(awesomeRes.value) ? awesomeRes.value : [];
       const mergedRaw = [...extraItems, ...libItems].filter(
         (item) => !item.partial && (item.prompt || '').length >= 30
       );
-      if (mergedRaw.length === 0) return;
+      if (mergedRaw.length === 0 && awesomeItems.length === 0) return;
+      const seenUrls = new Set();
       const mapped = mergedRaw.map((item, idx) => {
         const fixOverride = typeof promptFix[item.id] === 'string' ? promptFix[item.id] : promptFix[item.id]?.prompt;
         const enOverride = promptEn[item.id]?.en;
@@ -77,6 +80,8 @@ export default function App() {
           ? `https://lumpongautomated.com/opus-video-library${item.poster}`
           : item.poster;
         const techArr = Array.isArray(item.tech) ? item.tech : [];
+        const postUrl = videoPost[item.id] || item.postUrl || '';
+        if (postUrl) seenUrls.add(postUrl);
         return {
           id: item.id || `data-${idx}`,
           title: item.title || `Opus Animation by @${item.author || 'creator'}`,
@@ -89,10 +94,47 @@ export default function App() {
           demoType: ['orbit', 'kinetic', 'nodes', 'cube3d', 'particles', 'wave', 'bounce', 'spiral'][idx % 8],
           accent: ['#fde047', '#fb7185', '#38bdf8', '#4ade80', '#c084fc'][idx % 5],
           thumbnailUrl: poster,
-          prompt: enOverride || item.prompt || 'Prompt not available.',
-          postUrl: videoPost[item.id] || item.postUrl || '',
+          prompt: fixOverride || enOverride || item.prompt || 'Prompt not available.',
+          postUrl,
         };
       });
+
+      const catMap = {
+        music: 'motion',
+        motion: 'motion',
+        explainer: 'explainer',
+        '3d': '3d',
+        blender: '3d',
+        game: 'games',
+        games: 'games',
+        interactive: 'games',
+      };
+
+      awesomeItems.forEach((item, idx) => {
+        if (!item.post || seenUrls.has(item.post)) return;
+        const rawPrompt =
+          typeof item.prompt === 'string'
+            ? item.prompt
+            : item.prompt?.text || item.prompt?.en || item.desc || '';
+        if (!rawPrompt || rawPrompt.length < 30) return;
+        seenUrls.add(item.post);
+        mapped.push({
+          id: `awesome-${item.slug || idx}`,
+          title: item.title || `Opus 5.5 Demo by @${item.handle || 'creator'}`,
+          author: item.handle ? `@${item.handle}` : '@creator',
+          category: catMap[(item.cat || '').toLowerCase()] || 'motion',
+          sets: [],
+          format: 'landscape',
+          tech: 'video',
+          duration: 'Opus 5.5',
+          demoType: ['orbit', 'kinetic', 'nodes', 'cube3d', 'particles', 'wave', 'bounce', 'spiral'][idx % 8],
+          accent: ['#fde047', '#fb7185', '#38bdf8', '#4ade80', '#c084fc'][idx % 5],
+          thumbnailUrl: null,
+          prompt: rawPrompt,
+          postUrl: item.post,
+        });
+      });
+
       setImportedItems(mapped);
     });
   }, []);
