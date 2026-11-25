@@ -98,26 +98,13 @@ export default function App() {
     });
   }, []);
 
-  // Accessibility state
-  const [textSize, setTextSize] = useState('base'); // 'base' | 'lg' | 'xl'
-  const [highContrast, setHighContrast] = useState(false);
-  const [reduceMotion, setReduceMotion] = useState(false);
-  const [underlineLinks, setUnderlineLinks] = useState(false);
-
-  const resetA11y = () => {
-    setTextSize('base');
-    setHighContrast(false);
-    setReduceMotion(false);
-    setUnderlineLinks(false);
-  };
-
   const openLibraryWithFilter = (filter = {}) => {
     setActiveCat(filter.cat || 'all');
     setActiveSet(filter.set || 'all');
     setActiveFormat(filter.format || 'all');
     setActiveTech(filter.tech || 'all');
     setView('library');
-    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleImportFiles = async (e) => {
@@ -217,18 +204,8 @@ export default function App() {
     setTimeout(() => setCopiedId(null), 1800);
   };
 
-  const rootClasses = [
-    'min-h-screen flex flex-col transition-colors',
-    textSize === 'lg' ? 'text-size-lg' : textSize === 'xl' ? 'text-size-xl' : '',
-    highContrast ? 'high-contrast' : '',
-    reduceMotion ? 'reduce-motion' : '',
-    underlineLinks ? 'underline-links' : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
-
   return (
-    <div className={rootClasses}>
+    <div className="min-h-screen flex flex-col transition-colors">
       {/* Top Sketchbook Navbar */}
       <header className="sticky top-0 z-30 bg-[#fdfbf7]/95 backdrop-blur-sm border-b-2 border-[#1e1b18] px-4 sm:px-8 py-3">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
@@ -569,7 +546,7 @@ export default function App() {
                           <AnimationCanvas
                             demoType={item.demoType}
                             accent={item.accent}
-                            reduceMotion={reduceMotion}
+                            reduceMotion={false}
                             interactive={item.tech === 'playable'}
                           />
                         )}
@@ -626,62 +603,9 @@ export default function App() {
         )}
       </main>
 
-      {/* Accessibility Footer */}
+      {/* Footer */}
       <footer className="border-t-2 border-[#1e1b18] bg-white px-4 sm:px-8 py-6 mt-12">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="font-marker text-base mr-1">Text size:</span>
-            {[
-              { id: 'base', label: 'A' },
-              { id: 'lg', label: 'A+' },
-              { id: 'xl', label: 'A++' },
-            ].map((sz) => (
-              <button
-                key={sz.id}
-                onClick={() => setTextSize(sz.id)}
-                className={`sketch-btn px-2.5 py-0.5 text-sm font-bold cursor-pointer ${
-                  textSize === sz.id ? 'bg-[#fde047]' : 'bg-[#fdfbf7]'
-                }`}
-              >
-                {sz.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2.5">
-            <button
-              onClick={() => setHighContrast(!highContrast)}
-              className={`sketch-btn px-3 py-1 text-sm font-bold cursor-pointer ${
-                highContrast ? 'bg-[#1e1b18] text-white' : 'bg-[#fdfbf7]'
-              }`}
-            >
-              High contrast
-            </button>
-            <button
-              onClick={() => setReduceMotion(!reduceMotion)}
-              className={`sketch-btn px-3 py-1 text-sm font-bold cursor-pointer ${
-                reduceMotion ? 'bg-[#38bdf8]' : 'bg-[#fdfbf7]'
-              }`}
-            >
-              Reduce motion
-            </button>
-            <button
-              onClick={() => setUnderlineLinks(!underlineLinks)}
-              className={`sketch-btn px-3 py-1 text-sm font-bold cursor-pointer ${
-                underlineLinks ? 'bg-[#bbf7d0]' : 'bg-[#fdfbf7]'
-              }`}
-            >
-              Underline links
-            </button>
-            <button
-              onClick={resetA11y}
-              className="sketch-btn bg-white px-3 py-1 text-sm font-bold flex items-center gap-1 cursor-pointer"
-            >
-              <RotateCcw className="w-3.5 h-3.5" /> Reset
-            </button>
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-4 pt-3 border-t border-dashed border-[#1e1b18]/30 flex flex-wrap items-center justify-between gap-2 text-sm text-[#57534e]">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2 text-sm text-[#57534e]">
           <span className="font-caveat text-xl">
             Hand-drawn &amp; coded by{' '}
             <span className="marker-highlight font-bold text-[#1e1b18]">
@@ -728,7 +652,7 @@ export default function App() {
                   <AnimationCanvas
                     demoType={selectedItem.demoType}
                     accent={selectedItem.accent}
-                    reduceMotion={reduceMotion}
+                    reduceMotion={false}
                     interactive={true}
                   />
                 </div>
