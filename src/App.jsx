@@ -271,7 +271,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col transition-colors">
       {/* Top Sketchbook Navbar */}
-      <header className="sticky top-0 z-30 bg-[#fdfbf7]/95 backdrop-blur-sm border-b-2 border-[#1e1b18] px-4 sm:px-8 py-3">
+      <header className="sticky top-0 z-30 bg-[#fdfbf7] border-b-2 border-[#1e1b18] px-4 sm:px-8 py-3">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <button
             onClick={() => setView('home')}
@@ -649,7 +649,7 @@ export default function App() {
                           <AnimationCanvas
                             demoType={item.demoType}
                             accent={item.accent}
-                            reduceMotion={false}
+                            reduceMotion={true}
                             interactive={item.tech === 'playable'}
                           />
                         )}
