@@ -280,9 +280,9 @@ export default function App() {
           </button>
 
           <div className="flex items-center gap-2 ml-auto">
-            <div className="relative flex items-center justify-end w-[calc(100vw-2rem)] sm:w-80 h-10">
+            <div className="relative w-10 h-10 flex items-center justify-end">
               <div
-                className={`absolute inset-0 origin-right transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${
+                className={`absolute right-0 top-0 h-10 w-[calc(100vw-2rem)] sm:w-80 origin-right transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform z-20 ${
                   searchOpen || searchQuery
                     ? 'scale-x-100 opacity-100 pointer-events-auto'
                     : 'scale-x-0 opacity-0 pointer-events-none'
