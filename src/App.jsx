@@ -24,6 +24,14 @@ export default function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [showCanvas, setShowCanvas] = useState(false);
   const [copiedId, setCopiedId] = useState(null);
+
+  useEffect(() => {
+    if (selectedItem && !showCanvas && selectedItem.postUrl?.includes('x.com/')) {
+      setTimeout(() => {
+        window.twttr?.widgets?.load();
+      }, 50);
+    }
+  }, [selectedItem, showCanvas]);
   const [importedItems, setImportedItems] = useState(() => {
     try {
       const saved = localStorage.getItem('opus_imported_animations');
@@ -609,39 +617,49 @@ export default function App() {
             </p>
 
             <div
-              onClick={() => setShowCanvas(!showCanvas)}
-              className="h-64 sm:h-72 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-[#1e1b18] relative group cursor-pointer"
-              title="Click to toggle interactive animation"
+              className="min-h-64 max-h-96 overflow-y-auto border-2 border-[#1e1b18] rounded-xl mb-5 bg-[#1e1b18] relative flex items-center justify-center"
             >
-              {showCanvas || !selectedItem.thumbnailUrl ? (
-                <AnimationCanvas
-                  demoType={selectedItem.demoType}
-                  accent={selectedItem.accent}
-                  reduceMotion={reduceMotion}
-                  interactive={true}
-                />
+              {showCanvas || (!selectedItem.thumbnailUrl && !selectedItem.postUrl?.includes('x.com/')) ? (
+                <div className="w-full h-64">
+                  <AnimationCanvas
+                    demoType={selectedItem.demoType}
+                    accent={selectedItem.accent}
+                    reduceMotion={reduceMotion}
+                    interactive={true}
+                  />
+                </div>
+              ) : selectedItem.postUrl?.includes('x.com/') ? (
+                <div className="w-full flex justify-center p-2 bg-white">
+                  <blockquote className="twitter-tweet" data-dnt="true">
+                    <a href={selectedItem.postUrl.replace('x.com/', 'twitter.com/')}>
+                      Loading video from X...
+                    </a>
+                  </blockquote>
+                </div>
               ) : (
                 <img
                   src={selectedItem.thumbnailUrl}
                   alt={selectedItem.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-64 object-contain"
                 />
               )}
-              <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                <span className="sketch-btn bg-white px-3 py-1 text-xs font-bold flex items-center gap-1">
-                  <Play className="w-3.5 h-3.5" />{' '}
-                  {showCanvas ? 'Show Poster' : 'Play Live Canvas'}
-                </span>
-              </div>
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <button
+                onClick={() => setShowCanvas(!showCanvas)}
+                className="sketch-btn bg-white px-3 py-1 text-xs font-bold flex items-center gap-1 cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5" />{' '}
+                {showCanvas ? 'Show X Video' : 'Play Live Canvas'}
+              </button>
               {selectedItem.postUrl && (
                 <a
                   href={selectedItem.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="sketch-btn bg-[#fde047] px-3.5 py-1.5 text-xs sm:text-sm font-bold flex items-center gap-1.5 absolute bottom-3 right-3"
+                  className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1"
                 >
-                  Original Video <ArrowRight className="w-3.5 h-3.5" />
+                  Open on X <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               )}
             </div>
