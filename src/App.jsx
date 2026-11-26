@@ -622,12 +622,6 @@ export default function App() {
                   prompts
                 </p>
               </div>
-              <button
-                onClick={() => openLibraryWithFilter({})}
-                className="sketch-btn bg-white px-3 py-1.5 text-sm font-bold flex items-center gap-1.5 cursor-pointer"
-              >
-                <SlidersHorizontal className="w-4 h-4" /> Clear filters
-              </button>
             </div>
 
             {/* Filter Pills */}
