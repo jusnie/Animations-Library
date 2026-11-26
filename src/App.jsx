@@ -833,69 +833,52 @@ export default function App() {
                   <div className="sketch-box bg-white p-6 space-y-6">
                     <div>
                       <span className="inline-block bg-[#d8b4fe] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                        Framework • PDFs &amp; Template
+                        Framework • Text &amp; Template
                       </span>
                       <h2 className="font-marker text-2xl sm:text-3xl">
                         Master Prompt
                       </h2>
                     </div>
 
-                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5 space-y-3">
-                      <h3 className="font-marker text-xl">
-                        1/ Official Master Prompt Framework PDFs
-                      </h3>
-                      <div className="flex flex-wrap gap-3">
-                        <a
-                          href="https://github.com/nikhil-ai-insights/master-prompt-framework/blob/main/Universal_Master_Prompt_Template_(Professional_Version).pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="sketch-btn bg-[#fde047] px-4 py-2 text-sm font-bold inline-flex items-center gap-1.5"
-                        >
-                          Universal Master Prompt Template (PDF)
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                        <a
-                          href="https://github.com/nikhil-ai-insights/master-prompt-framework/blob/main/Master_Prompt_Framework.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="sketch-btn bg-[#bae6fd] px-4 py-2 text-sm font-bold inline-flex items-center gap-1.5"
-                        >
-                          Master Prompt Framework (PDF)
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
+                    {[
+                      {
+                        id: 'master-framework-overview',
+                        step: '1/ Master Prompt Framework (Overview & Core Principles)',
+                        body: `Master Prompt Framework is a structured methodology for designing effective AI prompts.\n\nInstead of writing unstructured or inconsistent instructions, this framework provides a repeatable format that ensures:\n- Clarity: Eliminates vague or ambiguous instructions.\n- Control: Guides the AI through exact reasoning and constraints.\n- Consistency: Produces reliable, repeatable outputs across runs.\n- Scalability: Works for any domain (video, coding, writing, or research).`,
+                      },
+                      {
+                        id: 'master-prompt-template',
+                        step: '2/ Universal Master Prompt Template (Professional Version)',
+                        body: `ROLE:\nAct as a world-class [EXPERT ROLE / SPECIALIST].\n\nOBJECTIVE:\n[CLEAR, SPECIFIC GOAL OR DELIVERABLE YOU WANT PRODUCED].\n\nCONTEXT:\n- Target Audience: [WHO THIS IS FOR]\n- Platform / Medium: [WHERE IT WILL BE USED]\n- Key Constraints: [BUDGET, TIME, STYLE, OR TECHNICAL LIMITS]\n\nINSTRUCTIONS:\n1. [STEP 1 — RESEARCH / ANALYZE]\n2. [STEP 2 — STRUCTURE / DRAFT]\n3. [STEP 3 — REFINE / OPTIMIZE]\n\nOUTPUT FORMAT:\n- Structure: [BULLETS / TABLE / SCRIPT / CODE]\n- Tone: [PROFESSIONAL / CONVERSATIONAL / CINEMATIC]\n- Length: [WORD COUNT OR DURATION]`,
+                      },
+                    ].map((s) => (
+                      <div
+                        key={s.id}
+                        className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                          <h3 className="font-marker text-xl">{s.step}</h3>
+                          <button
+                            type="button"
+                            onClick={() => handleCopy(s.body, s.id)}
+                            className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          >
+                            {copiedId === s.id ? (
+                              <>
+                                <Check className="w-3.5 h-3.5" /> Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3.5 h-3.5" /> Copy text
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                          {s.body}
+                        </p>
                       </div>
-                    </div>
-
-                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5">
-                      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                        <h3 className="font-marker text-xl">
-                          2/ Universal Master Prompt Template (Copy &amp; Use)
-                        </h3>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            handleCopy(
-                              `ROLE: Act as a world-class [EXPERT ROLE].\n\nOBJECTIVE: [CLEAR GOAL / DELIVERABLE].\n\nCONTEXT: [AUDIENCE, PLATFORM, CONSTRAINTS].\n\nINSTRUCTIONS:\n1. [STEP 1]\n2. [STEP 2]\n3. [STEP 3]\n\nOUTPUT FORMAT: [STRUCTURE, TONE, LENGTH].`,
-                              'master-prompt-template'
-                            )
-                          }
-                          className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
-                        >
-                          {copiedId === 'master-prompt-template' ? (
-                            <>
-                              <Check className="w-3.5 h-3.5" /> Copied!
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="w-3.5 h-3.5" /> Copy template
-                            </>
-                          )}
-                        </button>
-                      </div>
-                      <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
-                        {`ROLE: Act as a world-class [EXPERT ROLE].\n\nOBJECTIVE: [CLEAR GOAL / DELIVERABLE].\n\nCONTEXT: [AUDIENCE, PLATFORM, CONSTRAINTS].\n\nINSTRUCTIONS:\n1. [STEP 1]\n2. [STEP 2]\n3. [STEP 3]\n\nOUTPUT FORMAT: [STRUCTURE, TONE, LENGTH].`}
-                      </p>
-                    </div>
+                    ))}
                   </div>
                 )}
               </div>
