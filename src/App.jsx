@@ -702,64 +702,15 @@ export default function App() {
 
                 {openGuideId === 'roblox-3d' && (
                   <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
-                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5">
-                      <h3 className="font-marker text-xl mb-3">
-                        1/ Top GitHub Repos &amp; Skills for Roblox 3D
-                      </h3>
-                      <ul className="space-y-2.5 font-hand text-base">
-                        {[
-                          {
-                            name: 'CodeByJN/3D-Asset-Agent',
-                            desc: 'Blender MCP + Hunyuan3D to Roblox-ready models, R15 characters, animations & VFX placed straight into Roblox Studio.',
-                            url: 'https://github.com/CodeByJN/3D-Asset-Agent',
-                          },
-                          {
-                            name: 'gogolumo/rbsmithy-roblox-claude-skill',
-                            desc: 'RBSmithy 3D Asset Forge: Roblox-ready 3D asset briefs, Blender Python blockouts, MeshPart import, collision & LODs.',
-                            url: 'https://github.com/gogolumo/rbsmithy-roblox-claude-skill',
-                          },
-                          {
-                            name: 'ColinEdw/RobloxStudioMCP',
-                            desc: 'MCP server + Studio plugin where AI can see 3D/orthographic views, build CSG/layouts, terrain & GUI.',
-                            url: 'https://github.com/ColinEdw/RobloxStudioMCP',
-                          },
-                          {
-                            name: 'hope1026/weppy-roblox-mcp',
-                            desc: 'WEPPY Roblox Studio MCP server & plugin (npx -y @weppy/roblox-mcp@latest).',
-                            url: 'https://github.com/hope1026/weppy-roblox-mcp',
-                          },
-                          {
-                            name: 'WiktorKluczny/Roblox_MCP',
-                            desc: 'Custom MCP bridge for generate_mesh, generate_material, generate_procedural_model & Luau.',
-                            url: 'https://github.com/WiktorKluczny/Roblox_MCP',
-                          },
-                        ].map((repo) => (
-                          <li key={repo.name} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-dashed border-[#1e1b18]/20 pb-2">
-                            <div>
-                              <a
-                                href={repo.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold underline hover:text-[#0284c7]"
-                              >
-                                {repo.name}
-                              </a>
-                              <p className="text-sm text-[#57534e]">{repo.desc}</p>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
                     {[
                       {
-                        id: 'roblox-step-2',
-                        step: '2/ Prompt: Generate a Roblox-Ready 3D Model (Blender + MeshPart)',
+                        id: 'roblox-step-1',
+                        step: '1/ Prompt: Generate a Roblox-Ready 3D Model (Blender + MeshPart)',
                         body: `Create a Roblox-ready 3D model of [YOUR OBJECT, e.g., stylized medieval lantern] using Blender Python (bmesh).\n\nRequirements:\n- Keep total triangle count under 10,000 tris (Roblox MeshPart limit is 20k).\n- Ensure clean, watertight manifold geometry with no N-gons or inverted normals.\n- Scale in Roblox studs (1 Blender meter = 1 stud) with pivot centered at the bottom.\n- Unwrap clean UVs onto a single 1024x1024 texture atlas.\n- Export as FBX/GLB ready for Roblox Studio MeshPart import, plus a simple collision proxy.`,
                       },
                       {
-                        id: 'roblox-step-3',
-                        step: '3/ Prompt: Clean Up an AI-Generated 3D Mesh (Hunyuan3D / Meshy) for Roblox',
+                        id: 'roblox-step-2',
+                        step: '2/ Prompt: Clean Up an AI-Generated 3D Mesh (Hunyuan3D / Meshy) for Roblox',
                         body: `Inspect this raw AI-generated 3D mesh and prepare it for Roblox Studio:\n\n1. Check for non-manifold edges, duplicate/loose vertices, and inward faces.\n2. Decimate cleanly to under 12,000 triangles while preserving the silhouette.\n3. Bake materials/colors into a single 1024px texture.\n4. Set origin/pivot to the base center and scale to [X] studs tall.\n5. Export as .fbx and list the exact MeshPart import settings (CollisionFidelity, RenderFidelity).`,
                       },
                     ].map((s) => (
