@@ -151,12 +151,22 @@ export default function App() {
   const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {
+    const fallbackVisit = () => {
+      try {
+        const next = (parseInt(localStorage.getItem('opus_visits') || '0', 10) || 0) + 1;
+        localStorage.setItem('opus_visits', String(next));
+        setVisitorCount(next);
+      } catch {
+        setVisitorCount(1);
+      }
+    };
     fetch('https://api.counterapi.dev/v1/opus-animations-library/visits/up')
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (data?.count) setVisitorCount(data.count);
+        else fallbackVisit();
       })
-      .catch(() => {});
+      .catch(fallbackVisit);
   }, []);
 
   useEffect(() => {
