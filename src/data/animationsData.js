@@ -373,6 +373,15 @@ export const SKILLS_AND_TOOLS = [
     description: 'Game-dev resource list including Quaternius, Poly Pizza, GameAsset.net (10,000+ free GLB animations), and Mint Polycount Checker.',
     url: 'https://github.com/liuyan-wjy/magictools',
   },
+  {
+    id: 'claude-master-prompt-template',
+    title: 'Claude Master Prompt Template',
+    author: 'NeuraPulse',
+    badge: 'XML Tags · 6 Core Sections',
+    color: '#fde047',
+    description: 'Reusable XML-tagged Claude master prompt structure (Role, Context, Task, Rules, Example, Output Format) for consistent, high-precision outputs.',
+    url: 'https://neuraplus-ai.github.io/blog/claude-master-prompt-template.html',
+  },
 ];
 
 export const ANIMATIONS = [
