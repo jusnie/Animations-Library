@@ -386,10 +386,10 @@ export default function App() {
             </div>
           </div>
 
-          <nav className="flex items-center gap-2">
+          <nav className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setView('home')}
-              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer ${
+              className={`sketch-btn px-3 py-1.5 text-sm sm:text-base font-bold cursor-pointer ${
                 view === 'home' ? 'bg-[#fde047]' : 'bg-white'
               }`}
             >
@@ -397,23 +397,33 @@ export default function App() {
             </button>
             <button
               onClick={() => setView('skills')}
-              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer ${
+              className={`sketch-btn px-3 py-1.5 text-sm sm:text-base font-bold cursor-pointer ${
                 view === 'skills' ? 'bg-[#bbf7d0]' : 'bg-white'
               }`}
             >
               Skills
             </button>
             <button
-              onClick={() => openLibraryWithFilter({})}
-              className={`sketch-btn px-3.5 py-1.5 text-base font-bold cursor-pointer flex items-center gap-1.5 ${
-                view === 'library' ? 'bg-[#38bdf8]' : 'bg-white'
+              onClick={() => setView('guides')}
+              className={`sketch-btn px-3 py-1.5 text-sm sm:text-base font-bold cursor-pointer ${
+                view === 'guides' ? 'bg-[#fda4af]' : 'bg-white'
               }`}
             >
-              <span>Browse All</span>
-              <span className="text-xs font-mono-code bg-[#fdfbf7] border border-[#1e1b18] rounded-full px-1.5 py-0.2">
-                {allAnimations.length}
-              </span>
+              Guides
             </button>
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => openLibraryWithFilter({ cat: cat.id })}
+                className={`sketch-btn px-3 py-1.5 text-sm sm:text-base font-bold cursor-pointer ${
+                  view === 'library' && activeCat === cat.id
+                    ? 'bg-[#38bdf8]'
+                    : 'bg-white'
+                }`}
+              >
+                {cat.title}
+              </button>
+            ))}
           </nav>
         </div>
       </header>
@@ -593,6 +603,23 @@ export default function App() {
                   </span>
                 </a>
               ))}
+            </div>
+          </section>
+        ) : view === 'guides' ? (
+          <section>
+            <div className="mb-8">
+              <h1 className="font-marker text-3xl sm:text-5xl mb-2">
+                Guides &amp;{' '}
+                <span className="marker-highlight">Workflows</span>
+              </h1>
+              <p className="font-caveat text-2xl text-[#57534e]">
+                Step-by-step guides, tips, and workflows — coming soon.
+              </p>
+            </div>
+            <div className="sketch-box bg-white p-8 text-center">
+              <p className="font-hand text-lg text-[#57534e]">
+                This section is ready for your guides!
+              </p>
             </div>
           </section>
         ) : (
