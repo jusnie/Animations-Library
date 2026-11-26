@@ -815,12 +815,22 @@ export default function App() {
             <h2 className="font-marker text-2xl sm:text-3xl mb-1 pr-10">
               {selectedItem.title}
             </h2>
-            <p className="text-sm text-[#57534e] mb-4">
+            <p className="text-sm text-[#57534e] mb-2">
               by {selectedItem.author} •{' '}
               {selectedItem.tech === 'playable'
                 ? 'Interactive (move mouse or click inside!)'
                 : selectedItem.duration}
             </p>
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              {detectSkills(selectedItem).map((sk) => (
+                <span
+                  key={sk}
+                  className="text-xs font-mono-code font-bold bg-[#fef08a] text-[#1e1b18] border border-[#1e1b18] rounded-md px-2 py-0.5"
+                >
+                  {sk}
+                </span>
+              ))}
+            </div>
 
             <div
               className="h-64 sm:h-80 border-2 border-[#1e1b18] rounded-xl overflow-hidden mb-5 bg-[#1e1b18] relative flex items-center justify-center"
