@@ -14,6 +14,29 @@ import {
 import { CATEGORIES, CURATED_SETS, ANIMATIONS, SKILLS_AND_TOOLS } from './data/animationsData';
 import AnimationCanvas from './components/AnimationCanvas';
 
+const detectSkills = (item) => {
+  const text = `${item.title || ''} ${item.prompt || ''} ${item.category || ''}`.toLowerCase();
+  const skills = [];
+  if (/three\.?js|r3f|react three fiber/.test(text)) skills.push('Three.js');
+  if (/remotion/.test(text)) skills.push('Remotion');
+  if (/gsap|scrolltrigger/.test(text)) skills.push('GSAP');
+  if (/manim/.test(text)) skills.push('Manim');
+  if (/blender/.test(text)) skills.push('Blender');
+  if (/p5\.?js|p5\.brush/.test(text)) skills.push('p5.js');
+  if (/webgl|glsl|shader/.test(text)) skills.push('WebGL / Shaders');
+  if (/ffmpeg/.test(text)) skills.push('FFmpeg');
+  if (/lottie/.test(text)) skills.push('Lottie');
+  if (/\bsvg\b/.test(text)) skills.push('SVG');
+  if (/canvas/.test(text)) skills.push('HTML5 Canvas');
+  if (/react/.test(text) && !skills.includes('Remotion')) skills.push('React');
+  if (skills.length === 0) {
+    if (item.category === '3d') skills.push('Three.js');
+    else if (item.category === 'games' || item.tech === 'playable') skills.push('HTML5 Canvas');
+    else skills.push('HTML / CSS / JS');
+  }
+  return skills.slice(0, 3);
+};
+
 export default function App() {
   const [view, setView] = useState('home'); // 'home' | 'library'
   const [activeCat, setActiveCat] = useState('all');
@@ -686,9 +709,19 @@ export default function App() {
                       <div className="flex items-start justify-between gap-2 mb-1">
                         <h3 className="font-marker text-xl">{item.title}</h3>
                       </div>
-                      <p className="text-sm text-[#57534e] mb-3">
+                      <p className="text-sm text-[#57534e] mb-2">
                         by {item.author} • {item.format}
                       </p>
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {detectSkills(item).map((sk) => (
+                          <span
+                            key={sk}
+                            className="text-[11px] font-mono-code font-bold bg-[#fef08a] text-[#1e1b18] border border-[#1e1b18] rounded-md px-1.5 py-0.5"
+                          >
+                            {sk}
+                          </span>
+                        ))}
+                      </div>
                       <p className="text-sm line-clamp-2 bg-[#fdfbf7] p-2 border border-dashed border-[#1e1b18]/40 rounded-lg mb-4">
                         "{item.prompt}"
                       </p>
