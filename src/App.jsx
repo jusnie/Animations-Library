@@ -605,32 +605,26 @@ export default function App() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="sketch-box bg-white p-6">
+            {openGuideId ? (
+              <div>
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenGuideId(
-                      openGuideId === 'reverse-engineer' ? null : 'reverse-engineer'
-                    )
-                  }
-                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                  onClick={() => setOpenGuideId(null)}
+                  className="sketch-btn bg-white px-3.5 py-1.5 text-sm font-bold mb-6 cursor-pointer"
                 >
-                  <div>
-                    <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                      Video Workflow • 3 Steps
-                    </span>
-                    <h2 className="font-marker text-2xl sm:text-3xl">
-                      How to Reverse Engineer any type of video
-                    </h2>
-                  </div>
-                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
-                    {openGuideId === 'reverse-engineer' ? 'Hide' : 'Open Guide'}
-                  </span>
+                  ← Back to Guides
                 </button>
 
                 {openGuideId === 'reverse-engineer' && (
-                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Video Workflow • 3 Steps
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        How to Reverse Engineer any type of video
+                      </h2>
+                    </div>
                     {[
                       {
                         id: 'guide-step-1',
@@ -677,31 +671,17 @@ export default function App() {
                     ))}
                   </div>
                 )}
-              </div>
-
-              <div className="sketch-box bg-white p-6">
-                <button
-                  type="button"
-                  onClick={() =>
-                    setOpenGuideId(openGuideId === 'roblox-3d' ? null : 'roblox-3d')
-                  }
-                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
-                >
-                  <div>
-                    <span className="inline-block bg-[#bae6fd] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                      Roblox 3D • GitHub + Prompts
-                    </span>
-                    <h2 className="font-marker text-2xl sm:text-3xl">
-                      Roblox 3D Model Generation &amp; Studio AI
-                    </h2>
-                  </div>
-                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
-                    {openGuideId === 'roblox-3d' ? 'Hide' : 'Open Guide'}
-                  </span>
-                </button>
 
                 {openGuideId === 'roblox-3d' && (
-                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#bae6fd] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Roblox 3D • Prompts
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        Roblox 3D Model Generation &amp; Studio AI
+                      </h2>
+                    </div>
                     {[
                       {
                         id: 'roblox-step-1',
@@ -743,31 +723,17 @@ export default function App() {
                     ))}
                   </div>
                 )}
-              </div>
-
-              <div className="sketch-box bg-white p-6">
-                <button
-                  type="button"
-                  onClick={() =>
-                    setOpenGuideId(openGuideId === 'yta-niche' ? null : 'yta-niche')
-                  }
-                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
-                >
-                  <div>
-                    <span className="inline-block bg-[#bbf7d0] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                      YTA • YouTube Automation
-                    </span>
-                    <h2 className="font-marker text-2xl sm:text-3xl">
-                      YTA Niche Playbook: Faceless &amp; Documentary Videos
-                    </h2>
-                  </div>
-                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
-                    {openGuideId === 'yta-niche' ? 'Hide' : 'Open Guide'}
-                  </span>
-                </button>
 
                 {openGuideId === 'yta-niche' && (
-                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#bbf7d0] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        YTA • YouTube Automation
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        YTA Niche Playbook: Faceless &amp; Documentary Videos
+                      </h2>
+                    </div>
                     {[
                       {
                         id: 'yta-step-1',
@@ -809,31 +775,17 @@ export default function App() {
                     ))}
                   </div>
                 )}
-              </div>
-
-              <div className="sketch-box bg-white p-6">
-                <button
-                  type="button"
-                  onClick={() =>
-                    setOpenGuideId(openGuideId === 'clipping-niche' ? null : 'clipping-niche')
-                  }
-                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
-                >
-                  <div>
-                    <span className="inline-block bg-[#fda4af] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                      Clipping • Shorts / Reels / TikTok
-                    </span>
-                    <h2 className="font-marker text-2xl sm:text-3xl">
-                      Clipping Niche Playbook: Viral 9:16 Shorts &amp; Reels
-                    </h2>
-                  </div>
-                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
-                    {openGuideId === 'clipping-niche' ? 'Hide' : 'Open Guide'}
-                  </span>
-                </button>
 
                 {openGuideId === 'clipping-niche' && (
-                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#fda4af] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Clipping • Shorts / Reels / TikTok
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        Clipping Niche Playbook: Viral 9:16 Shorts &amp; Reels
+                      </h2>
+                    </div>
                     {[
                       {
                         id: 'clip-step-1',
@@ -875,8 +827,136 @@ export default function App() {
                     ))}
                   </div>
                 )}
+
+                {openGuideId === 'master-prompt' && (
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#d8b4fe] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Framework • PDFs &amp; Template
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        Master Prompt
+                      </h2>
+                    </div>
+
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5 space-y-3">
+                      <h3 className="font-marker text-xl">
+                        1/ Official Master Prompt Framework PDFs
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        <a
+                          href="https://github.com/nikhil-ai-insights/master-prompt-framework/blob/main/Universal_Master_Prompt_Template_(Professional_Version).pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="sketch-btn bg-[#fde047] px-4 py-2 text-sm font-bold inline-flex items-center gap-1.5"
+                        >
+                          Universal Master Prompt Template (PDF)
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                        <a
+                          href="https://github.com/nikhil-ai-insights/master-prompt-framework/blob/main/Master_Prompt_Framework.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="sketch-btn bg-[#bae6fd] px-4 py-2 text-sm font-bold inline-flex items-center gap-1.5"
+                        >
+                          Master Prompt Framework (PDF)
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5">
+                      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                        <h3 className="font-marker text-xl">
+                          2/ Universal Master Prompt Template (Copy &amp; Use)
+                        </h3>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleCopy(
+                              `ROLE: Act as a world-class [EXPERT ROLE].\n\nOBJECTIVE: [CLEAR GOAL / DELIVERABLE].\n\nCONTEXT: [AUDIENCE, PLATFORM, CONSTRAINTS].\n\nINSTRUCTIONS:\n1. [STEP 1]\n2. [STEP 2]\n3. [STEP 3]\n\nOUTPUT FORMAT: [STRUCTURE, TONE, LENGTH].`,
+                              'master-prompt-template'
+                            )
+                          }
+                          className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                        >
+                          {copiedId === 'master-prompt-template' ? (
+                            <>
+                              <Check className="w-3.5 h-3.5" /> Copied!
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-3.5 h-3.5" /> Copy template
+                            </>
+                          )}
+                        </button>
+                      </div>
+                      <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                        {`ROLE: Act as a world-class [EXPERT ROLE].\n\nOBJECTIVE: [CLEAR GOAL / DELIVERABLE].\n\nCONTEXT: [AUDIENCE, PLATFORM, CONSTRAINTS].\n\nINSTRUCTIONS:\n1. [STEP 1]\n2. [STEP 2]\n3. [STEP 3]\n\nOUTPUT FORMAT: [STRUCTURE, TONE, LENGTH].`}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    id: 'reverse-engineer',
+                    badge: 'Video Workflow • 3 Steps',
+                    color: '#fde047',
+                    title: 'How to Reverse Engineer any type of video',
+                  },
+                  {
+                    id: 'roblox-3d',
+                    badge: 'Roblox 3D • Prompts',
+                    color: '#bae6fd',
+                    title: 'Roblox 3D Model Generation & Studio AI',
+                  },
+                  {
+                    id: 'yta-niche',
+                    badge: 'YTA • YouTube Automation',
+                    color: '#bbf7d0',
+                    title: 'YTA Niche Playbook: Faceless & Documentary Videos',
+                  },
+                  {
+                    id: 'clipping-niche',
+                    badge: 'Clipping • Shorts / Reels / TikTok',
+                    color: '#fda4af',
+                    title: 'Clipping Niche Playbook: Viral 9:16 Shorts & Reels',
+                  },
+                  {
+                    id: 'master-prompt',
+                    badge: 'Framework • PDFs & Template',
+                    color: '#d8b4fe',
+                    title: 'Master Prompt',
+                  },
+                ].map((g) => (
+                  <button
+                    key={g.id}
+                    type="button"
+                    onClick={() => {
+                      setOpenGuideId(g.id);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="sketch-box bg-white p-6 text-left flex flex-col justify-between gap-4 cursor-pointer"
+                  >
+                    <div>
+                      <span
+                        className="inline-block border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2"
+                        style={{ backgroundColor: g.color }}
+                      >
+                        {g.badge}
+                      </span>
+                      <h2 className="font-marker text-2xl">{g.title}</h2>
+                    </div>
+                    <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold self-start">
+                      Open Guide →
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
           </section>
         ) : (
           /* Library Browser View */
