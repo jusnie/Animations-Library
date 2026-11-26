@@ -148,7 +148,13 @@ export default function App() {
   }, []);
 
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [visitorCount, setVisitorCount] = useState(null);
+  const [visitorCount, setVisitorCount] = useState(() => {
+    try {
+      return parseInt(localStorage.getItem('opus_visits') || '1', 10) || 1;
+    } catch {
+      return 1;
+    }
+  });
 
   useEffect(() => {
     const fallbackVisit = () => {
