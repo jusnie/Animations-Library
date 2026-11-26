@@ -10,6 +10,7 @@ import {
   ArrowRight,
   SlidersHorizontal,
   Upload,
+  ExternalLink,
 } from 'lucide-react';
 import { CATEGORIES, CURATED_SETS, ANIMATIONS, SKILLS_AND_TOOLS } from './data/animationsData';
 import AnimationCanvas from './components/AnimationCanvas';
