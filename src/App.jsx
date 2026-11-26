@@ -631,6 +631,19 @@ export default function App() {
             </div>
 
             {/* Filter Pills */}
+            {activeCat !== 'all' ? (
+              <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+                <h2 className="font-marker text-3xl sm:text-4xl">
+                  {CATEGORIES.find((c) => c.id === activeCat)?.title || activeCat}
+                </h2>
+                <button
+                  onClick={() => setView('home')}
+                  className="sketch-btn bg-white px-3.5 py-1.5 text-sm font-bold cursor-pointer"
+                >
+                  ← Back to Home
+                </button>
+              </div>
+            ) : (
             <div className="flex flex-wrap gap-2 mb-8">
               {[
                 { label: 'All', cat: 'all' },
@@ -670,6 +683,7 @@ export default function App() {
                 Playable in browser
               </button>
             </div>
+            )}
 
             {/* Cards Grid */}
             {filteredAnimations.length === 0 ? (
