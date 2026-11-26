@@ -171,7 +171,7 @@ export default function App() {
   }, []);
 
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [openGuide, setOpenGuide] = useState(false);
+  const [openGuideId, setOpenGuideId] = useState(null);
   const [visitorCount, setVisitorCount] = useState(() => {
     try {
       return parseInt(localStorage.getItem('opus_visits') || '1', 10) || 1;
@@ -605,73 +605,194 @@ export default function App() {
               </p>
             </div>
 
-            <div className="sketch-box bg-white p-6">
-              <button
-                type="button"
-                onClick={() => setOpenGuide(!openGuide)}
-                className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
-              >
-                <div>
-                  <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                    Video Workflow • 3 Steps
+            <div className="space-y-6">
+              <div className="sketch-box bg-white p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenGuideId(
+                      openGuideId === 'reverse-engineer' ? null : 'reverse-engineer'
+                    )
+                  }
+                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                >
+                  <div>
+                    <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                      Video Workflow • 3 Steps
+                    </span>
+                    <h2 className="font-marker text-2xl sm:text-3xl">
+                      How to Reverse Engineer any type of video
+                    </h2>
+                  </div>
+                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
+                    {openGuideId === 'reverse-engineer' ? 'Hide' : 'Open Guide'}
                   </span>
-                  <h2 className="font-marker text-2xl sm:text-3xl">
-                    How to Reverse Engineer any type of video
-                  </h2>
-                </div>
-                <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
-                  {openGuide ? 'Hide' : 'Open Guide'}
-                </span>
-              </button>
+                </button>
 
-              {openGuide && (
-                <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
-                  {[
-                    {
-                      id: 'guide-step-1',
-                      step: '1/ Download the video you want to recreate.',
-                      body: `Save the video from the social media platform where you found it.\n\nMake sure you have a copy available on your device before moving to the next step.`,
-                    },
-                    {
-                      id: 'guide-step-2',
-                      step: '2/ Upload the video to Gemini.',
-                      body: `Open Gemini, attach the downloaded video, and paste this prompt:\n\n"Analyse this video in detail, scene by scene and frame by frame where possible.\n\nIdentify the main subject, actions, environment, camera angles, camera movements, lighting, colour grading, composition, transitions, visual effects, and overall aesthetic.\n\nUsing your analysis, write a detailed AI video generation prompt specifically optimised for Seedance 2.5\n\nPreserve the original video's visual style, sequence of events, shot composition, movement, and pacing as closely as possible.\n\nBreak down complex scenes into individual shots and provide clear instructions for recreating each one.\n\nMake the final prompt specific, descriptive, and ready to use."\n\nBONUS: Want to appear in the recreated video?\n\nUpload a clear reference photo of yourself and add:\n\n"Use the person in my uploaded reference photo as the main character instead of the original subject. Preserve their recognisable facial features and overall appearance throughout the video."`,
-                    },
-                    {
-                      id: 'guide-step-3',
-                      step: '3/ Generate your recreated video.',
-                      body: `Copy the finished prompt and paste it into your preferred AI video generator.\n\nUse the generated instructions alongside your reference images to recreate the video's scenes and visual style.\n\nYou can now turn a video you admire into a detailed AI generation prompt and use it as the blueprint for your own creation.`,
-                    },
-                  ].map((s) => (
-                    <div
-                      key={s.id}
-                      className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
-                    >
-                      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                        <h3 className="font-marker text-xl">{s.step}</h3>
-                        <button
-                          type="button"
-                          onClick={() => handleCopy(s.body, s.id)}
-                          className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
-                        >
-                          {copiedId === s.id ? (
-                            <>
-                              <Check className="w-3.5 h-3.5" /> Copied!
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="w-3.5 h-3.5" /> Copy step
-                            </>
-                          )}
-                        </button>
+                {openGuideId === 'reverse-engineer' && (
+                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                    {[
+                      {
+                        id: 'guide-step-1',
+                        step: '1/ Download the video you want to recreate.',
+                        body: `Save the video from the social media platform where you found it.\n\nMake sure you have a copy available on your device before moving to the next step.`,
+                      },
+                      {
+                        id: 'guide-step-2',
+                        step: '2/ Upload the video to Gemini.',
+                        body: `Open Gemini, attach the downloaded video, and paste this prompt:\n\n"Analyse this video in detail, scene by scene and frame by frame where possible.\n\nIdentify the main subject, actions, environment, camera angles, camera movements, lighting, colour grading, composition, transitions, visual effects, and overall aesthetic.\n\nUsing your analysis, write a detailed AI video generation prompt specifically optimised for Seedance 2.5\n\nPreserve the original video's visual style, sequence of events, shot composition, movement, and pacing as closely as possible.\n\nBreak down complex scenes into individual shots and provide clear instructions for recreating each one.\n\nMake the final prompt specific, descriptive, and ready to use."\n\nBONUS: Want to appear in the recreated video?\n\nUpload a clear reference photo of yourself and add:\n\n"Use the person in my uploaded reference photo as the main character instead of the original subject. Preserve their recognisable facial features and overall appearance throughout the video."`,
+                      },
+                      {
+                        id: 'guide-step-3',
+                        step: '3/ Generate your recreated video.',
+                        body: `Copy the finished prompt and paste it into your preferred AI video generator.\n\nUse the generated instructions alongside your reference images to recreate the video's scenes and visual style.\n\nYou can now turn a video you admire into a detailed AI generation prompt and use it as the blueprint for your own creation.`,
+                      },
+                    ].map((s) => (
+                      <div
+                        key={s.id}
+                        className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                          <h3 className="font-marker text-xl">{s.step}</h3>
+                          <button
+                            type="button"
+                            onClick={() => handleCopy(s.body, s.id)}
+                            className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          >
+                            {copiedId === s.id ? (
+                              <>
+                                <Check className="w-3.5 h-3.5" /> Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3.5 h-3.5" /> Copy step
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                          {s.body}
+                        </p>
                       </div>
-                      <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
-                        {s.body}
-                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="sketch-box bg-white p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenGuideId(openGuideId === 'roblox-3d' ? null : 'roblox-3d')
+                  }
+                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                >
+                  <div>
+                    <span className="inline-block bg-[#bae6fd] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                      Roblox 3D • GitHub + Prompts
+                    </span>
+                    <h2 className="font-marker text-2xl sm:text-3xl">
+                      Roblox 3D Model Generation &amp; Studio AI
+                    </h2>
+                  </div>
+                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
+                    {openGuideId === 'roblox-3d' ? 'Hide' : 'Open Guide'}
+                  </span>
+                </button>
+
+                {openGuideId === 'roblox-3d' && (
+                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5">
+                      <h3 className="font-marker text-xl mb-3">
+                        1/ Top GitHub Repos &amp; Skills for Roblox 3D
+                      </h3>
+                      <ul className="space-y-2.5 font-hand text-base">
+                        {[
+                          {
+                            name: 'CodeByJN/3D-Asset-Agent',
+                            desc: 'Blender MCP + Hunyuan3D to Roblox-ready models, R15 characters, animations & VFX placed straight into Roblox Studio.',
+                            url: 'https://github.com/CodeByJN/3D-Asset-Agent',
+                          },
+                          {
+                            name: 'gogolumo/rbsmithy-roblox-claude-skill',
+                            desc: 'RBSmithy 3D Asset Forge: Roblox-ready 3D asset briefs, Blender Python blockouts, MeshPart import, collision & LODs.',
+                            url: 'https://github.com/gogolumo/rbsmithy-roblox-claude-skill',
+                          },
+                          {
+                            name: 'ColinEdw/RobloxStudioMCP',
+                            desc: 'MCP server + Studio plugin where AI can see 3D/orthographic views, build CSG/layouts, terrain & GUI.',
+                            url: 'https://github.com/ColinEdw/RobloxStudioMCP',
+                          },
+                          {
+                            name: 'hope1026/weppy-roblox-mcp',
+                            desc: 'WEPPY Roblox Studio MCP server & plugin (npx -y @weppy/roblox-mcp@latest).',
+                            url: 'https://github.com/hope1026/weppy-roblox-mcp',
+                          },
+                          {
+                            name: 'WiktorKluczny/Roblox_MCP',
+                            desc: 'Custom MCP bridge for generate_mesh, generate_material, generate_procedural_model & Luau.',
+                            url: 'https://github.com/WiktorKluczny/Roblox_MCP',
+                          },
+                        ].map((repo) => (
+                          <li key={repo.name} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-dashed border-[#1e1b18]/20 pb-2">
+                            <div>
+                              <a
+                                href={repo.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold underline hover:text-[#0284c7]"
+                              >
+                                {repo.name}
+                              </a>
+                              <p className="text-sm text-[#57534e]">{repo.desc}</p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  ))}
-                </div>
-              )}
+
+                    {[
+                      {
+                        id: 'roblox-step-2',
+                        step: '2/ Prompt: Generate a Roblox-Ready 3D Model (Blender + MeshPart)',
+                        body: `Create a Roblox-ready 3D model of [YOUR OBJECT, e.g., stylized medieval lantern] using Blender Python (bmesh).\n\nRequirements:\n- Keep total triangle count under 10,000 tris (Roblox MeshPart limit is 20k).\n- Ensure clean, watertight manifold geometry with no N-gons or inverted normals.\n- Scale in Roblox studs (1 Blender meter = 1 stud) with pivot centered at the bottom.\n- Unwrap clean UVs onto a single 1024x1024 texture atlas.\n- Export as FBX/GLB ready for Roblox Studio MeshPart import, plus a simple collision proxy.`,
+                      },
+                      {
+                        id: 'roblox-step-3',
+                        step: '3/ Prompt: Clean Up an AI-Generated 3D Mesh (Hunyuan3D / Meshy) for Roblox',
+                        body: `Inspect this raw AI-generated 3D mesh and prepare it for Roblox Studio:\n\n1. Check for non-manifold edges, duplicate/loose vertices, and inward faces.\n2. Decimate cleanly to under 12,000 triangles while preserving the silhouette.\n3. Bake materials/colors into a single 1024px texture.\n4. Set origin/pivot to the base center and scale to [X] studs tall.\n5. Export as .fbx and list the exact MeshPart import settings (CollisionFidelity, RenderFidelity).`,
+                      },
+                    ].map((s) => (
+                      <div
+                        key={s.id}
+                        className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                          <h3 className="font-marker text-xl">{s.step}</h3>
+                          <button
+                            type="button"
+                            onClick={() => handleCopy(s.body, s.id)}
+                            className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          >
+                            {copiedId === s.id ? (
+                              <>
+                                <Check className="w-3.5 h-3.5" /> Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3.5 h-3.5" /> Copy step
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                          {s.body}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         ) : (
