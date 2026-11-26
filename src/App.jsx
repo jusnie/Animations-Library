@@ -753,8 +753,8 @@ export default function App() {
             </span>
           </span>
           <div className="flex items-center gap-3">
-            <span className="font-mono-code text-xs bg-[#fef08a] text-[#1e1b18] border border-[#1e1b18] rounded-full px-2.5 py-0.5 font-bold">
-              👀 {visitorCount.toLocaleString()} visits
+            <span className="sketch-btn bg-[#fef08a] text-[#1e1b18] px-3 py-0.5 font-hand text-sm font-bold">
+              Visitors: {visitorCount.toLocaleString()}
             </span>
             <span>Opus Animations Library</span>
           </div>
