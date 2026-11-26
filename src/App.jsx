@@ -744,6 +744,138 @@ export default function App() {
                   </div>
                 )}
               </div>
+
+              <div className="sketch-box bg-white p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenGuideId(openGuideId === 'yta-niche' ? null : 'yta-niche')
+                  }
+                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                >
+                  <div>
+                    <span className="inline-block bg-[#bbf7d0] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                      YTA • YouTube Automation
+                    </span>
+                    <h2 className="font-marker text-2xl sm:text-3xl">
+                      YTA Niche Playbook: Faceless &amp; Documentary Videos
+                    </h2>
+                  </div>
+                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
+                    {openGuideId === 'yta-niche' ? 'Hide' : 'Open Guide'}
+                  </span>
+                </button>
+
+                {openGuideId === 'yta-niche' && (
+                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                    {[
+                      {
+                        id: 'yta-step-1',
+                        step: '1/ Prompt: High-Retention YTA Script & Hook (Documentary / Finance / Tech)',
+                        body: `Write a 8-minute YouTube Automation script on [TOPIC] in a high-retention documentary style.\n\nStructure:\n- 0:00–0:30: Pattern-interrupt hook with a bold claim or mystery.\n- 0:30–1:30: Setup & stakes (why the viewer should care right now).\n- Body: 4–5 escalating chapters with open loops at the end of each.\n- Include [VISUAL CUE: ...] tags every 5–8 seconds for motion graphics, maps, or B-roll.`,
+                      },
+                      {
+                        id: 'yta-step-2',
+                        step: '2/ Prompt: Generate Animated Explainer Scenes (Opus / Remotion)',
+                        body: `Create a 16:9 dark-mode documentary motion graphic scene explaining [CONCEPT/STATISTIC].\n\nInclude:\n- Smooth kinetic typography for key numbers and dates.\n- Minimalist vector map/chart animation with glowing accent lines.\n- Subtle film grain, 60fps easing, and clean 2-second transitions between beats.`,
+                      },
+                    ].map((s) => (
+                      <div
+                        key={s.id}
+                        className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                          <h3 className="font-marker text-xl">{s.step}</h3>
+                          <button
+                            type="button"
+                            onClick={() => handleCopy(s.body, s.id)}
+                            className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          >
+                            {copiedId === s.id ? (
+                              <>
+                                <Check className="w-3.5 h-3.5" /> Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3.5 h-3.5" /> Copy step
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                          {s.body}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="sketch-box bg-white p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenGuideId(openGuideId === 'clipping-niche' ? null : 'clipping-niche')
+                  }
+                  className="w-full text-left flex items-center justify-between gap-4 cursor-pointer"
+                >
+                  <div>
+                    <span className="inline-block bg-[#fda4af] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                      Clipping • Shorts / Reels / TikTok
+                    </span>
+                    <h2 className="font-marker text-2xl sm:text-3xl">
+                      Clipping Niche Playbook: Viral 9:16 Shorts &amp; Reels
+                    </h2>
+                  </div>
+                  <span className="sketch-btn bg-[#fdfbf7] px-3 py-1.5 text-sm font-bold shrink-0">
+                    {openGuideId === 'clipping-niche' ? 'Hide' : 'Open Guide'}
+                  </span>
+                </button>
+
+                {openGuideId === 'clipping-niche' && (
+                  <div className="mt-6 pt-6 border-t-2 border-dashed border-[#1e1b18]/30 space-y-6">
+                    {[
+                      {
+                        id: 'clip-step-1',
+                        step: '1/ Prompt: Find Viral Clip Moments from Long-Form Video',
+                        body: `Analyze this transcript/video and extract the top 5 viral 30–60 second moments for YouTube Shorts, Reels, and TikTok.\n\nFor each clip, provide:\n- Exact start/end timestamps.\n- A 3-second scroll-stopping hook line.\n- Why it triggers emotion, curiosity, or debate.`,
+                      },
+                      {
+                        id: 'clip-step-2',
+                        step: '2/ Prompt: Style 9:16 Kinetic Captions & Retention Edits',
+                        body: `Format this clip for 9:16 vertical (1080x1920) with:\n- Dynamic speaker-centered crop and subtle zoom-ins every 3–4 seconds.\n- Bold, word-by-word kinetic captions (2–3 words per line, yellow highlight on power words).\n- Sound effects (whoosh on cuts, subtle riser before the punchline) and clean loop ending.`,
+                      },
+                    ].map((s) => (
+                      <div
+                        key={s.id}
+                        className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 sm:p-5"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                          <h3 className="font-marker text-xl">{s.step}</h3>
+                          <button
+                            type="button"
+                            onClick={() => handleCopy(s.body, s.id)}
+                            className="sketch-btn bg-[#fde047] px-3 py-1 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          >
+                            {copiedId === s.id ? (
+                              <>
+                                <Check className="w-3.5 h-3.5" /> Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="w-3.5 h-3.5" /> Copy step
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <p className="font-hand text-base whitespace-pre-wrap text-[#1e1b18]/90">
+                          {s.body}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         ) : (
