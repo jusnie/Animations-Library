@@ -842,14 +842,14 @@ export default function App() {
 
                     {[
                       {
-                        id: 'master-framework-overview',
-                        step: '1/ Master Prompt Framework (Overview & Core Principles)',
-                        body: `Master Prompt Framework is a structured methodology for designing effective AI prompts.\n\nInstead of writing unstructured or inconsistent instructions, this framework provides a repeatable format that ensures:\n- Clarity: Eliminates vague or ambiguous instructions.\n- Control: Guides the AI through exact reasoning and constraints.\n- Consistency: Produces reliable, repeatable outputs across runs.\n- Scalability: Works for any domain (video, coding, writing, or research).`,
+                        id: 'master-framework-full',
+                        step: '1/ Master Prompt Framework (Full 5-Step Guide)',
+                        body: `1. Set the Role\nTell the AI what role it should assume before performing the task.\nExamples:\n- "You are an expert digital marketer..."\n- "Act as a professional script writer..."\n- "You are a senior software developer..."\nThis helps the AI understand the perspective and level of expertise required.\n\n2. Clearly Define the Task\nSpecify exactly what you want.\nExamples:\n- "Write a 30-second script for an Instagram reel..."\n- "Create a login system in Python..."\nBe precise. The clearer the instruction, the better the output.\n\n3. Provide Context\nGive background information so the AI doesn't have to guess.\nContext improves relevance and accuracy.\n\n4. Specify the Output Format (Very Important)\nTell the AI how you want the response structured.\nExamples:\n- "Provide the output in bullet points..."\n- "Present the information in table format..."\n- "Write in simple and clear English..."\nClear formatting instructions produce cleaner results.\n\n5. Add Constraints\nSet limits or conditions for the response.\nExamples:\n- "Maximum 200 words..."\n- "Avoid technical jargon..."\n- "Make it beginner-friendly..."\nConstraints help control length, tone, and complexity.`,
                       },
                       {
                         id: 'master-prompt-template',
                         step: '2/ Universal Master Prompt Template (Professional Version)',
-                        body: `ROLE:\nAct as a world-class [EXPERT ROLE / SPECIALIST].\n\nOBJECTIVE:\n[CLEAR, SPECIFIC GOAL OR DELIVERABLE YOU WANT PRODUCED].\n\nCONTEXT:\n- Target Audience: [WHO THIS IS FOR]\n- Platform / Medium: [WHERE IT WILL BE USED]\n- Key Constraints: [BUDGET, TIME, STYLE, OR TECHNICAL LIMITS]\n\nINSTRUCTIONS:\n1. [STEP 1 — RESEARCH / ANALYZE]\n2. [STEP 2 — STRUCTURE / DRAFT]\n3. [STEP 3 — REFINE / OPTIMIZE]\n\nOUTPUT FORMAT:\n- Structure: [BULLETS / TABLE / SCRIPT / CODE]\n- Tone: [PROFESSIONAL / CONVERSATIONAL / CINEMATIC]\n- Length: [WORD COUNT OR DURATION]`,
+                        body: `You are a [define the expert role clearly, e.g., senior digital marketing strategist / professional scriptwriter / software engineer].\n\nYour task is to [clearly describe what you want the AI to do].\n\nContext:\n- Background information:\n- Target audience:\n- Platform or medium (if applicable):\n- Objective or goal:\n\nRequirements:\n- Tone and style:\n- Word limit (if any):\n- Format (bullet points, table, step-by-step, essay, script, etc.):\n- Key points that must be included:\n- Things to avoid:\n\nAdditional Instructions:\n- Make the response practical and actionable.\n- Keep it clear, structured, and easy to understand.\n- If necessary, ask clarifying questions before proceeding.`,
                       },
                     ].map((s) => (
                       <div
