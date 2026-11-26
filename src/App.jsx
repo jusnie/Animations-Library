@@ -411,19 +411,6 @@ export default function App() {
             >
               Guides
             </button>
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => openLibraryWithFilter({ cat: cat.id })}
-                className={`sketch-btn px-3 py-1.5 text-sm sm:text-base font-bold cursor-pointer ${
-                  view === 'library' && activeCat === cat.id
-                    ? 'bg-[#38bdf8]'
-                    : 'bg-white'
-                }`}
-              >
-                {cat.title}
-              </button>
-            ))}
           </nav>
         </div>
       </header>
