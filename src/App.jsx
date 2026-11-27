@@ -967,14 +967,58 @@ export default function App() {
                   </div>
                 )}
 
-                {openGuideId === 'discord-resources' && (
+                {openGuideId?.startsWith('doc-') && (() => {
+                  const doc = DRIVE_SOURCES.find((d) => `doc-${d.id}` === openGuideId);
+                  if (!doc) return null;
+                  const isCopied = copiedDocId === doc.id;
+                  return (
+                    <div className="sketch-box bg-white p-6 space-y-4">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                          <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                            {doc.type} • Source
+                          </span>
+                          <h2 className="font-marker text-2xl sm:text-3xl">
+                            {doc.name.replace(/\.(pdf|docx|txt)$/i, '')}
+                          </h2>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              navigator.clipboard.writeText(doc.content);
+                              setCopiedDocId(doc.id);
+                              setTimeout(() => setCopiedDocId(null), 1500);
+                            }}
+                            className="sketch-btn bg-[#bbf7d0] px-3.5 py-1.5 text-sm font-bold"
+                          >
+                            {isCopied ? 'Copied!' : 'Copy'}
+                          </button>
+                          <a
+                            href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="sketch-btn bg-white px-3.5 py-1.5 text-sm font-bold"
+                          >
+                            Download
+                          </a>
+                        </div>
+                      </div>
+                      <pre className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 text-xs font-mono-code whitespace-pre-wrap overflow-x-auto">
+                        {doc.content}
+                      </pre>
+                    </div>
+                  );
+                })()}
+
+                {openGuideId === 'niche-vault' && (
                   <div className="sketch-box bg-white p-6 space-y-6">
                     <div>
                       <span className="inline-block bg-[#fbcfe8] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                        Discord • Converted from Screenshots
+                        Playbooks • YTA, FBA &amp; Growth
                       </span>
                       <h2 className="font-marker text-2xl sm:text-3xl">
-                        Discord Resources &amp; Niche Vault
+                        Niche &amp; Channel Playbooks Vault
                       </h2>
                     </div>
 
@@ -1520,17 +1564,17 @@ Suggest 5 catchy, viral YouTube titles based on the script below:
                     title: 'Master Prompt',
                   },
                   {
-                    id: 'drive-sources',
-                    badge: 'Google Drive • PDFs, Docs & Scripts',
-                    color: '#fde047',
-                    title: 'Niche Guides & Value Vault Sources (Drive)',
-                  },
-                  {
-                    id: 'discord-resources',
-                    badge: 'Discord • #-yta-resources • #-fba-resources • #-niches',
+                    id: 'niche-vault',
+                    badge: 'Playbooks • YTA, FBA & Growth',
                     color: '#fbcfe8',
-                    title: 'Discord Resources & Niche Vault',
+                    title: 'Niche & Channel Playbooks Vault',
                   },
+                  ...DRIVE_SOURCES.map((doc) => ({
+                    id: `doc-${doc.id}`,
+                    badge: `${doc.type} • Source`,
+                    color: '#fde047',
+                    title: doc.name.replace(/\.(pdf|docx|txt)$/i, ''),
+                  })),
                 ].map((g) => (
                   <button
                     key={g.id}
