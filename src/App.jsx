@@ -603,11 +603,31 @@ export default function App() {
             <div className="mb-8">
               <h1 className="font-marker text-3xl sm:text-5xl mb-2">
                 Guides &amp;{' '}
-                <span className="marker-highlight">Workflows</span>
+                <span className="marker-highlight">Sources</span>
               </h1>
               <p className="font-caveat text-2xl text-[#57534e]">
                 Step-by-step guides, prompts, and workflows. Click a guide to open.
               </p>
+              <div className="mt-4 max-w-md relative">
+                <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#57534e]" />
+                <input
+                  type="text"
+                  value={guidesSearch}
+                  onChange={(e) => setGuidesSearch(e.target.value)}
+                  placeholder="Search guides & sources..."
+                  className="w-full pl-10 pr-8 py-2 bg-white border-2 border-[#1e1b18] rounded-xl font-hand text-sm focus:outline-none"
+                />
+                {guidesSearch && (
+                  <button
+                    type="button"
+                    onClick={() => setGuidesSearch('')}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#57534e]"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
             </div>
 
             {openGuideId ? (
@@ -1574,9 +1594,18 @@ Suggest 5 catchy, viral YouTube titles based on the script below:
                     id: `doc-${doc.id}`,
                     badge: `${doc.type} • Source`,
                     color: '#fde047',
-                    title: doc.name.replace(/\.(pdf|docx|txt)$/i, ''),
+                    title: doc.name.replace(/\.(pdf|docx|txt)$/i, '').replace(/_/g, ' '),
                   })),
-                ].map((g) => (
+                ]
+                  .filter((g) => {
+                    if (!guidesSearch.trim()) return true;
+                    const q = guidesSearch.toLowerCase();
+                    return (
+                      g.title.toLowerCase().includes(q) ||
+                      g.badge.toLowerCase().includes(q)
+                    );
+                  })
+                  .map((g) => (
                   <button
                     key={g.id}
                     type="button"
