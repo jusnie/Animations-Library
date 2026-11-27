@@ -13,6 +13,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import { CATEGORIES, CURATED_SETS, ANIMATIONS, SKILLS_AND_TOOLS } from './data/animationsData';
+import { DRIVE_SOURCES } from './data/driveSources';
 import AnimationCanvas from './components/AnimationCanvas';
 
 const detectSkills = (item) => {
@@ -173,6 +174,8 @@ export default function App() {
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [openGuideId, setOpenGuideId] = useState(null);
+  const [openDriveDocId, setOpenDriveDocId] = useState(null);
+  const [copiedDocId, setCopiedDocId] = useState(null);
   const [visitorCount, setVisitorCount] = useState(() => {
     try {
       return parseInt(localStorage.getItem('opus_visits') || '1', 10) || 1;
@@ -903,45 +906,63 @@ export default function App() {
                       </a>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {[
-                        { name: 'ANIMAL WILDLIFE NICHE.pdf', id: '1bA5LMb-0qHpgKNjs-eun23xo-J1O3-mQ', type: 'PDF' },
-                        { name: 'CHARACTER COOKING NICHE.pdf', id: '1IuQvnMe21EXH3m1EMzZiNhnxnshOE5Ah', type: 'PDF' },
-                        { name: 'COOKING_POV_WORKFLOW_V4.0.pdf', id: '1z6vfJc98KDu-fsGHW6riq4dL09xXXU6b', type: 'PDF' },
-                        { name: 'HAND COOKING NICHE.pdf', id: '1ZDhQKPrtT1gyxzoiFv3HkYYy8utPl0Nw', type: 'PDF' },
-                        { name: 'CAPCUT PREMIUM TUTORIAL.pdf', id: '1SBHsGpaMkJdzTwJ0BxkL2K2k3ALEydmt', type: 'PDF' },
-                        { name: 'MAMA MO GEOGRAPHY.pdf', id: '1HteAhZVrE2IIR877-szx0Kml_vybTJXs', type: 'PDF' },
-                        { name: 'Psychology.pdf', id: '1kV1tHyZIgYChovnuDyroc7ZZCTIToylp', type: 'PDF' },
-                        { name: 'WAR beta 1 (1).pdf', id: '1eCUFYk6UffvzR__uIlvGaeuU6XZYTOJ1', type: 'PDF' },
-                        { name: 'ENDTIMES505 Short formula.docx', id: '1ac5ouWtrnPy69PoutlnDrWZf4EO2LO-N', type: 'DOCX' },
-                        { name: 'FACEBOOK AUTOMATION 2026 GUIDES1.docx', id: '1sIxF6oknTlZBUdclfZVKPOMSuVspBtgW', type: 'DOCX' },
-                        { name: 'LOGO AND BANNER CREATION.txt', id: '10EMVaGielUB89ol9vdgNV2DejiGg_bC9', type: 'TXT' },
-                        { name: 'VALUE VAULT 3D ANIMATION V2.txt', id: '1kZwGuIeib7-m9seisYWdNABHU49UNlAQ', type: 'TXT' },
-                        { name: 'VALUEVAULT CONTENT VIDEO SYSTEM V2 (BUGS FIXED).txt', id: '1x0zofTpRP5fZ0Cn8JSK94-qs7jEodScK', type: 'TXT' },
-                        { name: 'VALUEVAULT COOKING ANIMATION SYSTEM V1.txt', id: '1-Pm8dmsz6QaZNJpFcz8Z0Aj6tMVc01nq', type: 'TXT' },
-                      ].map((doc) => (
-                        <div
-                          key={doc.id}
-                          className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 flex items-center justify-between gap-3"
-                        >
-                          <div className="min-w-0">
-                            <span className="inline-block text-[10px] font-mono-code font-bold bg-[#fef08a] border border-[#1e1b18] rounded px-1.5 py-0.5 mb-1">
-                              {doc.type}
-                            </span>
-                            <p className="font-hand font-bold text-sm truncate" title={doc.name}>
-                              {doc.name}
-                            </p>
-                          </div>
-                          <a
-                            href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="sketch-btn bg-[#bbf7d0] px-3 py-1.5 text-xs font-bold shrink-0"
+                    <div className="space-y-3">
+                      {DRIVE_SOURCES.map((doc) => {
+                        const isOpen = openDriveDocId === doc.id;
+                        const isCopied = copiedDocId === doc.id;
+                        return (
+                          <div
+                            key={doc.id}
+                            className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 space-y-3"
                           >
-                            Download
-                          </a>
-                        </div>
-                      ))}
+                            <div className="flex flex-wrap items-center justify-between gap-3">
+                              <div className="min-w-0">
+                                <span className="inline-block text-[10px] font-mono-code font-bold bg-[#fef08a] border border-[#1e1b18] rounded px-1.5 py-0.5 mr-2">
+                                  {doc.type}
+                                </span>
+                                <span className="font-hand font-bold text-sm">
+                                  {doc.name}
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2 shrink-0">
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setOpenDriveDocId(isOpen ? null : doc.id)
+                                  }
+                                  className="sketch-btn bg-[#bae6fd] px-3 py-1.5 text-xs font-bold"
+                                >
+                                  {isOpen ? 'Hide' : 'View'}
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    navigator.clipboard.writeText(doc.content);
+                                    setCopiedDocId(doc.id);
+                                    setTimeout(() => setCopiedDocId(null), 1500);
+                                  }}
+                                  className="sketch-btn bg-[#bbf7d0] px-3 py-1.5 text-xs font-bold"
+                                >
+                                  {isCopied ? 'Copied!' : 'Copy'}
+                                </button>
+                                <a
+                                  href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="sketch-btn bg-white px-3 py-1.5 text-xs font-bold"
+                                >
+                                  Download
+                                </a>
+                              </div>
+                            </div>
+                            {isOpen && (
+                              <pre className="bg-white border border-[#1e1b18] rounded-lg p-4 text-xs font-mono-code whitespace-pre-wrap max-h-96 overflow-y-auto">
+                                {doc.content}
+                              </pre>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
