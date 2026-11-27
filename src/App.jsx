@@ -1322,6 +1322,146 @@ Wait for my script before generating anything.`}
                         ))}
                       </div>
                     </div>
+
+                    {/* #stock-footage-hub */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#stock-footage-hub</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div>
+                          <h4 className="font-bold text-sm mb-1.5">Free Stock Footage Sites</h4>
+                          <ul className="space-y-1">
+                            {[
+                              ['Pexels', 'https://www.pexels.com/videos/'],
+                              ['Pixabay', 'https://pixabay.com/videos/'],
+                              ['Videezy', 'https://www.videezy.com/'],
+                              ['Coverr', 'https://coverr.co/'],
+                              ['Mixkit', 'https://mixkit.co/'],
+                              ['Life of Vids', 'https://www.lifeofvids.com/'],
+                              ['Splitshire', 'https://www.splitshire.com/'],
+                              ['Distill', 'https://www.wedistill.io/'],
+                              ['Mazwai', 'https://mazwai.com/'],
+                              ['Clipstill', 'https://clipstill.com/'],
+                            ].map(([n, u]) => (
+                              <li key={u}>
+                                <a href={u} target="_blank" rel="noopener noreferrer" className="underline font-bold">{n}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-sm mb-1.5">Paid / Premium Stock Footage Sites</h4>
+                          <ul className="space-y-1">
+                            {[
+                              ['Storyblocks', 'https://www.storyblocks.com/'],
+                              ['Artgrid', 'https://artgrid.io/'],
+                              ['Envato Elements', 'https://elements.envato.com/'],
+                              ['Shutterstock', 'https://www.shutterstock.com/video'],
+                              ['Motion Array', 'https://motionarray.com/'],
+                              ['Pond5', 'https://www.pond5.com/'],
+                              ['Filmsupply', 'https://www.filmsupply.com/'],
+                              ['Getty Images', 'https://www.gettyimages.com/videos'],
+                              ['Depositphotos', 'https://depositphotos.com/'],
+                            ].map(([n, u]) => (
+                              <li key={u}>
+                                <a href={u} target="_blank" rel="noopener noreferrer" className="underline font-bold">{n}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* #video-vault */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#video-vault</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono-code">
+                        <div>
+                          <h4 className="font-sans font-bold text-sm mb-1">Instagram Handles</h4>
+                          <p className="leading-relaxed">
+                            @bringavoice, @insidestory, @excelbranding, @interestingpedia, @seungjaenim_, @crazy_greape, @diren.kartal, @olima_omega, @mewsttv, @anwar, @collinskey, @needmorecash_vdhh, @catnikaprincess, @mike850822, @alone_boy_2.0.0.4, @alanchikinchow, @candy182, @avinashuphar, @avinashupharstar, @argenby, @bhopal_hunerlegends, @haydenxlee, @brainrot.2019, @doubledate.official, @kkubi99, @hannahstocking, @natesofit, @kailiefitness, @timmorrel, @mike.ocdink
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="font-sans font-bold text-sm mb-1">TikTok Handles</h4>
+                          <p className="leading-relaxed">
+                            @indiana_jose, @kindness.man.official, @dailymail, @matt.tv, @linhchihihihi, @tuanompbbc4, @thekiryalife, @hoa_2309, @rosssmith, @jackdoherty, @hem.seavhor, @alanchikinchow, @oneman.kindness, @robbieromantic, @joker.me1, @lilymiumiu, @parliamentarian84
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* #cta-competitors & #competitors-insight */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#cta-competitors &amp; #competitors-insight</h3>
+                      <p className="text-xs font-mono-code leading-relaxed">
+                        <strong>#cta-competitors:</strong> @GloryPick, @astromax0
+                      </p>
+                      <p className="text-xs font-mono-code leading-relaxed">
+                        <strong>#competitors-insight:</strong> @Bloomshorts01, @Facetiostube, @funkyfoxyz, @GoodNewsDailyYT, @Hamtubezz, @JDGzyro, @PadsdopiaShorts, @Perfecthiingz2.0, @Pestitesaga, @Phenomeniix, @PotatoSheeez, @RealPenguin, @VangoStory, @GreenCloverShorts, @trendflix0, @lifelove001, @buzzhawkk, @monkey.thinks, @joumotivation, @roxxedd, @kacpermalaj, @watchninjadaily, @theloop322, @fitwithgigachad, @amplyawesome, @Vistorryofficial, @Lilasaurus, @Jeykify, @Zerair, @Lilasauruofficial, @Jerwoldshorts, @trottedStory28, @talkaryyy.11, @snap_root, @Rifflexx
+                      </p>
+                      <div className="flex flex-wrap gap-3 text-xs">
+                        <a href="https://www.instagram.com/asad.alalo" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+                          IG: @asad.alalo (250K followers)
+                        </a>
+                        <a href="https://youtube.com/@kindnex" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+                          YT: @kindnex
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* #channel-copy & #key-word-hub */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#channel-copy &amp; #key-word-hub</h3>
+                      <p className="text-sm">
+                        <strong>#channel-copy:</strong> Includes Optimized Version 1 (Commentary Niche) and Optimized Version 3 (CTA-Commentary Niche with Milestones 10K–1M) + Section 107 Fair Use disclaimer.
+                      </p>
+                      <pre className="bg-white border border-[#1e1b18] rounded-lg p-3 text-xs font-mono-code whitespace-pre-wrap">
+{`Prompt for YouTube Keyword Generation (#key-word-hub):
+"Based on the following YouTube channel/video description, generate a horizontal list of SEO-friendly keywords (no hashtags) focused on [insert niche]. These keywords should help the content rank better on YouTube search, be relevant for both U.S. and global audiences, and match the tone and themes of the description. Keep the list optimized for YouTube Shorts and commentary-style content."`}
+                      </pre>
+                    </div>
+
+                    {/* #cta-snippets & #script-prompt */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#cta-snippets &amp; #script-prompt</h3>
+                      <p className="text-sm">
+                        <strong>#cta-snippets:</strong> Animal Rescue CTAs (puppy/kitten/dog empathy hooks) &amp; Emotional Family CTAs (no sticker). Always rotate per <code>#cta-frameworks</code> and <code>#anti-spam-strategy</code>.
+                      </p>
+                      <pre className="bg-white border border-[#1e1b18] rounded-lg p-3 text-xs font-mono-code whitespace-pre-wrap">
+{`#script-prompt:
+Give me a story rewritten in simple, natural, and engaging English for better flow:
+[ --- Insert your script here --- ]
+Make it sound like a casual, attention-grabbing narration — similar to YouTube Shorts voiceover.
+
+Suggest 5 catchy, viral YouTube titles based on the script below:
+- Must be in question form, short, scroll-stopping, SEO-optimized, with emojis.
+- If I pick one title, also give me: YouTube Video Description + 3-5 SEO-optimized Hashtags (separated by commas).`}
+                      </pre>
+                    </div>
+
+                    {/* #ai-voice-tools */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#ai-voice-tools (ElevenLabs Voice Lab)</h3>
+                      <p className="text-sm">
+                        <a href="https://elevenlabs.io/voice-lab" target="_blank" rel="noopener noreferrer" className="underline font-bold">
+                          https://elevenlabs.io/voice-lab
+                        </a>
+                      </p>
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        {[
+                          'Haven Sands (Youthful General American)',
+                          'Reel (Conversational, hyped flair)',
+                          'Dan Dan (Upbeat & modulated)',
+                          'Alex (Young American Male)',
+                          'Nicko (Young male YouTuber, natural)',
+                          'Murph (Social Media Voice, commentary/mini-docu)',
+                        ].map((v) => (
+                          <span key={v} className="bg-white border border-[#1e1b18] rounded-full px-3 py-1 font-bold">
+                            {v}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
