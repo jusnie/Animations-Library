@@ -175,6 +175,8 @@ export default function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [openGuideId, setOpenGuideId] = useState(null);
   const [guidesSearch, setGuidesSearch] = useState('');
+  const [playingVideoId, setPlayingVideoId] = useState(null);
+  const [videoFallback, setVideoFallback] = useState({});
   const [openDriveDocId, setOpenDriveDocId] = useState(null);
   const [copiedDocId, setCopiedDocId] = useState(null);
   const [visitorCount, setVisitorCount] = useState(() => {
@@ -1073,13 +1075,24 @@ export default function App() {
                             </a>
                           </div>
                           {playingVideoId === v.id ? (
-                            <video
-                              src={`https://drive.google.com/uc?export=download&id=${v.id}`}
-                              controls
-                              autoPlay
-                              playsInline
-                              className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
-                            />
+                            videoFallback[v.id] ? (
+                              <iframe
+                                src={`https://drive.google.com/file/d/${v.id}/preview`}
+                                title={v.name}
+                                className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                                allow="autoplay; fullscreen"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <video
+                                src={`https://drive.google.com/uc?export=download&id=${v.id}`}
+                                controls
+                                autoPlay
+                                playsInline
+                                onError={() => setVideoFallback((prev) => ({ ...prev, [v.id]: true }))}
+                                className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                              />
+                            )
                           ) : (
                             <button
                               type="button"
