@@ -1032,18 +1032,10 @@ export default function App() {
                   );
                 })()}
 
-                {openGuideId === 'niche-vault' && (
-                  <div className="sketch-box bg-white p-6 space-y-6">
-                    <div>
-                      <span className="inline-block bg-[#fbcfe8] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
-                        Playbooks • YTA, FBA &amp; Growth
-                      </span>
-                      <h2 className="font-marker text-2xl sm:text-3xl">
-                        Niche &amp; Channel Playbooks Vault
-                      </h2>
-                    </div>
+                {/* Standalone Playbook Sections */}
 
-                    {/* #-yta-resources */}
+                    {openGuideId === "yta-resources" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
                       <h3 className="font-marker text-xl">#-yta-resources</h3>
 
@@ -1115,7 +1107,11 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* #-fba-resources */}
+                                      </div>
+                )}
+
+                {openGuideId === "fba-resources" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
                       <h3 className="font-marker text-xl">#-fba-resources</h3>
                       <div>
@@ -1153,7 +1149,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #-niches */}
+                                      </div>
+                )}
+
+                {openGuideId === "niches-vault" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
                       <h3 className="font-marker text-xl">#-niches</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -1182,7 +1182,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #-stickers & Recommended Voices */}
+                                      </div>
+                )}
+
+                {openGuideId === "stickers-voices" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#-stickers &amp; Recommended AI Voices</h3>
                       <p className="text-sm">
@@ -1206,7 +1210,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #channel-warm-up */}
+                                      </div>
+                )}
+
+                {openGuideId === "channel-warmup" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#channel-warm-up</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1.5">
@@ -1216,7 +1224,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #account-warmup-plan */}
+                                      </div>
+                )}
+
+                {openGuideId === "account-warmup-plan" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#account-warmup-plan</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1226,7 +1238,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #grind-guide */}
+                                      </div>
+                )}
+
+                {openGuideId === "grind-guide" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#grind-guide</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1236,7 +1252,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #upload-time-analysis */}
+                                      </div>
+                )}
+
+                {openGuideId === "upload-time-analysis" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#upload-time-analysis (PH Time)</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1248,7 +1268,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #momentum-building */}
+                                      </div>
+                )}
+
+                {openGuideId === "momentum-building" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#momentum-building</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1258,13 +1282,21 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #cta-frameworks */}
+                                      </div>
+                )}
+
+                {openGuideId === "cta-frameworks" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#cta-frameworks</h3>
                       <p className="text-sm">Rotate audience targeting &amp; wording every video to avoid spam/shadowban (Teens, Pet lovers, Family, Couples, Gen Z, Nostalgic, Curious, Creators). Never copy-paste exact scripts. Limit to 1 clear CTA per video, switch positions (intro vs middle), use visual cues.</p>
                     </div>
 
-                    {/* #account-creation-guide */}
+                                      </div>
+                )}
+
+                {openGuideId === "account-creation-guide" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#account-creation-guide</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1312,7 +1344,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #channel-revival */}
+                                      </div>
+                )}
+
+                {openGuideId === "channel-revival" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#channel-revival</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1322,7 +1358,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #deletion-truth */}
+                                      </div>
+                )}
+
+                {openGuideId === "deletion-truth" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#deletion-truth</h3>
                       <p className="text-sm">
@@ -1336,7 +1376,11 @@ Wait for my script before generating anything.`}
                       />
                     </div>
 
-                    {/* #visibility-trouble-shooting */}
+                                      </div>
+                )}
+
+                {openGuideId === "visibility-troubleshooting" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#visibility-trouble-shooting</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1348,7 +1392,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #anti-spam-strategy */}
+                                      </div>
+                )}
+
+                {openGuideId === "anti-spam-strategy" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#anti-spam-strategy</h3>
                       <p className="text-sm">Rotate CTA style, topic, and placement daily to avoid duplicate-behavior flags:</p>
@@ -1363,7 +1411,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #11labs-support */}
+                                      </div>
+                )}
+
+                {openGuideId === "elevenlabs-support" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#11labs-support</h3>
                       <ul className="list-disc pl-5 text-sm space-y-1">
@@ -1373,7 +1425,11 @@ Wait for my script before generating anything.`}
                       </ul>
                     </div>
 
-                    {/* #creators-tools */}
+                                      </div>
+                )}
+
+                {openGuideId === "creators-tools" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#creators-tools</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1409,7 +1465,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #stock-footage-hub */}
+                                      </div>
+                )}
+
+                {openGuideId === "stock-footage-hub" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#stock-footage-hub</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -1457,7 +1517,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #video-vault */}
+                                      </div>
+                )}
+
+                {openGuideId === "video-vault" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#video-vault</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono-code">
@@ -1476,7 +1540,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #cta-competitors & #competitors-insight */}
+                                      </div>
+                )}
+
+                {openGuideId === "competitors-insight" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#cta-competitors &amp; #competitors-insight</h3>
                       <p className="text-xs font-mono-code leading-relaxed">
@@ -1495,7 +1563,11 @@ Wait for my script before generating anything.`}
                       </div>
                     </div>
 
-                    {/* #channel-copy & #key-word-hub */}
+                                      </div>
+                )}
+
+                {openGuideId === "channel-copy-keywords" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#channel-copy &amp; #key-word-hub</h3>
                       <p className="text-sm">
@@ -1507,7 +1579,11 @@ Wait for my script before generating anything.`}
                       </pre>
                     </div>
 
-                    {/* #cta-snippets & #script-prompt */}
+                                      </div>
+                )}
+
+                {openGuideId === "cta-snippets-script" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
                       <h3 className="font-marker text-xl">#cta-snippets &amp; #script-prompt</h3>
                       <p className="text-sm">
@@ -1525,7 +1601,11 @@ Suggest 5 catchy, viral YouTube titles based on the script below:
                       </pre>
                     </div>
 
-                    {/* #ai-voice-tools */}
+                                      </div>
+                )}
+
+                {openGuideId === "ai-voice-tools" && (
+                  <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
                       <h3 className="font-marker text-xl">#ai-voice-tools (ElevenLabs Voice Lab)</h3>
                       <p className="text-sm">
@@ -1585,10 +1665,142 @@ Suggest 5 catchy, viral YouTube titles based on the script below:
                     title: 'Master Prompt',
                   },
                   {
-                    id: 'niche-vault',
-                    badge: 'Playbooks • YTA, FBA & Growth',
+                    id: 'yta-resources',
+                    badge: 'Playbook • YTA & Retention',
                     color: '#fbcfe8',
-                    title: 'Niche & Channel Playbooks Vault',
+                    title: 'YTA Resources & Retention Targets',
+                  },
+                  {
+                    id: 'fba-resources',
+                    badge: 'Playbook • FBA & SEO',
+                    color: '#fbcfe8',
+                    title: 'FBA Resources & Facebook SEO',
+                  },
+                  {
+                    id: 'niches-vault',
+                    badge: 'Playbook • Niches',
+                    color: '#fbcfe8',
+                    title: 'Niche Ideas (Nostalgia & Christmas)',
+                  },
+                  {
+                    id: 'stickers-voices',
+                    badge: 'Playbook • Assets & Voices',
+                    color: '#fbcfe8',
+                    title: 'Stickers & Recommended AI Voices',
+                  },
+                  {
+                    id: 'channel-warmup',
+                    badge: 'Playbook • Warm-Up',
+                    color: '#fbcfe8',
+                    title: 'Channel Warm-Up (Options 1–3)',
+                  },
+                  {
+                    id: 'account-warmup-plan',
+                    badge: 'Playbook • 10-Day Plan',
+                    color: '#fbcfe8',
+                    title: 'Account Warmup Plan',
+                  },
+                  {
+                    id: 'grind-guide',
+                    badge: 'Playbook • Workflow',
+                    color: '#fbcfe8',
+                    title: 'Grind Guide & Video Flow',
+                  },
+                  {
+                    id: 'upload-time-analysis',
+                    badge: 'Playbook • Schedule',
+                    color: '#fbcfe8',
+                    title: 'Upload Time Analysis (PH Time)',
+                  },
+                  {
+                    id: 'momentum-building',
+                    badge: 'Playbook • Growth',
+                    color: '#fbcfe8',
+                    title: 'Momentum Building',
+                  },
+                  {
+                    id: 'cta-frameworks',
+                    badge: 'Playbook • Engagement',
+                    color: '#fbcfe8',
+                    title: 'CTA Frameworks',
+                  },
+                  {
+                    id: 'account-creation-guide',
+                    badge: 'Playbook • Setup & Screenshots',
+                    color: '#fbcfe8',
+                    title: 'Account Creation Guide',
+                  },
+                  {
+                    id: 'channel-revival',
+                    badge: 'Playbook • Rebrand',
+                    color: '#fbcfe8',
+                    title: 'Channel Revival',
+                  },
+                  {
+                    id: 'deletion-truth',
+                    badge: 'Playbook • Risk Timeline',
+                    color: '#fbcfe8',
+                    title: 'Deletion Truth & Risk Timeline',
+                  },
+                  {
+                    id: 'visibility-troubleshooting',
+                    badge: 'Playbook • View Jail',
+                    color: '#fbcfe8',
+                    title: 'Visibility Troubleshooting',
+                  },
+                  {
+                    id: 'anti-spam-strategy',
+                    badge: 'Playbook • Rotation',
+                    color: '#fbcfe8',
+                    title: 'Anti-Spam Strategy',
+                  },
+                  {
+                    id: 'elevenlabs-support',
+                    badge: 'Playbook • IP Hygiene',
+                    color: '#fbcfe8',
+                    title: '11Labs Support',
+                  },
+                  {
+                    id: 'creators-tools',
+                    badge: 'Playbook • Links',
+                    color: '#fbcfe8',
+                    title: 'Creators Tools',
+                  },
+                  {
+                    id: 'stock-footage-hub',
+                    badge: 'Playbook • Stock Video',
+                    color: '#fbcfe8',
+                    title: 'Stock Footage Hub',
+                  },
+                  {
+                    id: 'video-vault',
+                    badge: 'Playbook • Handles',
+                    color: '#fbcfe8',
+                    title: 'Video Vault (IG & TikTok)',
+                  },
+                  {
+                    id: 'competitors-insight',
+                    badge: 'Playbook • Research',
+                    color: '#fbcfe8',
+                    title: 'Competitors & Insights',
+                  },
+                  {
+                    id: 'channel-copy-keywords',
+                    badge: 'Playbook • SEO & Copy',
+                    color: '#fbcfe8',
+                    title: 'Channel Copy & Keyword Hub',
+                  },
+                  {
+                    id: 'cta-snippets-script',
+                    badge: 'Playbook • Prompts',
+                    color: '#fbcfe8',
+                    title: 'CTA Snippets & Script Prompt',
+                  },
+                  {
+                    id: 'ai-voice-tools',
+                    badge: 'Playbook • Voice Lab',
+                    color: '#fbcfe8',
+                    title: 'AI Voice Tools (ElevenLabs)',
                   },
                   ...DRIVE_SOURCES.map((doc) => ({
                     id: `doc-${doc.id}`,
