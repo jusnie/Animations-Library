@@ -341,7 +341,13 @@ export default function App() {
           </button>
 
           <div className="flex items-center gap-2 ml-auto">
-            <div className="relative w-10 h-10 flex items-center justify-end">
+            <div
+              className={`relative w-10 h-10 flex items-center justify-end transition-opacity duration-200 ${
+                view === 'guides' || view === 'skills'
+                  ? 'opacity-0 pointer-events-none'
+                  : 'opacity-100'
+              }`}
+            >
               <div
                 className={`absolute right-0 top-0 h-10 w-[calc(100vw-2rem)] sm:w-80 origin-right transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform z-20 ${
                   searchOpen || searchQuery
@@ -1034,7 +1040,52 @@ export default function App() {
 
                 {/* Standalone Playbook Sections */}
 
-                    {openGuideId === "yta-resources" && (
+                    {openGuideId === 'video-tutorials' && (
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#bae6fd] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Videos • 4 Parts
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        Video Tutorials (PART 1 – 3.1)
+                      </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {[
+                        { name: 'PART 1.mp4', id: '1mK5js_AVYGgF-5BpzIqyskZFy-CFUK-h' },
+                        { name: 'PART 2.mp4', id: '1KEGwtJWF-WLkTEjvgRDdZ1GZUEFkiNab' },
+                        { name: 'PART 3.mp4', id: '1l1ls1HWiOnEPfaiZXcN3j-XuZ2EaHEEv' },
+                        { name: 'PART 3.1 (CONTINUE).mp4', id: '1IL2mblo33zEaj-WlwQFOp-8ooHPRIpqD' },
+                      ].map((v) => (
+                        <div
+                          key={v.id}
+                          className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 space-y-3"
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <h3 className="font-marker text-base">{v.name}</h3>
+                            <a
+                              href={`https://drive.google.com/file/d/${v.id}/view`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="sketch-btn bg-[#fef08a] px-2.5 py-1 text-xs font-bold inline-flex items-center gap-1"
+                            >
+                              Open <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </div>
+                          <iframe
+                            src={`https://drive.google.com/file/d/${v.id}/preview`}
+                            title={v.name}
+                            className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                            allow="autoplay"
+                            allowFullScreen
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {openGuideId === "yta-resources" && (
                   <div className="sketch-box bg-white p-6 space-y-4">
                     <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
                       <h3 className="font-marker text-xl">#-yta-resources</h3>
@@ -1663,6 +1714,12 @@ Suggest 5 catchy, viral YouTube titles based on the script below:
                     badge: 'Framework • PDFs & Template',
                     color: '#d8b4fe',
                     title: 'Master Prompt',
+                  },
+                  {
+                    id: 'video-tutorials',
+                    badge: 'Videos • 4 Parts',
+                    color: '#bae6fd',
+                    title: 'Video Tutorials (PART 1 – 3.1)',
                   },
                   {
                     id: 'yta-resources',
