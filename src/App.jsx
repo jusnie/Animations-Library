@@ -1072,13 +1072,33 @@ export default function App() {
                               Open <ExternalLink className="w-3 h-3" />
                             </a>
                           </div>
-                          <iframe
-                            src={`https://drive.google.com/file/d/${v.id}/preview`}
-                            title={v.name}
-                            className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
-                            allow="autoplay"
-                            allowFullScreen
-                          />
+                          {playingVideoId === v.id ? (
+                            <video
+                              src={`https://drive.google.com/uc?export=download&id=${v.id}`}
+                              controls
+                              autoPlay
+                              playsInline
+                              className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                            />
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => setPlayingVideoId(v.id)}
+                              className="relative w-full aspect-video rounded-lg border-2 border-[#1e1b18] overflow-hidden bg-[#1e1b18] group cursor-pointer block"
+                            >
+                              <img
+                                src={`https://drive.google.com/thumbnail?id=${v.id}&sz=w800`}
+                                alt={v.name}
+                                className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
+                                loading="lazy"
+                              />
+                              <span className="absolute inset-0 flex items-center justify-center">
+                                <span className="w-14 h-14 rounded-full bg-[#fde047] border-2 border-[#1e1b18] shadow-[3px_3px_0px_#1e1b18] flex items-center justify-center group-hover:scale-105 transition-transform">
+                                  <Play className="w-6 h-6 text-[#1e1b18] fill-[#1e1b18] ml-0.5" />
+                                </span>
+                              </span>
+                            </button>
+                          )}
                         </div>
                       ))}
                     </div>
