@@ -1086,7 +1086,106 @@ Wait for my script before generating anything.`}
                             <li>Reference: <strong>Pinoy Core Memory</strong> (42K followers)</li>
                           </ul>
                         </div>
+                        <div className="bg-white border border-[#1e1b18] rounded-lg p-4">
+                          <h4 className="font-bold mb-1">Christmas (Tier 1 &amp; 2 • FBA)</h4>
+                          <ul className="list-disc pl-4 space-y-1 text-xs">
+                            <li>Pure AI generated</li>
+                            <li>Reference: <strong>Home for Christmas</strong> (223K followers)</li>
+                          </ul>
+                        </div>
                       </div>
+                    </div>
+
+                    {/* #-stickers & Recommended Voices */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#-stickers &amp; Recommended AI Voices</h3>
+                      <p className="text-sm">
+                        <strong>ICONS PART 1:</strong>{' '}
+                        <a href="https://drive.google.com/drive/folders/1BDnxHDWOcQ9ioSlUiPAvbGubkYDlHqso" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
+                          Open Google Drive Folder
+                        </a>
+                      </p>
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        {[
+                          'Jessica (Young & popular, playful American)',
+                          'Alex (Young American Male, upbeat)',
+                          'Brian (Middle-aged, resonant)',
+                          'Adam (Bright tenor pitch)',
+                          'Daniel (Strong voice)',
+                        ].map((v) => (
+                          <span key={v} className="bg-white border border-[#1e1b18] rounded-full px-3 py-1 font-bold">
+                            {v}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* #channel-warm-up */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#channel-warm-up</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1.5">
+                        <li><strong>Option 1 – Bagong Channel (Bagong Gmail):</strong> 5–10 days warm-up. Setup profile pic, banner, description. Verify phone number (2nd option), wag muna 3rd option (Advanced Features). Engagement: watch 10 Shorts, like 10, comment 10, subscribe + like 1 direct competitor (max 10 engagements total), then exit. Upload 10:30 PM or 11:55 PM PH time, US location/residency, wag mag-edit sa Studio after upload. Enable Advanced Features after 5 uploads.</li>
+                        <li><strong>Option 2 – Lumang Gmail / Channel na Ire-rebrand:</strong> 1–3 months inactive bago magpalit ng niche. Private old videos for 1 week before deleting. Clear Watch &amp; Search history, unsubscribe all, subscribe to 1 aligned competitor.</li>
+                        <li><strong>Option 3 – Old Gmail (2020 pababa, never used on YouTube):</strong> Treat like Option 1 (2 days warm-up). Higher account-age trust.</li>
+                      </ul>
+                    </div>
+
+                    {/* #account-warmup-plan */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#account-warmup-plan</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li><strong>Day 1 – Account Setup:</strong> Create Gmail &amp; YT channel. Add profile pic, banner, description ONLY. Do NOT upload, change settings, subscribe, or interact. Sign out &amp; remove account from device.</li>
+                        <li><strong>Day 2–9 – Cooling Period:</strong> Do not log in or interact at all (8 days rest).</li>
+                        <li><strong>Day 10 – Activation &amp; Engagement:</strong> Log back in, do 10/10/10 method (watch 10, like 10, comment 10), update settings, begin uploading.</li>
+                      </ul>
+                    </div>
+
+                    {/* #grind-guide */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#grind-guide</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li>Create a new Gmail &amp; YT channel every 48 hours (target 2 accounts/week for backups).</li>
+                        <li><strong>Video Flow Format:</strong> <code>HOOK → BODY → CTA → REVEAL</code> (place CTA in the middle, never at the start; hook in 0–4s).</li>
+                        <li>Script + clips are the foundation; editing amplifies. Don&apos;t forget thumbnail.</li>
+                      </ul>
+                    </div>
+
+                    {/* #upload-time-analysis */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#upload-time-analysis (PH Time)</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li><strong>Option 1 (New Channel + New Gmail, 5–10d warm-up):</strong> Mon–Fri 11:55 PM | Sat–Sun 9:00 PM (targets 8 AM–12 PM EST US).</li>
+                        <li><strong>Option 2 (New Channel + Old Gmail, 3–10d warm-up):</strong> Mon–Fri 10:00–10:30 PM | Sat–Sun 11:55 PM.</li>
+                        <li><strong>Option 3 (Old Channel + Old Gmail, No warm-up):</strong> Mon–Fri 10:00–11:00 PM | Sat–Sun 11:55 PM.</li>
+                        <li><strong>Option 4 (Revived / Rebrand):</strong> Mon–Fri 12:00 AM–2:00 AM | Sat–Sun 10:00 PM.</li>
+                        <li><em>Reminder:</em> Rotate upload time by ±5–15 mins daily. Track YouTube Studio &gt; Audience &gt; Top Geographies.</li>
+                      </ul>
+                    </div>
+
+                    {/* #momentum-building */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#momentum-building</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li><strong>Phase 1 (First 2–20 mins):</strong> Target 100–120 organic views = positive algo signal.</li>
+                        <li><strong>Phase 2 (20 mins–1 hr):</strong> Below 10 views after 1 hr = bad sign (weak warm-up, poor metadata, wrong timing, or flagged).</li>
+                        <li><strong>Phase 3 (If 2–3 uploads flop):</strong> Reset with fresh Gmail + new channel, re-warm-up properly, tweak title/hashtags/thumbnail, upload 10:30 PM–12 MN PH time. Test 5 uploads; if 3/5 flop, reset.</li>
+                      </ul>
+                    </div>
+
+                    {/* #cta-frameworks */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#cta-frameworks</h3>
+                      <p className="text-sm">Rotate audience targeting &amp; wording every video to avoid spam/shadowban (Teens, Pet lovers, Family, Couples, Gen Z, Nostalgic, Curious, Creators). Never copy-paste exact scripts. Limit to 1 clear CTA per video, switch positions (intro vs middle), use visual cues.</p>
+                    </div>
+
+                    {/* #account-creation-guide */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#account-creation-guide</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li>Choose <strong>Personal</strong> Gmail (18+), always add phone number &amp; recovery email.</li>
+                        <li>Use separate Chrome Profiles / Incognito + rotate IP/mobile data; max 3–4 accounts/day per device; avoid <code>user1@</code> naming patterns.</li>
+                        <li><strong>Channel Setup:</strong> Country = <strong>United States</strong>, Not made for kids, add Channel Keywords/Tags, verify 2 features first (reserve 3rd for after 5 uploads), upload as <strong>Unlisted</strong> first, Category = <strong>People &amp; Blogs</strong>, Video/Title Language = <strong>English (US)</strong>, turn OFF show likes/dislikes.</li>
+                      </ul>
                     </div>
                   </div>
                 )}
