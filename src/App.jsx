@@ -1199,6 +1199,127 @@ Wait for my script before generating anything.`}
                           className="w-full rounded-lg border-2 border-[#1e1b18]"
                           loading="lazy"
                         />
+                        <img
+                          src="/images/yt-upload-defaults-basic.webp"
+                          alt="YouTube Studio Upload Defaults Basic Info"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="/images/yt-upload-defaults-advanced-1.webp"
+                          alt="YouTube Studio Upload Defaults Advanced Settings 1"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="/images/yt-upload-defaults-advanced-2.webp"
+                          alt="YouTube Studio Upload Defaults Advanced Settings 2"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="/images/yt-feature-eligibility.webp"
+                          alt="YouTube Studio Feature Eligibility"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+
+                    {/* #channel-revival */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#channel-revival</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li>Wait 1–3 months inactive before rebranding. If recent upload in past 30 days, set to Private for 7 full days then delete.</li>
+                        <li>Complete rebrand: name, profile pic, banner, about section. Clear Watch &amp; Search history, unsubscribe from unrelated channels, subscribe to 1–2 aligned creators, remove old playlists/unlisted videos, set new niche-only keywords.</li>
+                        <li>Do passive warm-up (watch, comment organically, engage 1–3 days) before uploading. Rephrase scripts &amp; rotate CTAs.</li>
+                      </ul>
+                    </div>
+
+                    {/* #deletion-truth */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#deletion-truth</h3>
+                      <p className="text-sm">
+                        Deleting videos is allowed, but frequent deletion hurts performance history, watch time/views, subscriber trust, and can cause &quot;shadow impact.&quot; <strong>Safer alternative:</strong> Set to <strong>Private</strong> instead of deleting.
+                      </p>
+                      <img
+                        src="/images/yt-deletion-risk-timeline.png"
+                        alt="YouTube Video Deletion Risk Timeline"
+                        className="w-full rounded-lg border-2 border-[#1e1b18]"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {/* #visibility-trouble-shooting */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#visibility-trouble-shooting</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li><strong>1K View Jail:</strong> Stuck in small-pocket testing. Escape by changing format/hook, focusing on first 30s retention, editing with intention (zooms, crop cuts, text), fixing metadata, and avoiding mass-uploads.</li>
+                        <li><strong>Low STW (Subscriber-to-Watch):</strong> Make &quot;Part 2&quot; of top performers, run Community Tab polls, check for dead subs.</li>
+                        <li><strong>Flatline / 0 Views:</strong> Change title &amp; thumbnail, trim first 30s dead space, private &amp; re-upload after 3–5 days, or start fresh (new SIM, IP/browser, proper setup).</li>
+                        <li><strong>30K View Jail:</strong> Audit your viral video and make a &quot;spiritual sequel&quot;; don&apos;t abruptly shift style/topic right after a viral hit.</li>
+                        <li><strong>1 Week Low Views (&lt;1K / &lt;100):</strong> Pause uploads 3–5 days, revisit format/pacing, test 6–9 PM or 12–2 AM, or study 5 new channels (&lt;5K subs) with consistent growth.</li>
+                      </ul>
+                    </div>
+
+                    {/* #anti-spam-strategy */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#anti-spam-strategy</h3>
+                      <p className="text-sm">Rotate CTA style, topic, and placement daily to avoid duplicate-behavior flags:</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs bg-white border border-[#1e1b18] rounded-lg p-3">
+                        <span>📅 <strong>Mon:</strong> CTA about dogs</span>
+                        <span>📅 <strong>Tue:</strong> CTA about cats</span>
+                        <span>📅 <strong>Wed:</strong> CTA about family/parents</span>
+                        <span>📅 <strong>Thu:</strong> CTA connected to school/education</span>
+                        <span>📅 <strong>Fri:</strong> CTA related to mystery/surprise</span>
+                        <span>📅 <strong>Sat:</strong> CTA aligned to video topic</span>
+                        <span>📅 <strong>Sun:</strong> CTA for viewer emotions/values</span>
+                      </div>
+                    </div>
+
+                    {/* #11labs-support */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-2">
+                      <h3 className="font-marker text-xl">#11labs-support</h3>
+                      <ul className="list-disc pl-5 text-sm space-y-1">
+                        <li>Before hitting 1k credits, create a new Gmail &amp; 11Labs account.</li>
+                        <li><strong>IP Ban Prevention:</strong> Switch connection (data hotspot / pocket WiFi, or restart router 30 mins) before switching accounts.</li>
+                        <li>Use Incognito / clear cookies; don&apos;t reuse recovery email or phone number across multiple 11Labs accounts.</li>
+                      </ul>
+                    </div>
+
+                    {/* #creators-tools */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-3">
+                      <h3 className="font-marker text-xl">#creators-tools</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        {[
+                          { name: 'Looka Business Name Generator', url: 'https://looka.com/business-name-generator/' },
+                          { name: 'Namelix', url: 'https://namelix.com/' },
+                          { name: 'Pinterest', url: 'https://pinterest.com/' },
+                          { name: 'ChatGPT', url: 'https://chat.openai.com/' },
+                          { name: 'Google Gemini', url: 'https://gemini.google.com/app' },
+                          { name: 'ElevenLabs', url: 'https://elevenlabs.io/' },
+                          { name: 'Google AI Studio', url: 'https://aistudio.google.com/prompts/new_chat' },
+                          { name: 'Vizard.ai Transcription', url: 'https://vizard.ai/upload?from=transcription&tool-page=%2Fen%2Ftools%2Ftranscription' },
+                          { name: 'DownSub', url: 'https://downsub.com/' },
+                          { name: 'CapCut (April Windows)', url: 'https://capcut.uptodown.com/windows/download/5084010' },
+                          { name: 'Cobalt Tools', url: 'https://cobalt.tools/' },
+                          { name: 'MyInstants Soundboard', url: 'https://www.myinstants.com/en/index/us/' },
+                          { name: 'CnvMP3 (YT to MP3/MP4)', url: 'https://cnvmp3.com/' },
+                          { name: 'Tikmate.app', url: 'https://tikmate.app/' },
+                          { name: 'Tikmate.io', url: 'https://tikmate.io/' },
+                          { name: 'TikDownloader.io', url: 'https://tikdownloader.io/en' },
+                        ].map((t) => (
+                          <a
+                            key={t.url}
+                            href={t.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white border border-[#1e1b18] rounded-lg px-3 py-2 font-bold flex items-center justify-between hover:bg-[#fef08a] transition-colors"
+                          >
+                            <span>{t.name}</span>
+                            <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                          </a>
+                        ))}
                       </div>
                     </div>
                   </div>
