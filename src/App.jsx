@@ -174,6 +174,7 @@ export default function App() {
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [openGuideId, setOpenGuideId] = useState(null);
+  const [guidesSearch, setGuidesSearch] = useState('');
   const [openDriveDocId, setOpenDriveDocId] = useState(null);
   const [copiedDocId, setCopiedDocId] = useState(null);
   const [visitorCount, setVisitorCount] = useState(() => {
