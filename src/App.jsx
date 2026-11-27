@@ -945,6 +945,151 @@ export default function App() {
                     </div>
                   </div>
                 )}
+
+                {openGuideId === 'discord-resources' && (
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div>
+                      <span className="inline-block bg-[#fbcfe8] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                        Discord • Converted from Screenshots
+                      </span>
+                      <h2 className="font-marker text-2xl sm:text-3xl">
+                        Discord Resources &amp; Niche Vault
+                      </h2>
+                    </div>
+
+                    {/* #-yta-resources */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
+                      <h3 className="font-marker text-xl">#-yta-resources</h3>
+
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Recommended SIM Options &amp; SMS Virtual</h4>
+                        <ul className="list-disc pl-5 text-sm space-y-1">
+                          <li><strong>GOMO / TM / Globe</strong> lang ang palaging gamitin — pinaka-stable, trusted, at low chance ma-flag ni YouTube as spam. Avoid Smart or TNT for fresh accounts.</li>
+                          <li><strong>Tipid Method (SMS Virtual):</strong> Download <em>&quot;SMS Virtual – Receive SMS&quot;</em> from Play Store (~₱19 per number activation).</li>
+                          <li><strong>Optimal Timing:</strong> 10:00 PM – 12:00 AM (PH time) for faster code delivery.</li>
+                          <li><strong>Country to Use:</strong> Choose <strong>Hongkong</strong> in the app and set YouTube number verification region to Hongkong.</li>
+                          <li><strong>Strategic Reminders:</strong> Use virtual number once per Gmail/YT; if code doesn&apos;t arrive within 5 mins, cancel &amp; generate a new number; don&apos;t change number for at least 7 days; update recovery email &amp; password right after activation.</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Repetitive / Reused Content Checks &amp; Appeals</h4>
+                        <ul className="list-disc pl-5 text-sm space-y-1">
+                          <li>
+                            Paano Malalaman Kung Repetitive o Paulit-ulit na ang Isang Video:{' '}
+                            <a href="https://drive.google.com/file/d/1se4N1TjtTi4x_ByHm6Z_7Gv5Z7gfowRC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
+                              Google Drive Video
+                            </a>
+                          </li>
+                          <li>
+                            Reused Content Proper Appeal:{' '}
+                            <a href="https://youtu.be/yXmOq_py09M?si=p4lgbS-0bP_K59ef" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
+                              YouTube Tutorial
+                            </a>
+                          </li>
+                          <li>
+                            Tutorial on How to Create Zack D. Films Videos Using AI (ReachMora):{' '}
+                            <a href="https://youtu.be/2cdiRopMoeQ?si=SNH2dJQRY6bVabvk" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
+                              YouTube Tutorial
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Prompt for Reused Content Appeal</h4>
+                        <pre className="bg-white border border-[#1e1b18] rounded-lg p-3 text-xs font-mono-code whitespace-pre-wrap">
+{`Voiceover: "Hello. I'm the creator behind [CHANNEL NAME], a channel dedicated to [CHANNEL/CONTENT DESCRIPTION]. Today, I'm reaching out to appeal the recent monetization decision affecting our community. [Visuals: Clips of your video editing process, showing your work on commentary] Voiceover: "At first glance, our use of clips from various sources might appear as reused content. However, this is a fundamental misunderstanding of our work. These clips are essential, serving as the foundation upon which we build our in-depth analysis and commentary." [Visuals: Side-by-side comparison of original clips and your edited, annotated versions] Voiceover: "Each video undergoes extensive editing to not just show, but to critically examine and underline [CHANNEL/CONTENT DESCRIPTION]. This transformation is crucial, adding educational value and insights that go far beyond the original footage." [Visuals: Fair Use doctrine highlights, emphasizing educational and transformative use] Voiceover: "Our approach is squarely within the bounds of fair use, designed to educate and provoke thought among our viewers. We spend a lot of time crafting each video to ensure it contributes meaningfully to the discourse on [CHANNEL/CONTENT DESCRIPTION]." [Closing Visuals: A sincere appeal to the YouTube team] Voiceover: "We understand and respect YouTube's guidelines and the importance of protecting content creators. That's why we're committed to ensuring our work not only meets but exceeds the criteria for fair use, offering unique, value-added content to our audience. We kindly request a reconsideration of our channel's monetization status. We're prepared to make any necessary adjustments to align with YouTube's policies and guidelines. Thank you for your time and for the opportunity to continue contributing positively to the YouTube community."`}
+                        </pre>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Retention Rate Targets (Above 70% in first 30–60s)</h4>
+                        <p className="text-sm text-[#57534e] mb-2">
+                          Hook viewers in the first 3 seconds, then sustain interest up to the 1-minute mark. High retention = high satisfaction signal sa algorithm.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs font-mono-code bg-white border border-[#1e1b18] rounded-lg p-3">
+                          <span>🔥 30s: 83–93% (Excellent hook)</span>
+                          <span>🚀 31s: 82–92% (Konting drop lang)</span>
+                          <span>⚡ 32s: 82–91% (Holding well)</span>
+                          <span>🎯 33s: 81–91% (Top percentile)</span>
+                          <span>💯 34s: 80–90% (Solid start)</span>
+                          <span>🧠 35s: 80–90% (Viewers focused)</span>
+                          <span>✅ 36s: 79–90% (No red flags yet)</span>
+                          <span>📈 37s: 78–89% (Smooth pacing)</span>
+                          <span>🎬 38s: 78–89% (Walang dead air)</span>
+                          <span>🧍 53s: 69–81% (Consider transitions)</span>
+                          <span>💤 54s: 68–80% (Huwag maging boring)</span>
+                          <span>😴 55s: 68–80% (Try cutaways/shifts)</span>
+                          <span>🕳️ 56s: 67–79% (Baka mahaba intro)</span>
+                          <span>🤯 57s: 67–78% (Clarity issue?)</span>
+                          <span>⚫ 58s: 66–78% (Wrap or tease next)</span>
+                          <span>🚫 59s: 65–77% (Major drop / disconnect)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* #-fba-resources */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
+                      <h3 className="font-marker text-xl">#-fba-resources</h3>
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Facebook Automation Workflow Notes</h4>
+                        <ul className="list-disc pl-5 text-sm space-y-1">
+                          <li>When the image is generated just type <code>&quot;Value Vault&quot;</code>.</li>
+                          <li>There must be two generated images — from step 2 and step 7.</li>
+                          <li>If ChatGPT did not generate the step 7 image, complete the prompt until STEP 8 and type <code>&quot;You didn&apos;t generate the storyboard or Generate the storyboard&quot;</code>.</li>
+                          <li>Download a 3D character from Chrome or Pinterest.</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-sm mb-1">Prompt for Facebook SEO</h4>
+                        <pre className="bg-white border border-[#1e1b18] rounded-lg p-3 text-xs font-mono-code whitespace-pre-wrap">
+{`You are a Facebook Reels SEO expert.
+
+Your task is to analyze the script I provide and create:
+1. A highly engaging Facebook Reels description (1-2 short sentences only).
+2. The description must be SEO-optimized using relevant keywords from the script.
+3. The description should encourage engagement naturally without sounding spammy.
+4. Create exactly 5 SEO-optimized hashtags related to the video's topic.
+5. Use only hashtags that are relevant to the content.
+6. Do not use emojis unless they fit naturally.
+7. Keep the description clean, concise, and optimized for Facebook Reels discovery.
+8. Output format:
+
+Description:
+[SEO-optimized description]
+
+Hashtags:
+#Hashtag1 #Hashtag2 #Hashtag3 #Hashtag4 #Hashtag5
+
+Wait for my script before generating anything.`}
+                        </pre>
+                      </div>
+                    </div>
+
+                    {/* #-niches */}
+                    <div className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-5 space-y-4">
+                      <h3 className="font-marker text-xl">#-niches</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div className="bg-white border border-[#1e1b18] rounded-lg p-4">
+                          <h4 className="font-bold mb-1">American Nostalgia (Tier 1–2)</h4>
+                          <ul className="list-disc pl-4 space-y-1 text-xs">
+                            <li>Pure AI generated</li>
+                            <li>Caption from any editing app</li>
+                            <li>Reference: <strong>LiterallyNostalgia</strong> (349K followers)</li>
+                          </ul>
+                        </div>
+                        <div className="bg-white border border-[#1e1b18] rounded-lg p-4">
+                          <h4 className="font-bold mb-1">Nostalgia PH Version (Philippines)</h4>
+                          <ul className="list-disc pl-4 space-y-1 text-xs">
+                            <li>Tools: ChatGPT (ideas), ChatGPT/Claude (prompt), Grok/Flow (animation), CapCut (editing)</li>
+                            <li>Reference: <strong>Pinoy Core Memory</strong> (42K followers)</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -978,6 +1123,18 @@ export default function App() {
                     badge: 'Framework • PDFs & Template',
                     color: '#d8b4fe',
                     title: 'Master Prompt',
+                  },
+                  {
+                    id: 'drive-sources',
+                    badge: 'Google Drive • PDFs, Docs & Scripts',
+                    color: '#fde047',
+                    title: 'Niche Guides & Value Vault Sources (Drive)',
+                  },
+                  {
+                    id: 'discord-resources',
+                    badge: 'Discord • #-yta-resources • #-fba-resources • #-niches',
+                    color: '#fbcfe8',
+                    title: 'Discord Resources & Niche Vault',
                   },
                 ].map((g) => (
                   <button
