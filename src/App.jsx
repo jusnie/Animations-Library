@@ -1135,27 +1135,93 @@ export default function App() {
                       </div>
 
                       <div>
-                        <h4 className="font-bold text-sm mb-1">Repetitive / Reused Content Checks &amp; Appeals</h4>
-                        <ul className="list-disc pl-5 text-sm space-y-1">
-                          <li>
-                            Paano Malalaman Kung Repetitive o Paulit-ulit na ang Isang Video:{' '}
-                            <a href="https://drive.google.com/file/d/1se4N1TjtTi4x_ByHm6Z_7Gv5Z7gfowRC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
-                              Google Drive Video
-                            </a>
-                          </li>
-                          <li>
-                            Reused Content Proper Appeal:{' '}
-                            <a href="https://youtu.be/yXmOq_py09M?si=p4lgbS-0bP_K59ef" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
-                              YouTube Tutorial
-                            </a>
-                          </li>
-                          <li>
-                            Tutorial on How to Create Zack D. Films Videos Using AI (ReachMora):{' '}
-                            <a href="https://youtu.be/2cdiRopMoeQ?si=SNH2dJQRY6bVabvk" target="_blank" rel="noopener noreferrer" className="underline font-bold text-[#1e1b18]">
-                              YouTube Tutorial
-                            </a>
-                          </li>
-                        </ul>
+                        <h4 className="font-bold text-sm mb-2">Repetitive / Reused Content Checks &amp; Appeals</h4>
+                        <div className="space-y-3">
+                          {[
+                            {
+                              id: '1se4N1TjtTi4x_ByHm6Z_7Gv5Z7gfowRC',
+                              type: 'drive',
+                              title: 'Paano Malalaman Kung Repetitive o Paulit-ulit na ang Isang Video',
+                              url: 'https://drive.google.com/file/d/1se4N1TjtTi4x_ByHm6Z_7Gv5Z7gfowRC/view?usp=sharing',
+                            },
+                            {
+                              id: 'yXmOq_py09M',
+                              type: 'youtube',
+                              title: 'Reused Content Proper Appeal',
+                              url: 'https://youtu.be/yXmOq_py09M?si=p4lgbS-0bP_K59ef',
+                            },
+                            {
+                              id: '2cdiRopMoeQ',
+                              type: 'youtube',
+                              title: 'Tutorial on How to Create Zack D. Films Videos Using AI (ReachMora)',
+                              url: 'https://youtu.be/2cdiRopMoeQ?si=SNH2dJQRY6bVabvk',
+                            },
+                          ].map((vid) => (
+                            <div key={vid.id} className="bg-white border-2 border-[#1e1b18] rounded-xl p-3">
+                              <div className="flex items-center justify-between gap-2 mb-2">
+                                <span className="font-bold text-xs sm:text-sm text-[#1e1b18] leading-snug">{vid.title}</span>
+                                <a
+                                  href={vid.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-2.5 py-1 text-xs font-bold bg-[#fde047] border border-[#1e1b18] rounded-lg hover:bg-[#fef08a] inline-flex items-center gap-1 shrink-0"
+                                >
+                                  Open <ExternalLink className="w-3 h-3" />
+                                </a>
+                              </div>
+                              {playingVideoId === vid.id ? (
+                                vid.type === 'youtube' ? (
+                                  <iframe
+                                    src={`https://www.youtube.com/embed/${vid.id}?autoplay=1`}
+                                    title={vid.title}
+                                    className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                    allowFullScreen
+                                  />
+                                ) : videoFallback[vid.id] ? (
+                                  <iframe
+                                    src={`https://drive.google.com/file/d/${vid.id}/preview`}
+                                    title={vid.title}
+                                    className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen
+                                  />
+                                ) : (
+                                  <video
+                                    src={`https://drive.google.com/uc?export=download&id=${vid.id}`}
+                                    controls
+                                    autoPlay
+                                    playsInline
+                                    onError={() => setVideoFallback((prev) => ({ ...prev, [vid.id]: true }))}
+                                    className="w-full aspect-video rounded-lg border border-[#1e1b18] bg-black"
+                                  />
+                                )
+                              ) : (
+                                <button
+                                  type="button"
+                                  onClick={() => setPlayingVideoId(vid.id)}
+                                  className="relative w-full aspect-video rounded-lg border-2 border-[#1e1b18] overflow-hidden bg-[#1e1b18] group cursor-pointer block"
+                                >
+                                  <img
+                                    src={
+                                      vid.type === 'youtube'
+                                        ? `https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`
+                                        : `https://drive.google.com/thumbnail?id=${vid.id}&sz=w800`
+                                    }
+                                    alt={vid.title}
+                                    className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity"
+                                    loading="lazy"
+                                  />
+                                  <span className="absolute inset-0 flex items-center justify-center">
+                                    <span className="w-14 h-14 rounded-full bg-[#fde047] border-2 border-[#1e1b18] shadow-[3px_3px_0px_#1e1b18] flex items-center justify-center group-hover:scale-105 transition-transform">
+                                      <Play className="w-6 h-6 text-[#1e1b18] fill-[#1e1b18] ml-0.5" />
+                                    </span>
+                                  </span>
+                                </button>
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
                       <div>
