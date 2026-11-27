@@ -411,7 +411,7 @@ export default function App() {
                 view === 'guides' ? 'bg-[#fda4af]' : 'bg-white'
               }`}
             >
-              Guides
+              Guides &amp; Sources
             </button>
           </nav>
         </div>
@@ -879,6 +879,70 @@ export default function App() {
                         </p>
                       </div>
                     ))}
+                  </div>
+                )}
+
+                {openGuideId === 'drive-sources' && (
+                  <div className="sketch-box bg-white p-6 space-y-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <span className="inline-block bg-[#fde047] border border-[#1e1b18] px-2.5 py-0.5 rounded-full text-xs font-bold mb-2">
+                          Google Drive • PDFs, Docs &amp; Scripts
+                        </span>
+                        <h2 className="font-marker text-2xl sm:text-3xl">
+                          Niche Guides &amp; Value Vault Sources
+                        </h2>
+                      </div>
+                      <a
+                        href="https://drive.google.com/drive/folders/1Up82oapBIUpKhj8QXprKIMMPrKYvBVbe"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="sketch-btn bg-[#bae6fd] px-3.5 py-1.5 text-sm font-bold inline-flex items-center gap-1.5"
+                      >
+                        Open Drive Folder <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[
+                        { name: 'ANIMAL WILDLIFE NICHE.pdf', id: '1bA5LMb-0qHpgKNjs-eun23xo-J1O3-mQ', type: 'PDF' },
+                        { name: 'CHARACTER COOKING NICHE.pdf', id: '1IuQvnMe21EXH3m1EMzZiNhnxnshOE5Ah', type: 'PDF' },
+                        { name: 'COOKING_POV_WORKFLOW_V4.0.pdf', id: '1z6vfJc98KDu-fsGHW6riq4dL09xXXU6b', type: 'PDF' },
+                        { name: 'HAND COOKING NICHE.pdf', id: '1ZDhQKPrtT1gyxzoiFv3HkYYy8utPl0Nw', type: 'PDF' },
+                        { name: 'CAPCUT PREMIUM TUTORIAL.pdf', id: '1SBHsGpaMkJdzTwJ0BxkL2K2k3ALEydmt', type: 'PDF' },
+                        { name: 'MAMA MO GEOGRAPHY.pdf', id: '1HteAhZVrE2IIR877-szx0Kml_vybTJXs', type: 'PDF' },
+                        { name: 'Psychology.pdf', id: '1kV1tHyZIgYChovnuDyroc7ZZCTIToylp', type: 'PDF' },
+                        { name: 'WAR beta 1 (1).pdf', id: '1eCUFYk6UffvzR__uIlvGaeuU6XZYTOJ1', type: 'PDF' },
+                        { name: 'ENDTIMES505 Short formula.docx', id: '1ac5ouWtrnPy69PoutlnDrWZf4EO2LO-N', type: 'DOCX' },
+                        { name: 'FACEBOOK AUTOMATION 2026 GUIDES1.docx', id: '1sIxF6oknTlZBUdclfZVKPOMSuVspBtgW', type: 'DOCX' },
+                        { name: 'LOGO AND BANNER CREATION.txt', id: '10EMVaGielUB89ol9vdgNV2DejiGg_bC9', type: 'TXT' },
+                        { name: 'VALUE VAULT 3D ANIMATION V2.txt', id: '1kZwGuIeib7-m9seisYWdNABHU49UNlAQ', type: 'TXT' },
+                        { name: 'VALUEVAULT CONTENT VIDEO SYSTEM V2 (BUGS FIXED).txt', id: '1x0zofTpRP5fZ0Cn8JSK94-qs7jEodScK', type: 'TXT' },
+                        { name: 'VALUEVAULT COOKING ANIMATION SYSTEM V1.txt', id: '1-Pm8dmsz6QaZNJpFcz8Z0Aj6tMVc01nq', type: 'TXT' },
+                      ].map((doc) => (
+                        <div
+                          key={doc.id}
+                          className="bg-[#fdfbf7] border-2 border-[#1e1b18] rounded-xl p-4 flex items-center justify-between gap-3"
+                        >
+                          <div className="min-w-0">
+                            <span className="inline-block text-[10px] font-mono-code font-bold bg-[#fef08a] border border-[#1e1b18] rounded px-1.5 py-0.5 mb-1">
+                              {doc.type}
+                            </span>
+                            <p className="font-hand font-bold text-sm truncate" title={doc.name}>
+                              {doc.name}
+                            </p>
+                          </div>
+                          <a
+                            href={`https://drive.google.com/uc?export=download&id=${doc.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="sketch-btn bg-[#bbf7d0] px-3 py-1.5 text-xs font-bold shrink-0"
+                          >
+                            Download
+                          </a>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
