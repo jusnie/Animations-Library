@@ -1186,6 +1186,20 @@ Wait for my script before generating anything.`}
                         <li>Use separate Chrome Profiles / Incognito + rotate IP/mobile data; max 3–4 accounts/day per device; avoid <code>user1@</code> naming patterns.</li>
                         <li><strong>Channel Setup:</strong> Country = <strong>United States</strong>, Not made for kids, add Channel Keywords/Tags, verify 2 features first (reserve 3rd for after 5 uploads), upload as <strong>Unlisted</strong> first, Category = <strong>People &amp; Blogs</strong>, Video/Title Language = <strong>English (US)</strong>, turn OFF show likes/dislikes.</li>
                       </ul>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <img
+                          src="/images/yt-channel-basic-info.webp"
+                          alt="YouTube Studio Channel Basic Info Settings"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                        <img
+                          src="/images/yt-channel-advanced-settings.webp"
+                          alt="YouTube Studio Channel Advanced Settings"
+                          className="w-full rounded-lg border-2 border-[#1e1b18]"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
                   </div>
                 )}
